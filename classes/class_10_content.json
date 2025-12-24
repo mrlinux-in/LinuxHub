@@ -1,0 +1,109 @@
+{
+  "classId": 10,
+  "topic": "Linux Help System and Revision",
+  "slides": [
+    {
+      "slideId": 1,
+      "content": [
+        {
+          "type": "heading",
+          "value": "Introduction"
+        },
+        {
+          "type": "definition",
+          "value": "The Linux help system provides built-in tools that help users understand commands, options, and usage without needing the internet.",
+          "example": "Example: Using the man command to learn how ls works."
+        },
+        {
+          "type": "text",
+          "value": "Linux has thousands of commands and options. It is impossible to memorize everything. The Linux help system allows users to quickly find information about commands directly from the terminal."
+        }
+      ],
+      "video": null
+    },
+    {
+      "slideId": 2,
+      "content": [
+        {
+          "type": "heading",
+          "value": "man Command"
+        },
+        {
+          "type": "definition",
+          "value": "man (manual) is a command that displays detailed documentation for Linux commands.",
+          "example": "Example: Reading the manual page for the ls command."
+        }
+      ],
+      "video": null
+    },
+    {
+      "slideId": 3,
+      "content": [
+        {
+          "type": "heading",
+          "value": "Using man"
+        },
+        {
+          "type": "code",
+          "command": "man ls",
+          "description": "Opens the manual page for the ls command."
+        }
+      ],
+      "video": null
+    },
+    {
+      "slideId": 4,
+      "content": [
+        {
+          "type": "heading",
+          "value": "man Page Navigation"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Up / Down Arrow – Move line by line",
+            "Space – Move one page down",
+            "b – Move one page up",
+            "/word – Search for a word",
+            "q – Quit manual page"
+          ]
+        }
+      ],
+      "video": null
+    },
+    {
+      "slideId": 5,
+      "content": [
+        {
+          "type": "heading",
+          "value": "--help Option"
+        },
+        {
+          "type": "definition",
+          "value": "The --help option shows a short summary of how a command works and lists its options.",
+          "example": "Example: Viewing help for the cp command."
+        }
+      ],
+      "video": null
+    },
+    {
+      "slideId": 6,
+      "content": [
+        {
+          "type": "heading",
+          "value": "Using --help"
+        },
+        {
+          "type": "code",
+          "command": [
+            "ls --help",
+            "cp --help",
+            "grep --help"
+          ],
+          "description": ""
+        }
+      ],
+      "video": null
+    }
+  ]
+}

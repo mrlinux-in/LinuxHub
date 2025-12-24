@@ -1,0 +1,102 @@
+{
+  "classId": 29,
+  "topic": "Backup and Recovery",
+  "slides": [
+    {
+      "slideId": 1,
+      "content": [
+        {
+          "type": "heading",
+          "value": "Backup and Recovery"
+        },
+        {
+          "type": "definition",
+          "value": "The process of creating copies of data to protect against loss and restoring that data when needed.",
+          "example": "Example: Restoring files after accidental deletion or system failure."
+        },
+        {
+          "type": "text",
+          "value": "Data loss can happen due to hardware failure, accidental deletion, malware, or system crashes. Backups ensure that important data can be recovered quickly."
+        }
+      ],
+      "video": null
+    },
+    {
+      "slideId": 2,
+      "content": [
+        {
+          "type": "heading",
+          "value": "Why Backup and Recovery Are Important"
+        },
+        {
+          "type": "text",
+          "value": "Data loss can happen due to hardware failure, accidental deletion, malware, or system crashes. Backups ensure that important data can be recovered quickly."
+        }
+      ],
+      "video": null
+    },
+    {
+      "slideId": 3,
+      "content": [
+        {
+          "type": "heading",
+          "value": "Types of Backups"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Full backup – Copies all selected data",
+            "Incremental backup – Copies only changed data",
+            "Differential backup – Copies data changed since last full backup"
+          ]
+        }
+      ],
+      "video": null
+    },
+    {
+      "slideId": 4,
+      "content": [
+        {
+          "type": "heading",
+          "value": "Backup Strategy"
+        },
+        {
+          "type": "definition",
+          "value": "A backup strategy defines how often backups are taken, where they are stored, and how recovery is performed.",
+          "example": "Example: Daily backups stored on a remote server."
+        }
+      ],
+      "video": null
+    },
+    {
+      "slideId": 5,
+      "content": [
+        {
+          "type": "heading",
+          "value": "tar for Backup"
+        },
+        {
+          "type": "definition",
+          "value": "tar can be used to create archive backups of files and directories.",
+          "example": "Example: Backing up a home directory."
+        }
+      ],
+      "video": null
+    },
+    {
+      "slideId": 6,
+      "content": [
+        {
+          "type": "heading",
+          "value": "Creating a Backup with tar"
+        },
+        {
+          "type": "code",
+          "command": "tar -czvf home_backup.tar.gz /home/user",
+          "description": "Creates a compressed backup of the user’s home directory."
+        }
+      ],
+      "video": null
+    }
+  ]
+}

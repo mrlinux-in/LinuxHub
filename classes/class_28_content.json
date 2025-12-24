@@ -1,0 +1,92 @@
+{
+  "classId": 28,
+  "topic": "Database Basics on Linux",
+  "slides": [
+    {
+      "slideId": 1,
+      "content": [
+        {
+          "type": "heading",
+          "value": "What is a Database?"
+        },
+        {
+          "type": "definition",
+          "value": "A database is an organized collection of data that can be stored, managed, and accessed efficiently using database software.",
+          "example": "Example: Storing user login details in a database."
+        }
+      ]
+    },
+    {
+      "slideId": 2,
+      "content": [
+        {
+          "type": "heading",
+          "value": "Why Databases Are Important"
+        },
+        {
+          "type": "text",
+          "value": "Databases are used by almost all modern applications such as websites, mobile apps, and enterprise systems. Linux is widely used to host database servers because it is stable, secure, and efficient."
+        }
+      ]
+    },
+    {
+      "slideId": 3,
+      "content": [
+        {
+          "type": "heading",
+          "value": "What is a Database Server?"
+        },
+        {
+          "type": "definition",
+          "value": "A database server is software that manages databases and allows users or applications to store and retrieve data.",
+          "example": "Example: MySQL and PostgreSQL database servers."
+        }
+      ]
+    },
+    {
+      "slideId": 4,
+      "content": [
+        {
+          "type": "heading",
+          "value": "Popular Databases on Linux"
+        },
+        {
+          "type": "list",
+          "items": [
+            "MySQL – Widely used relational database",
+            "PostgreSQL – Advanced open-source database",
+            "MariaDB – MySQL-compatible database",
+            "SQLite – Lightweight file-based database"
+          ]
+        }
+      ]
+    },
+    {
+      "slideId": 5,
+      "content": [
+        {
+          "type": "heading",
+          "value": "MySQL Installation"
+        },
+        {
+          "type": "code",
+          "command": "sudo apt install mysql-server",
+          "description": "Installs the MySQL database server."
+        }
+      ]
+    },
+    {
+      "slideId": 6,
+      "content": [
+        {
+          "type": "heading",
+          "value": "Managing MySQL Service"
+        },
+        {
+          "type": "text",
+          "value": "After installation, the database service must be running to accept connections."
+        }
+      ]
+    }
+  ]
+}

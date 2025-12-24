@@ -1,0 +1,87 @@
+{
+  "classId": 8,
+  "topic": "File Permissions and Ownership",
+  "slides": [
+    {
+      "slideId": 1,
+      "content": [
+        {
+          "type": "heading",
+          "value": "File Permissions and Ownership"
+        },
+        {
+          "type": "definition",
+          "value": "Linux defines who can read, write, or execute a file or directory.",
+          "example": "Example: Allowing only the owner to edit a file while others can only read it."
+        }
+      ]
+    },
+    {
+      "slideId": 2,
+      "content": [
+        {
+          "type": "heading",
+          "value": "Why Permissions Are Important"
+        },
+        {
+          "type": "text",
+          "value": "Linux is a multi-user operating system. File permissions protect files from unauthorized access, accidental deletion, and security threats."
+        }
+      ]
+    },
+    {
+      "slideId": 3,
+      "content": [
+        {
+          "type": "heading",
+          "value": "File Ownership"
+        },
+        {
+          "type": "definition",
+          "value": "Every file in Linux has an owner and a group that control access to the file.",
+          "example": "Example: A file owned by user john and group developers."
+        }
+      ]
+    },
+    {
+      "slideId": 4,
+      "content": [
+        {
+          "type": "heading",
+          "value": "Ownership Types"
+        },
+        {
+          "type": "text",
+          "value": "Linux divides ownership into three categories: owner, group, and others."
+        }
+      ]
+    },
+    {
+      "slideId": 5,
+      "content": [
+        {
+          "type": "heading",
+          "value": "File Permissions"
+        },
+        {
+          "type": "definition",
+          "value": "File permissions define what actions users can perform on a file or directory.",
+          "example": "Example: Read, write, or execute access."
+        }
+      ]
+    },
+    {
+      "slideId": 6,
+      "content": [
+        {
+          "type": "heading",
+          "value": "Viewing File Permissions"
+        },
+        {
+          "type": "text",
+          "value": "You can view file permissions using the ls -l command."
+        }
+      ]
+    }
+  ]
+}

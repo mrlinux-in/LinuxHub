@@ -1,0 +1,103 @@
+{
+  "classId": 30,
+  "topic": "Troubleshooting and Final Project",
+  "slides": [
+    {
+      "slideId": 1,
+      "content": [
+        {
+          "type": "heading",
+          "value": "Linux Troubleshooting"
+        },
+        {
+          "type": "definition",
+          "value": "Linux troubleshooting is the process of identifying, analyzing, and fixing problems in a Linux system."
+        }
+      ],
+      "video": null
+    },
+    {
+      "slideId": 2,
+      "content": [
+        {
+          "type": "heading",
+          "value": "Why Troubleshooting Skills Matter"
+        },
+        {
+          "type": "text",
+          "value": "No Linux system runs perfectly all the time. Services may fail, disks may fill up, permissions may break applications, or networks may go down."
+        }
+      ],
+      "video": null
+    },
+    {
+      "slideId": 3,
+      "content": [
+        {
+          "type": "heading",
+          "value": "Troubleshooting Method"
+        },
+        {
+          "type": "stepByStep",
+          "steps": [
+            "Identify the problem clearly",
+            "Check error messages or symptoms",
+            "Review logs and system status",
+            "Isolate the root cause",
+            "Apply a fix",
+            "Verify the solution"
+          ]
+        }
+      ],
+      "video": null
+    },
+    {
+      "slideId": 4,
+      "content": [
+        {
+          "type": "heading",
+          "value": "Common Linux Problems"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Disk full issues",
+            "Service not starting",
+            "Permission denied errors",
+            "Network connectivity problems",
+            "High CPU or memory usage"
+          ]
+        }
+      ],
+      "video": null
+    },
+    {
+      "slideId": 5,
+      "content": [
+        {
+          "type": "heading",
+          "value": "Logs in Troubleshooting"
+        },
+        {
+          "type": "definition",
+          "value": "Logs are records of system and application events that help diagnose problems."
+        }
+      ],
+      "video": null
+    },
+    {
+      "slideId": 6,
+      "content": [
+        {
+          "type": "heading",
+          "value": "Service Troubleshooting"
+        },
+        {
+          "type": "definition",
+          "value": "Service troubleshooting involves checking whether a service is running correctly and identifying why it may have failed."
+        }
+      ],
+      "video": null
+    }
+  ]
+}

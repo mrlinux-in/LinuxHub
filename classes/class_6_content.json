@@ -1,0 +1,89 @@
+{
+  "classId": 6,
+  "topic": "Viewing and Reading Files",
+  "slides": [
+    {
+      "slideId": 1,
+      "content": [
+        {
+          "type": "heading",
+          "value": "Viewing and Reading Files"
+        },
+        {
+          "type": "definition",
+          "value": "Viewing and reading files in Linux means displaying the contents of files on the terminal without modifying them.",
+          "example": "Example: Reading a text file using the cat command."
+        }
+      ]
+    },
+    {
+      "slideId": 2,
+      "content": [
+        {
+          "type": "heading",
+          "value": "Why Viewing Files Is Important"
+        },
+        {
+          "type": "text",
+          "value": "In Linux, many important files such as configuration files, logs, and scripts are stored as text files. System administrators and users often need to read these files to understand system behavior, check errors, or verify data."
+        }
+      ]
+    },
+    {
+      "slideId": 3,
+      "content": [
+        {
+          "type": "heading",
+          "value": "cat Command"
+        },
+        {
+          "type": "definition",
+          "value": "cat (concatenate) is a command used to display the entire contents of a file on the terminal.",
+          "example": "Example: Displaying the contents of notes.txt."
+        }
+      ]
+    },
+    {
+      "slideId": 4,
+      "content": [
+        {
+          "type": "heading",
+          "value": "Using cat"
+        },
+        {
+          "type": "code",
+          "command": "cat notes.txt",
+          "description": "Displays the full content of the file notes.txt."
+        }
+      ]
+    },
+    {
+      "slideId": 5,
+      "content": [
+        {
+          "type": "heading",
+          "value": "less Command"
+        },
+        {
+          "type": "definition",
+          "value": "less is a command used to view file contents one screen at a time, allowing easy navigation through large files.",
+          "example": "Example: Reading a long log file using less."
+        }
+      ]
+    },
+    {
+      "slideId": 6,
+      "content": [
+        {
+          "type": "heading",
+          "value": "Using less"
+        },
+        {
+          "type": "code",
+          "command": "less logfile.txt",
+          "description": "Opens the file and allows scrolling using keyboard keys."
+        }
+      ]
+    }
+  ]
+}

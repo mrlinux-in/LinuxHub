@@ -1,0 +1,90 @@
+{
+  "classId": 7,
+  "topic": "Basic Text Editing",
+  "slides": [
+    {
+      "slideId": 1,
+      "content": [
+        {
+          "type": "heading",
+          "value": "Text Editing in Linux"
+        },
+        {
+          "type": "definition",
+          "value": "Basic text editing in Linux means creating and modifying text files using terminal-based editors."
+        }
+      ]
+    },
+    {
+      "slideId": 2,
+      "content": [
+        {
+          "type": "heading",
+          "value": "Nano Editor Overview"
+        },
+        {
+          "type": "text",
+          "value": "Nano is the easiest text editor for beginners. It displays helpful shortcuts at the bottom of the screen and does not require special modes."
+        }
+      ]
+    },
+    {
+      "slideId": 3,
+      "content": [
+        {
+          "type": "heading",
+          "value": "Working Inside nano"
+        },
+        {
+          "type": "text",
+          "value": "Once nano is open, you can start typing immediately. There are no special modes."
+        }
+      ]
+    },
+    {
+      "slideId": 4,
+      "content": [
+        {
+          "type": "heading",
+          "value": "Common nano Shortcuts"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Ctrl + O – Save the file",
+            "Ctrl + X – Exit nano",
+            "Ctrl + W – Search text",
+            "Ctrl + K – Cut a line",
+            "Ctrl + U – Paste a line"
+          ]
+        }
+      ]
+    },
+    {
+      "slideId": 5,
+      "content": [
+        {
+          "type": "heading",
+          "value": "Introduction to vi Editor"
+        },
+        {
+          "type": "text",
+          "value": "The vi editor is a powerful text editor available on almost all Linux systems."
+        }
+      ]
+    },
+    {
+      "slideId": 6,
+      "content": [
+        {
+          "type": "heading",
+          "value": "vi Modes Explained"
+        },
+        {
+          "type": "text",
+          "value": "The vi editor mainly works with three modes. Understanding these modes is key to using vi successfully."
+        }
+      ]
+    }
+  ]
+}

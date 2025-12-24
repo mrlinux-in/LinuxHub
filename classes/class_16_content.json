@@ -1,0 +1,102 @@
+{
+  "classId": 16,
+  "topic": "Package Management",
+  "slides": [
+    {
+      "slideId": 1,
+      "content": [
+        {
+          "type": "heading",
+          "value": "Package Management"
+        },
+        {
+          "type": "definition",
+          "value": "The process of installing, updating, upgrading, and removing software using package manager tools.",
+          "example": "Example: Installing a text editor using a single command."
+        },
+        {
+          "type": "text",
+          "value": "In Linux, software is usually installed from trusted online sources called repositories. Package managers automatically handle downloading software, installing required dependencies, and keeping applications updated."
+        }
+      ],
+      "video": null
+    },
+    {
+      "slideId": 2,
+      "content": [
+        {
+          "type": "heading",
+          "value": "Why Package Management Is Important"
+        },
+        {
+          "type": "text",
+          "value": "Package managers automatically handle downloading software, installing required dependencies, and keeping applications updated. This makes Linux software management fast, secure, and reliable compared to manual installation."
+        }
+      ],
+      "video": null
+    },
+    {
+      "slideId": 3,
+      "content": [
+        {
+          "type": "heading",
+          "value": "Popular Linux Package Managers"
+        },
+        {
+          "type": "list",
+          "items": [
+            "apt – Debian / Ubuntu based systems",
+            "dnf – Fedora / RHEL based systems",
+            "yum – Older RHEL / CentOS systems",
+            "pacman – Arch Linux"
+          ]
+        }
+      ],
+      "video": null
+    },
+    {
+      "slideId": 4,
+      "content": [
+        {
+          "type": "heading",
+          "value": "Software Repositories"
+        },
+        {
+          "type": "text",
+          "value": "Repositories are online servers that store software packages. Linux systems download packages from repositories instead of random websites, which improves security and stability."
+        }
+      ],
+      "video": null
+    },
+    {
+      "slideId": 5,
+      "content": [
+        {
+          "type": "heading",
+          "value": "Updating Package List"
+        },
+        {
+          "type": "code",
+          "command": "sudo apt update",
+          "description": "Updates the list of available packages from repositories."
+        }
+      ],
+      "video": null
+    },
+    {
+      "slideId": 6,
+      "content": [
+        {
+          "type": "heading",
+          "value": "Upgrading Installed Packages"
+        },
+        {
+          "type": "code",
+          "command": "sudo apt upgrade",
+          "description": "Upgrades all installed packages to the latest versions."
+        }
+      ],
+      "video": null
+    }
+  ]
+}

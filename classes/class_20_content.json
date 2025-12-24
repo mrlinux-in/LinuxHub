@@ -1,0 +1,89 @@
+{
+  "classId": 20,
+  "topic": "Task Scheduling with Cron",
+  "slides": [
+    {
+      "slideId": 1,
+      "content": [
+        {
+          "type": "heading",
+          "value": "Cron Overview"
+        },
+        {
+          "type": "definition",
+          "value": "Cron is a Linux scheduling system that allows users to run commands or scripts automatically at specified times or intervals."
+        },
+        {
+          "type": "text",
+          "value": "Many system tasks need to be performed regularly, such as backups, log cleanup, system updates, and monitoring. Manually running these tasks is inefficient and error-prone. Cron allows Linux to execute tasks automatically without user interaction, saving time and ensuring reliability."
+        }
+      ]
+    },
+    {
+      "slideId": 2,
+      "content": [
+        {
+          "type": "heading",
+          "value": "Cron Job Definition"
+        },
+        {
+          "type": "definition",
+          "value": "A cron job is a scheduled task that runs automatically according to a defined time and date."
+        }
+      ]
+    },
+    {
+      "slideId": 3,
+      "content": [
+        {
+          "type": "heading",
+          "value": "Crontab Definition"
+        },
+        {
+          "type": "definition",
+          "value": "crontab is a file and command used to create, view, edit, and manage cron jobs."
+        }
+      ]
+    },
+    {
+      "slideId": 4,
+      "content": [
+        {
+          "type": "heading",
+          "value": "Viewing Existing Cron Jobs"
+        },
+        {
+          "type": "code",
+          "command": "crontab -l",
+          "description": "Lists all cron jobs for the current user."
+        }
+      ]
+    },
+    {
+      "slideId": 5,
+      "content": [
+        {
+          "type": "heading",
+          "value": "Editing Cron Jobs"
+        },
+        {
+          "type": "definition",
+          "value": "Editing cron jobs allows users to add or modify scheduled tasks."
+        }
+      ]
+    },
+    {
+      "slideId": 6,
+      "content": [
+        {
+          "type": "heading",
+          "value": "Cron Time Format"
+        },
+        {
+          "type": "text",
+          "value": "A cron job uses five time fields followed by the command to execute. Each field represents a specific unit of time."
+        }
+      ]
+    }
+  ]
+}

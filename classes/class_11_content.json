@@ -1,0 +1,91 @@
+{
+  "classId": 11,
+  "topic": "Input and Output Redirection",
+  "slides": [
+    {
+      "slideId": 1,
+      "content": [
+        {
+          "type": "heading",
+          "value": "Input and Output Redirection"
+        },
+        {
+          "type": "definition",
+          "value": "Input and output redirection in Linux allows users to control where command input comes from and where command output goes.",
+          "example": "Example: Saving command output to a file instead of showing it on the screen."
+        }
+      ]
+    },
+    {
+      "slideId": 2,
+      "content": [
+        {
+          "type": "heading",
+          "value": "Why Redirection Is Important"
+        },
+        {
+          "type": "text",
+          "value": "By default, Linux commands take input from the keyboard and display output on the screen. Redirection allows users to send output to files, take input from files, and separate normal output from error messages."
+        }
+      ]
+    },
+    {
+      "slideId": 3,
+      "content": [
+        {
+          "type": "heading",
+          "value": "Standard Streams"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Standard Input (stdin) – takes input (keyboard)",
+            "Standard Output (stdout) – shows normal output",
+            "Standard Error (stderr) – shows error messages"
+          ]
+        }
+      ]
+    },
+    {
+      "slideId": 4,
+      "content": [
+        {
+          "type": "heading",
+          "value": "Default Behavior of Commands"
+        },
+        {
+          "type": "text",
+          "value": "Normally, commands read input from the keyboard and display both output and errors on the terminal screen. Redirection changes this default behavior."
+        }
+      ]
+    },
+    {
+      "slideId": 5,
+      "content": [
+        {
+          "type": "heading",
+          "value": "Output Redirection (>)"
+        },
+        {
+          "type": "code",
+          "command": "ls > files.txt",
+          "description": "Saves a directory listing to a file."
+        }
+      ]
+    },
+    {
+      "slideId": 6,
+      "content": [
+        {
+          "type": "heading",
+          "value": "Append Output (>>)"
+        },
+        {
+          "type": "code",
+          "command": "echo \"Hello\" >> notes.txt",
+          "description": "Appends output to the end of a file."
+        }
+      ]
+    }
+  ]
+}

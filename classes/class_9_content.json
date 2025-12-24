@@ -1,0 +1,118 @@
+{
+  "classId": 9,
+  "topic": "Searching Files and Text",
+  "slides": [
+    {
+      "slideId": 1,
+      "content": [
+        {
+          "type": "heading",
+          "value": "Searching Files and Text"
+        },
+        {
+          "type": "definition",
+          "value": "Searching files and text in Linux means finding files by name, type, or location and searching for specific words or patterns inside files.",
+          "example": "Example: Finding a file named config.txt or searching for the word error in log files."
+        },
+        {
+          "type": "text",
+          "value": "Linux systems can contain thousands of files. Searching manually is slow and inefficient. Linux provides powerful search tools that help users quickly locate files and specific text inside files. These tools are essential for troubleshooting, system administration, and daily work."
+        }
+      ]
+    },
+    {
+      "slideId": 2,
+      "content": [
+        {
+          "type": "heading",
+          "value": "find Command"
+        },
+        {
+          "type": "definition",
+          "value": "find is a command used to search for files and directories based on name, type, size, or other properties.",
+          "example": "Example: Finding a file named notes.txt."
+        },
+        {
+          "type": "code",
+          "command": [
+            "find /home -name notes.txt",
+            "find . -type f",
+            "find . -type d"
+          ],
+          "description": "Explain what this command/snippet does and when to use it."
+        }
+      ]
+    },
+    {
+      "slideId": 3,
+      "content": [
+        {
+          "type": "heading",
+          "value": "How find Works"
+        },
+        {
+          "type": "text",
+          "value": "The find command searches directories recursively, meaning it looks inside all subdirectories. This makes it powerful but sometimes slow on very large file systems."
+        }
+      ]
+    },
+    {
+      "slideId": 4,
+      "content": [
+        {
+          "type": "heading",
+          "value": "locate Command"
+        },
+        {
+          "type": "definition",
+          "value": "locate is a command used to quickly find files using a prebuilt database.",
+          "example": "Example: Instantly locating a file anywhere on the system."
+        },
+        {
+          "type": "code",
+          "command": [
+            "locate notes.txt",
+            "sudo updatedb"
+          ],
+          "description": "Explain what this command/snippet does and when to use it."
+        }
+      ]
+    },
+    {
+      "slideId": 5,
+      "content": [
+        {
+          "type": "heading",
+          "value": "find vs locate"
+        },
+        {
+          "type": "text",
+          "value": "The locate command is much faster than find because it uses an index. However, it may not show recently created files unless the database is updated."
+        }
+      ]
+    },
+    {
+      "slideId": 6,
+      "content": [
+        {
+          "type": "heading",
+          "value": "grep Command"
+        },
+        {
+          "type": "definition",
+          "value": "grep is a command used to search for specific text patterns inside files.",
+          "example": "Example: Searching for the word error inside a log file."
+        },
+        {
+          "type": "code",
+          "command": [
+            "grep error logfile.txt",
+            "grep -i warning logfile.txt",
+            "grep -n error logfile.txt"
+          ],
+          "description": "Explain what this command/snippet does and when to use it."
+        }
+      ]
+    }
+  ]
+}

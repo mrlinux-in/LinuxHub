@@ -1,0 +1,89 @@
+{
+  "classId": 17,
+  "topic": "Networking Basics",
+  "slides": [
+    {
+      "slideId": 1,
+      "content": [
+        {
+          "type": "heading",
+          "value": "Networking in Linux"
+        },
+        {
+          "type": "definition",
+          "value": "The ability to connect a system to other computers and the internet to share data and communicate.",
+          "example": "Example: Checking internet connectivity using the ping command."
+        }
+      ]
+    },
+    {
+      "slideId": 2,
+      "content": [
+        {
+          "type": "heading",
+          "value": "Why Networking Is Important"
+        },
+        {
+          "type": "text",
+          "value": "Most Linux systems are connected to networks. Servers must communicate with clients, and administrators must troubleshoot connectivity issues."
+        }
+      ]
+    },
+    {
+      "slideId": 3,
+      "content": [
+        {
+          "type": "heading",
+          "value": "Network Interface"
+        },
+        {
+          "type": "definition",
+          "value": "A hardware or virtual component that connects a computer to a network.",
+          "example": "Example: Ethernet or Wi-Fi adapter."
+        }
+      ]
+    },
+    {
+      "slideId": 4,
+      "content": [
+        {
+          "type": "heading",
+          "value": "Viewing Network Interfaces"
+        },
+        {
+          "type": "code",
+          "command": "ip a",
+          "description": "Displays all network interfaces and IP addresses."
+        }
+      ]
+    },
+    {
+      "slideId": 5,
+      "content": [
+        {
+          "type": "heading",
+          "value": "ping Command"
+        },
+        {
+          "type": "definition",
+          "value": "A command used to test network connectivity between two systems.",
+          "example": "Example: Checking if a server is reachable."
+        }
+      ]
+    },
+    {
+      "slideId": 6,
+      "content": [
+        {
+          "type": "heading",
+          "value": "Using ping"
+        },
+        {
+          "type": "code",
+          "command": "[\"ping google.com\", \"ping -c 4 8.8.8.8\"]",
+          "description": "Displays the system hostname."
+        }
+      ]
+    }
+  ]
+}

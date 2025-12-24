@@ -1,0 +1,85 @@
+{
+  "classId": 1,
+  "topic": "Navigating the Linux File System",
+  "slides": [
+    {
+      "slideId": 1,
+      "content": [
+        {
+          "type": "heading",
+          "value": "Navigating the Linux File System"
+        },
+        {
+          "type": "definition",
+          "value": "Navigating the Linux file system means moving between directories and viewing files using commands in the terminal."
+        }
+      ]
+    },
+    {
+      "slideId": 2,
+      "content": [
+        {
+          "type": "heading",
+          "value": "Why File Navigation Is Important"
+        },
+        {
+          "type": "text",
+          "value": "To work effectively in Linux, users must know how to move around the file system. Most Linux tasks such as editing files, running programs, and managing directories require correct navigation. Understanding navigation commands builds confidence when working in the terminal."
+        }
+      ]
+    },
+    {
+      "slideId": 3,
+      "content": [
+        {
+          "type": "heading",
+          "value": "Current Working Directory"
+        },
+        {
+          "type": "text",
+          "value": "At any moment, the terminal is located in a specific directory called the current working directory. All relative paths and many commands depend on this location."
+        }
+      ]
+    },
+    {
+      "slideId": 4,
+      "content": [
+        {
+          "type": "heading",
+          "value": "pwd Command"
+        },
+        {
+          "type": "definition",
+          "value": "pwd (print working directory) is a command used to display the full path of the current directory."
+        }
+      ]
+    },
+    {
+      "slideId": 5,
+      "content": [
+        {
+          "type": "heading",
+          "value": "Using pwd"
+        },
+        {
+          "type": "code",
+          "command": "pwd",
+          "description": "Shows the current directory location."
+        }
+      ]
+    },
+    {
+      "slideId": 6,
+      "content": [
+        {
+          "type": "heading",
+          "value": "ls Command"
+        },
+        {
+          "type": "definition",
+          "value": "ls is a command used to list files and directories inside the current directory."
+        }
+      ]
+    }
+  ]
+}

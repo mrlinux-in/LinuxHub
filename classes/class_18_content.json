@@ -1,0 +1,96 @@
+{
+  "classId": 18,
+  "topic": "Archiving and Compression",
+  "slides": [
+    {
+      "slideId": 1,
+      "content": [
+        {
+          "type": "heading",
+          "value": "Archiving and Compression"
+        },
+        {
+          "type": "definition",
+          "value": "Combining multiple files into a single file to save storage space and make file transfer easier."
+        },
+        {
+          "type": "text",
+          "value": "Linux systems often handle many files. Archiving helps combine multiple files, while compression reduces file size."
+        }
+      ]
+    },
+    {
+      "slideId": 2,
+      "content": [
+        {
+          "type": "heading",
+          "value": "Definition - Archive"
+        },
+        {
+          "type": "definition",
+          "value": "A single file that contains multiple files and directories."
+        }
+      ]
+    },
+    {
+      "slideId": 3,
+      "content": [
+        {
+          "type": "heading",
+          "value": "Definition - Compression"
+        },
+        {
+          "type": "definition",
+          "value": "Reduces the size of files by removing redundant data."
+        }
+      ]
+    },
+    {
+      "slideId": 4,
+      "content": [
+        {
+          "type": "heading",
+          "value": "List - Common Archive and Compression Tools"
+        },
+        {
+          "type": "list",
+          "items": [
+            "tar",
+            "gzip",
+            "gunzip",
+            "zip",
+            "unzip"
+          ]
+        }
+      ]
+    },
+    {
+      "slideId": 5,
+      "content": [
+        {
+          "type": "heading",
+          "value": "Code - Creating a tar Archive"
+        },
+        {
+          "type": "code",
+          "command": "tar -cvf backup.tar Documents",
+          "description": "Creates an archive named backup.tar from the Documents directory."
+        }
+      ]
+    },
+    {
+      "slideId": 6,
+      "content": [
+        {
+          "type": "heading",
+          "value": "Code - Extracting a tar Archive"
+        },
+        {
+          "type": "code",
+          "command": "tar -xvf backup.tar",
+          "description": "Extracts the contents of backup.tar."
+        }
+      ]
+    }
+  ]
+}

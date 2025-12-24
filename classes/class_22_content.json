@@ -1,0 +1,89 @@
+{
+  "classId": 22,
+  "topic": "System Monitoring and Logs",
+  "slides": [
+    {
+      "slideId": 1,
+      "content": [
+        {
+          "type": "heading",
+          "value": "System Monitoring and Logs"
+        },
+        {
+          "type": "definition",
+          "value": "System monitoring and logs in Linux involve tracking system performance and reviewing log files to identify issues, errors, and system activity.",
+          "example": "Example: Checking CPU usage with top and reading system logs with journalctl."
+        }
+      ]
+    },
+    {
+      "slideId": 2,
+      "content": [
+        {
+          "type": "heading",
+          "value": "Why System Monitoring Is Important"
+        },
+        {
+          "type": "text",
+          "value": "System monitoring helps users understand how system resources like CPU, memory, disk, and network are being used. Logs provide detailed records of system events and errors. Together, they help administrators detect problems early, troubleshoot issues, and maintain system stability."
+        }
+      ]
+    },
+    {
+      "slideId": 3,
+      "content": [
+        {
+          "type": "heading",
+          "value": "System Resources"
+        },
+        {
+          "type": "definition",
+          "value": "System resources are components such as CPU, memory, disk, and network that programs use to run.",
+          "example": "Example: High CPU usage caused by a running process."
+        }
+      ]
+    },
+    {
+      "slideId": 4,
+      "content": [
+        {
+          "type": "heading",
+          "value": "top Command"
+        },
+        {
+          "type": "definition",
+          "value": "top is a command used to display real-time information about running processes and system resource usage.",
+          "example": "Example: Monitoring CPU and memory usage live."
+        }
+      ]
+    },
+    {
+      "slideId": 5,
+      "content": [
+        {
+          "type": "heading",
+          "value": "Using top"
+        },
+        {
+          "type": "code",
+          "command": "top",
+          "description": "Shows running processes and system usage in real-time."
+        }
+      ]
+    },
+    {
+      "slideId": 6,
+      "content": [
+        {
+          "type": "heading",
+          "value": "htop Command"
+        },
+        {
+          "type": "definition",
+          "value": "htop is an interactive and user-friendly alternative to top with color-coded output.",
+          "example": "Example: Scrolling and killing processes interactively."
+        }
+      ]
+    }
+  ]
+}

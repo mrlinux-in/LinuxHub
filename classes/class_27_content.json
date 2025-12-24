@@ -1,0 +1,109 @@
+{
+  "classId": 27,
+  "topic": "Web Server Setup",
+  "slides": [
+    {
+      "slideId": 1,
+      "content": [
+        {
+          "type": "heading",
+          "value": "What is a Web Server?"
+        },
+        {
+          "type": "definition",
+          "value": "A web server is software that delivers web pages to users over the internet or a local network.",
+          "example": "Example: Hosting a website that users can access using a browser."
+        },
+        {
+          "type": "text",
+          "value": "Web servers are the backbone of the internet. They host websites, web applications, and APIs. Linux is the most popular platform for web servers because it is stable, secure, and efficient. Learning how to install and manage a web server is a key skill for system administrators and DevOps engineers."
+        }
+      ],
+      "video": null
+    },
+    {
+      "slideId": 2,
+      "content": [
+        {
+          "type": "heading",
+          "value": "Why Web Servers Are Important"
+        },
+        {
+          "type": "text",
+          "value": "Web servers are the backbone of the internet. They host websites, web applications, and APIs. Linux is the most popular platform for web servers because it is stable, secure, and efficient."
+        }
+      ],
+      "video": null
+    },
+    {
+      "slideId": 3,
+      "content": [
+        {
+          "type": "heading",
+          "value": "Apache vs Nginx"
+        },
+        {
+          "type": "text",
+          "value": "Both Apache and Nginx are popular web servers. Apache is easy to configure and beginner-friendly, while Nginx is lightweight and performs better under heavy traffic."
+        }
+      ],
+      "video": null
+    },
+    {
+      "slideId": 4,
+      "content": [
+        {
+          "type": "heading",
+          "value": "Comparison"
+        },
+        {
+          "type": "table",
+          "value": [
+            [
+              "Column 1 header",
+              "Column 2 header"
+            ],
+            [
+              "Row 1 label",
+              "Row 1 value"
+            ],
+            [
+              "Row 2 label",
+              "Row 2 value"
+            ]
+          ]
+        }
+      ],
+      "video": null
+    },
+    {
+      "slideId": 5,
+      "content": [
+        {
+          "type": "heading",
+          "value": "Installing Apache"
+        },
+        {
+          "type": "code",
+          "command": "sudo apt install apache2",
+          "description": "Installs the Apache web server on Ubuntu/Debian systems."
+        }
+      ],
+      "video": null
+    },
+    {
+      "slideId": 6,
+      "content": [
+        {
+          "type": "heading",
+          "value": "Starting and Checking Apache"
+        },
+        {
+          "type": "text",
+          "value": "After installation, the web server service must be started and checked to ensure it is running correctly."
+        }
+      ],
+      "video": null
+    }
+  ]
+}

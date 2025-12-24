@@ -1,0 +1,102 @@
+{
+  "classId": 21,
+  "topic": "Linux Boot Process and systemd",
+  "slides": [
+    {
+      "slideId": 1,
+      "content": [
+        {
+          "type": "heading",
+          "value": "Linux Boot Process and systemd"
+        },
+        {
+          "type": "definition",
+          "value": "The Linux boot process is the sequence of steps the system follows to start up and become ready for use, while systemd is the system manager that controls services during and after boot.",
+          "example": "Example: Starting the SSH service automatically when the system boots."
+        },
+        {
+          "type": "text",
+          "value": "Understanding how Linux boots helps users troubleshoot startup issues, manage services, and control what runs automatically. System administrators often need to start, stop, or disable services to improve performance and security."
+        }
+      ],
+      "video": null
+    },
+    {
+      "slideId": 2,
+      "content": [
+        {
+          "type": "heading",
+          "value": "Why Understanding the Boot Process Is Important"
+        },
+        {
+          "type": "text",
+          "value": "Understanding how Linux boots helps users troubleshoot startup issues, manage services, and control what runs automatically. System administrators often need to start, stop, or disable services to improve performance and security."
+        }
+      ],
+      "video": null
+    },
+    {
+      "slideId": 3,
+      "content": [
+        {
+          "type": "heading",
+          "value": "Stages of the Linux Boot Process"
+        },
+        {
+          "type": "list",
+          "items": [
+            "BIOS or UEFI",
+            "Bootloader",
+            "Kernel",
+            "Init system (systemd)",
+            "User space and login"
+          ]
+        }
+      ],
+      "video": null
+    },
+    {
+      "slideId": 4,
+      "content": [
+        {
+          "type": "heading",
+          "value": "BIOS / UEFI"
+        },
+        {
+          "type": "text",
+          "value": "When a computer is powered on, BIOS or UEFI performs hardware checks and looks for a bootable device such as a hard disk or SSD."
+        }
+      ],
+      "video": null
+    },
+    {
+      "slideId": 5,
+      "content": [
+        {
+          "type": "heading",
+          "value": "Bootloader"
+        },
+        {
+          "type": "text",
+          "value": "The bootloader loads the Linux kernel into memory. The most common Linux bootloader is GRUB, which also allows users to choose between operating systems."
+        }
+      ],
+      "video": null
+    },
+    {
+      "slideId": 6,
+      "content": [
+        {
+          "type": "heading",
+          "value": "Kernel"
+        },
+        {
+          "type": "definition",
+          "value": "The kernel is the core of the Linux operating system that manages hardware, memory, and processes.",
+          "example": "Example: The kernel controls CPU usage and device drivers."
+        }
+      ],
+      "video": null
+    }
+  ]
+}

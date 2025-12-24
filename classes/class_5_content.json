@@ -1,0 +1,99 @@
+{
+  "classId": 1,
+  "topic": "File and Directory Management",
+  "slides": [
+    {
+      "slideId": 1,
+      "content": [
+        {
+          "type": "heading",
+          "value": "Introduction"
+        },
+        {
+          "type": "text",
+          "value": "Managing files and directories is one of the most common tasks in Linux."
+        }
+      ]
+    },
+    {
+      "slideId": 2,
+      "content": [
+        {
+          "type": "heading",
+          "value": "Definitions"
+        },
+        {
+          "type": "definition",
+          "value": "A file is a container used to store data such as text, images, or programs.",
+          "example": "Example: notes.txt is a file and Documents is a directory."
+        },
+        {
+          "type": "definition",
+          "value": "A directory is a folder that holds files and other directories.",
+          "example": "Example: notes.txt is a file and Documents is a directory."
+        }
+      ]
+    },
+    {
+      "slideId": 3,
+      "content": [
+        {
+          "type": "heading",
+          "value": "Common File Management Tasks"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Creating files",
+            "Creating directories",
+            "Copying files and folders",
+            "Moving and renaming files",
+            "Deleting files and directories"
+          ]
+        }
+      ]
+    },
+    {
+      "slideId": 4,
+      "content": [
+        {
+          "type": "heading",
+          "value": "touch Command"
+        },
+        {
+          "type": "definition",
+          "value": "touch is a command used to create an empty file or update the timestamp of an existing file.",
+          "example": "Example: Creating a file named file1.txt."
+        }
+      ]
+    },
+    {
+      "slideId": 5,
+      "content": [
+        {
+          "type": "heading",
+          "value": "mkdir Command"
+        },
+        {
+          "type": "definition",
+          "value": "mkdir (make directory) is a command used to create new directories.",
+          "example": "Example: Creating a directory named projects."
+        }
+      ]
+    },
+    {
+      "slideId": 6,
+      "content": [
+        {
+          "type": "heading",
+          "value": "cp Command"
+        },
+        {
+          "type": "definition",
+          "value": "cp (copy) is a command used to copy files and directories from one location to another.",
+          "example": "Example: Copying file1.txt to another folder."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,212 @@
+﻿[
+    {
+        "classId":  1,
+        "topic":  "Introduction to Linux",
+        "description":  "Overview of Linux, its history, open-source concept, advantages, and comparison with other operating systems.",
+        "hash":  "95312E0545CDC5B7AA46AC8868DAA676BA55C1036A5D22278F646BB43E3C0F52",
+        "version":  "1.0"
+    },
+    {
+        "classId":  2,
+        "topic":  "Linux Installation and Desktop Environment",
+        "description":  "Installing Linux using virtual machines or dual boot and understanding Linux desktop environments and terminal basics.",
+        "hash":  "77CE378D5C7C0E19EFED79864D4E1AF7DA1FB0052C696102C9338331D0D864E5",
+        "version":  "1.0"
+    },
+    {
+        "classId":  3,
+        "topic":  "Linux File System Structure",
+        "description":  "Understanding the Linux directory hierarchy, important system directories, and absolute vs relative paths.",
+        "hash":  "AF72EC5D441FD953AAAA01F18114EBC49349A33518C56BE55138995F73DBD484",
+        "version":  "1.0"
+    },
+    {
+        "classId":  4,
+        "topic":  "Navigating the Linux File System",
+        "description":  "Learning how to move between directories and explore files using basic navigation commands.",
+        "hash":  "DEF7A448DF14FAE75C7595A7769E3148E6EC823B8FDA59B60FDB8A98777018D3",
+        "version":  "1.0"
+    },
+    {
+        "classId":  5,
+        "topic":  "File and Directory Management",
+        "description":  "Creating, copying, moving, renaming, and deleting files and directories in Linux.",
+        "hash":  "35866FBB02D41E66AD3A034870291402DE5A7ECE6468D38A27D56624D312164E",
+        "version":  "1.0"
+    },
+    {
+        "classId":  6,
+        "topic":  "Viewing and Reading Files",
+        "description":  "Viewing file contents using different commands and handling large text files efficiently.",
+        "hash":  "B2774725D6C283C206FC6CBF58B6FCF9FC83FD9E6A4C54585C042EF89CA14FD3",
+        "version":  "1.0"
+    },
+    {
+        "classId":  7,
+        "topic":  "Basic Text Editing",
+        "description":  "Editing text files using terminal-based editors like nano and vi.",
+        "hash":  "6FE2B21F2517CD87850D2B57F883AD56E5589475C3995B242916D0E47A2BBABB",
+        "version":  "1.0"
+    },
+    {
+        "classId":  8,
+        "topic":  "File Permissions and Ownership",
+        "description":  "Understanding Linux file permissions, ownership, and managing access using chmod and chown.",
+        "hash":  "B50D5342436D038680077C36948A25C84FD80877EC1E34B2E279F03EEDEFEF6F",
+        "version":  "1.0"
+    },
+    {
+        "classId":  9,
+        "topic":  "Searching Files and Text",
+        "description":  "Searching for files and patterns within files using Linux search and filtering tools.",
+        "hash":  "119C9032AF4F4CD931D79FE4AD6B40EEA65F22710AA4DAE401879577F7E6710A",
+        "version":  "1.0"
+    },
+    {
+        "classId":  10,
+        "topic":  "Linux Help System and Revision",
+        "description":  "Using manual pages and help commands along with practice and revision of beginner-level concepts.",
+        "hash":  "D5186AA412A87E70F39D60A76B4C7637E1C8255B09A7B3EAA0BB6F220221242F",
+        "version":  "1.0"
+    },
+    {
+        "classId":  11,
+        "topic":  "Input and Output Redirection",
+        "description":  "Understanding standard input, output, and error streams and redirecting command output.",
+        "hash":  "2E7ED0212F3D5D83BF96E098EF00BDECB2394672511C70E5106719ECA4270F48",
+        "version":  "1.0"
+    },
+    {
+        "classId":  12,
+        "topic":  "Pipes and Text Processing",
+        "description":  "Combining multiple commands using pipes and processing text with filters like sort, awk, and sed.",
+        "hash":  "877AF5810E05EF39B563496A7B47D63680EB31FC686C373908D3988B3D38E2BC",
+        "version":  "1.0"
+    },
+    {
+        "classId":  13,
+        "topic":  "Process Management",
+        "description":  "Managing running processes, background and foreground jobs, and terminating processes.",
+        "hash":  "36887F1B7F52F27DFD42D54508CDD4F83B82E015628C46CF8BC0A73B1766DA55",
+        "version":  "1.0"
+    },
+    {
+        "classId":  14,
+        "topic":  "Disk and File System Management",
+        "description":  "Monitoring disk usage, mounting and unmounting file systems, and understanding storage devices.",
+        "hash":  "2E2093AD82C0253516FF3DDB96CA4FEA602EE6BB3B26C0CF2AA63EB26F901629",
+        "version":  "1.0"
+    },
+    {
+        "classId":  15,
+        "topic":  "User and Group Management",
+        "description":  "Creating and managing users and groups and controlling access through permissions.",
+        "hash":  "CE2A2B3FDCFE9068BEB17C2BB8362320C5B682F6C32D3F20CA8BC077D4F390F0",
+        "version":  "1.0"
+    },
+    {
+        "classId":  16,
+        "topic":  "Package Management",
+        "description":  "Installing, updating, and removing software packages using Linux package managers.",
+        "hash":  "2512F0656C79FA2E8CB0D92C2FB2EF19015B73ADCED139EDB35D942EA17062B6",
+        "version":  "1.0"
+    },
+    {
+        "classId":  17,
+        "topic":  "Networking Basics",
+        "description":  "Understanding basic networking concepts, IP addressing, and testing network connectivity.",
+        "hash":  "7AE2B7628C6315DA950EDF4CF39973F0101C06BD82466EC169634BB4773A9D37",
+        "version":  "1.0"
+    },
+    {
+        "classId":  18,
+        "topic":  "Archiving and Compression",
+        "description":  "Creating and extracting compressed archives using tar, zip, and gzip tools.",
+        "hash":  "032964F91A9413CE68574CA17D3E684DEBCEB3D05E33BC742F7DDCFE2E60ED8D",
+        "version":  "1.0"
+    },
+    {
+        "classId":  19,
+        "topic":  "Shell Scripting Fundamentals",
+        "description":  "Introduction to shell scripting, variables, input/output, and writing simple scripts.",
+        "hash":  "C30B8AFCF64998F60619B47D4D0F5729B373EC6353F810EDCC5D026F82C1569C",
+        "version":  "1.0"
+    },
+    {
+        "classId":  20,
+        "topic":  "Task Scheduling with Cron",
+        "description":  "Automating repetitive tasks using cron jobs and understanding cron syntax.",
+        "hash":  "AE6D178224E2351366C78D3DFDEE5101F987329259F2CBC71CDE13B8C844F300",
+        "version":  "1.0"
+    },
+    {
+        "classId":  21,
+        "topic":  "Linux Boot Process and systemd",
+        "description":  "Understanding the Linux boot sequence, system initialization, and managing services with systemd.",
+        "hash":  "A402725FA92B51499A9BBA2AA301976AF22AEED833107AC8B64EB04560F554DF",
+        "version":  "1.0"
+    },
+    {
+        "classId":  22,
+        "topic":  "System Monitoring and Logs",
+        "description":  "Monitoring system performance and analyzing system logs for troubleshooting.",
+        "hash":  "88626E06703C7C8E549F9CA3DF50B84C5F0D3A6C44F18341D2CD8D953ABB617E",
+        "version":  "1.0"
+    },
+    {
+        "classId":  23,
+        "topic":  "Advanced Shell Scripting",
+        "description":  "Using conditions, loops, and functions to write more powerful and efficient shell scripts.",
+        "hash":  "6820F3A0CFB3D6692AADAC71446C7A8844C012ED6F334EBE5EE789AB923E800C",
+        "version":  "1.0"
+    },
+    {
+        "classId":  24,
+        "topic":  "File System Internals and Links",
+        "description":  "Understanding inodes, file metadata, and creating hard and symbolic links.",
+        "hash":  "1F450ED1914C38E18BDC6E05B462EB5CFCF256CB52A3EAF6974B80DB42985C57",
+        "version":  "1.0"
+    },
+    {
+        "classId":  25,
+        "topic":  "Advanced Networking and Remote Access",
+        "description":  "Secure remote access and file transfer using SSH, SCP, and rsync.",
+        "hash":  "CC6A7851D4C48CC6F19FF4B62B90B64A6976458F976C50A3ED04DB0AA3ED2328",
+        "version":  "1.0"
+    },
+    {
+        "classId":  26,
+        "topic":  "Linux Security and Firewall",
+        "description":  "Managing system security using sudo, firewalls, and basic SELinux concepts.",
+        "hash":  "390ACFC05D2B0C793DBF4BF821D3E18E832BA78D257414611C49658F943410C0",
+        "version":  "1.0"
+    },
+    {
+        "classId":  27,
+        "topic":  "Web Server Setup",
+        "description":  "Installing and managing web servers like Apache or Nginx and hosting a basic website.",
+        "hash":  "9FB08065141313A2E9F6CBB554A6DBAE17657E861B984A0CBF8251B1FDDFAC4A",
+        "version":  "1.0"
+    },
+    {
+        "classId":  28,
+        "topic":  "Database Basics on Linux",
+        "description":  "Introduction to database servers, basic database operations, and management using Linux.",
+        "hash":  "43B8C2A5BE5A446D1E869FEC884249A65FF294A569E73B006C7BB6CBCF271085",
+        "version":  "1.0"
+    },
+    {
+        "classId":  29,
+        "topic":  "Backup and Recovery",
+        "description":  "Planning and implementing backup strategies and restoring data using Linux tools.",
+        "hash":  "2DBC8BB9066CF6892AA2FC28BEED1BF4A48948B922B444ACAE533800CEFC93D8",
+        "version":  "1.0"
+    },
+    {
+        "classId":  30,
+        "topic":  "Troubleshooting and Final Project",
+        "description":  "Diagnosing common Linux issues and applying learned skills in a practical final project.",
+        "hash":  "5673E884D40058802E7FD5ED3B7E6CDFE43EAA992F85756F377BB9AAE254B50E",
+        "version":  "1.0"
+    }
+]

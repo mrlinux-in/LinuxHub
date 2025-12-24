@@ -1,0 +1,91 @@
+{
+  "classId": 25,
+  "topic": "Advanced Networking and Remote Access",
+  "slides": [
+    {
+      "slideId": 1,
+      "content": [
+        {
+          "type": "heading",
+          "value": "Advanced Networking and Remote Access"
+        },
+        {
+          "type": "definition",
+          "value": "Linux servers are often located in data centers or cloud environments and are managed remotely. Remote access allows administrators to control servers, troubleshoot issues, and transfer files without being physically present."
+        }
+      ],
+      "video": null
+    },
+    {
+      "slideId": 2,
+      "content": [
+        {
+          "type": "heading",
+          "value": "Why Remote Access Is Important"
+        },
+        {
+          "type": "text",
+          "value": "Linux servers are often located in data centers or cloud environments and are managed remotely. Remote access allows administrators to control servers, troubleshoot issues, and transfer files without being physically present."
+        }
+      ],
+      "video": null
+    },
+    {
+      "slideId": 3,
+      "content": [
+        {
+          "type": "heading",
+          "value": "SSH"
+        },
+        {
+          "type": "definition",
+          "value": "SSH (Secure Shell) is a protocol that allows secure remote login and command execution over a network."
+        }
+      ],
+      "video": null
+    },
+    {
+      "slideId": 4,
+      "content": [
+        {
+          "type": "heading",
+          "value": "How SSH Works"
+        },
+        {
+          "type": "text",
+          "value": "SSH encrypts all data sent between the client and the server, protecting usernames, passwords, and commands from being intercepted. It replaces older, insecure protocols like Telnet."
+        }
+      ],
+      "video": null
+    },
+    {
+      "slideId": 5,
+      "content": [
+        {
+          "type": "heading",
+          "value": "Connecting to a Remote Server"
+        },
+        {
+          "type": "code",
+          "command": "ssh user@remote_ip",
+          "description": "Connects to a remote Linux system using SSH."
+        }
+      ],
+      "video": null
+    },
+    {
+      "slideId": 6,
+      "content": [
+        {
+          "type": "heading",
+          "value": "SSH Key Authentication"
+        },
+        {
+          "type": "definition",
+          "value": "SSH key authentication uses a pair of cryptographic keys to authenticate users without passwords."
+        }
+      ],
+      "video": null
+    }
+  ]
+}

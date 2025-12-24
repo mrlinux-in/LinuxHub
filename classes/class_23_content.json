@@ -1,0 +1,85 @@
+{
+  "classId": 23,
+  "topic": "Advanced Shell Scripting",
+  "slides": [
+    {
+      "slideId": 1,
+      "content": [
+        {
+          "type": "heading",
+          "value": "Advanced Shell Scripting"
+        },
+        {
+          "type": "definition",
+          "value": "Advanced shell scripting involves using conditions, loops, and functions to create more powerful, flexible, and reusable Linux scripts."
+        }
+      ]
+    },
+    {
+      "slideId": 2,
+      "content": [
+        {
+          "type": "heading",
+          "value": "Why Advanced Scripting Is Important"
+        },
+        {
+          "type": "text",
+          "value": "Basic scripts run commands in sequence, but real-world automation often requires decision-making, repetition, and organization. Advanced scripting features allow scripts to respond to different situations, process large amounts of data, and perform complex administrative tasks automatically."
+        }
+      ]
+    },
+    {
+      "slideId": 3,
+      "content": [
+        {
+          "type": "heading",
+          "value": "Conditional Statements"
+        },
+        {
+          "type": "definition",
+          "value": "Conditional statements allow a script to make decisions based on conditions."
+        }
+      ]
+    },
+    {
+      "slideId": 4,
+      "content": [
+        {
+          "type": "heading",
+          "value": "if Statement"
+        },
+        {
+          "type": "definition",
+          "value": "The if statement executes commands only if a condition is true."
+        }
+      ]
+    },
+    {
+      "slideId": 5,
+      "content": [
+        {
+          "type": "heading",
+          "value": "Basic if Statement"
+        },
+        {
+          "type": "code",
+          "command": "[ if [ -f file.txt ] then echo \"File exists\" fi ]",
+          "description": "Explain what this command does and when to use it."
+        }
+      ]
+    },
+    {
+      "slideId": 6,
+      "content": [
+        {
+          "type": "heading",
+          "value": "Loops"
+        },
+        {
+          "type": "definition",
+          "value": "Loops allow scripts to repeat commands multiple times automatically."
+        }
+      ]
+    }
+  ]
+}

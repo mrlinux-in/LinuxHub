@@ -1,0 +1,100 @@
+{
+  "classId": 24,
+  "topic": "File System Internals and Links",
+  "slides": [
+    {
+      "slideId": 1,
+      "content": [
+        {
+          "type": "heading",
+          "value": "File System Internals and Links"
+        },
+        {
+          "type": "definition",
+          "value": "File system internals describe how Linux stores file information internally, while links allow multiple references to the same file.",
+          "example": "Example: Two different filenames pointing to the same data."
+        }
+      ],
+      "video": null
+    },
+    {
+      "slideId": 2,
+      "content": [
+        {
+          "type": "heading",
+          "value": "Why File System Internals Matter"
+        },
+        {
+          "type": "text",
+          "value": "Understanding file system internals helps users manage storage efficiently, troubleshoot file issues, and avoid accidental data loss. Links are commonly used in system directories, software installations, and shortcuts."
+        }
+      ],
+      "video": null
+    },
+    {
+      "slideId": 3,
+      "content": [
+        {
+          "type": "heading",
+          "value": "Inode"
+        },
+        {
+          "type": "definition",
+          "value": "An inode is a data structure that stores information about a file except its name and actual data.",
+          "example": "Example: File permissions and ownership are stored in the inode."
+        }
+      ],
+      "video": null
+    },
+    {
+      "slideId": 4,
+      "content": [
+        {
+          "type": "heading",
+          "value": "Information Stored in an Inode"
+        },
+        {
+          "type": "list",
+          "items": [
+            "File type",
+            "File permissions",
+            "Owner and group",
+            "File size",
+            "Timestamps",
+            "Disk location"
+          ]
+        }
+      ],
+      "video": null
+    },
+    {
+      "slideId": 5,
+      "content": [
+        {
+          "type": "heading",
+          "value": "Filename vs Inode"
+        },
+        {
+          "type": "text",
+          "value": "In Linux, filenames are not stored inside the file itself. Instead, filenames point to inodes. This allows multiple filenames (links) to reference the same inode."
+        }
+      ],
+      "video": null
+    },
+    {
+      "slideId": 6,
+      "content": [
+        {
+          "type": "heading",
+          "value": "Viewing Inode Number"
+        },
+        {
+          "type": "code",
+          "command": "ls -li",
+          "description": "Displays files along with their inode numbers."
+        }
+      ],
+      "video": null
+    }
+  ]
+}

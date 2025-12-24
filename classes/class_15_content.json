@@ -1,0 +1,97 @@
+{
+  "classId": 15,
+  "topic": "User and Group Management",
+  "slides": [
+    {
+      "slideId": 1,
+      "content": [
+        {
+          "type": "heading",
+          "value": "Why User and Group Management Is Important"
+        },
+        {
+          "type": "text",
+          "value": "Linux is a multi-user operating system. Many users can work on the same system at the same time. User and group management allows administrators to control who can access the system, what files they can use, and what actions they are allowed to perform."
+        }
+      ],
+      "video": null
+    },
+    {
+      "slideId": 2,
+      "content": [
+        {
+          "type": "heading",
+          "value": "Definition of a User"
+        },
+        {
+          "type": "definition",
+          "value": "A user is an individual account that can log in to a Linux system and perform actions based on assigned permissions.",
+          "example": "Example: A user named alice."
+        }
+      ],
+      "video": null
+    },
+    {
+      "slideId": 3,
+      "content": [
+        {
+          "type": "heading",
+          "value": "Definition of a Group"
+        },
+        {
+          "type": "definition",
+          "value": "A group is a collection of users that share common permissions.",
+          "example": "Example: A group named developers."
+        }
+      ],
+      "video": null
+    },
+    {
+      "slideId": 4,
+      "content": [
+        {
+          "type": "heading",
+          "value": "Types of Users in Linux"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Root user – system administrator",
+            "Normal users – regular system users",
+            "System users – used by services and applications"
+          ]
+        }
+      ],
+      "video": null
+    },
+    {
+      "slideId": 5,
+      "content": [
+        {
+          "type": "heading",
+          "value": "The Root User"
+        },
+        {
+          "type": "text",
+          "value": "The root user is the superuser in Linux. It has full access to the system and can perform any action. Because of its power, the root account must be used carefully to avoid accidental system damage."
+        }
+      ],
+      "video": null
+    },
+    {
+      "slideId": 6,
+      "content": [
+        {
+          "type": "heading",
+          "value": "sudo Command"
+        },
+        {
+          "type": "definition",
+          "value": "sudo allows a normal user to execute commands with administrator (root) privileges.",
+          "example": "Example: Installing software using sudo."
+        }
+      ],
+      "video": null
+    }
+  ]
+}

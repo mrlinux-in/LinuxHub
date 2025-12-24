@@ -1,0 +1,96 @@
+{
+  "classId": 13,
+  "topic": "Process Management",
+  "slides": [
+    {
+      "slideId": 1,
+      "content": [
+        {
+          "type": "heading",
+          "value": "Process Management"
+        },
+        {
+          "type": "definition",
+          "value": "Process management in Linux is the ability to view, monitor, control, and terminate running programs (processes).",
+          "example": "Example: Stopping a frozen application using the kill command."
+        },
+        {
+          "type": "text",
+          "value": "A process is a program that is currently running in the system. Every time you open an application or run a command, Linux creates a process for it. Linux can run thousands of processes at the same time while managing system resources efficiently."
+        }
+      ]
+    },
+    {
+      "slideId": 2,
+      "content": [
+        {
+          "type": "heading",
+          "value": "What Is a Process?"
+        },
+        {
+          "type": "text",
+          "value": "A process is a program that is currently running in the system. Every time you open an application or run a command, Linux creates a process for it. Linux can run thousands of processes at the same time while managing system resources efficiently."
+        }
+      ]
+    },
+    {
+      "slideId": 3,
+      "content": [
+        {
+          "type": "heading",
+          "value": "Process ID (PID)"
+        },
+        {
+          "type": "definition",
+          "value": "A Process ID (PID) is a unique number assigned to every running process in Linux.",
+          "example": "Example: PID 2456 represents a specific running program."
+        }
+      ]
+    },
+    {
+      "slideId": 4,
+      "content": [
+        {
+          "type": "heading",
+          "value": "Why Process Management Is Important"
+        },
+        {
+          "type": "text",
+          "value": "Process management helps users monitor system performance, identify high resource usage, stop unwanted programs, and troubleshoot system issues. System administrators rely heavily on process management to keep systems stable."
+        }
+      ]
+    },
+    {
+      "slideId": 5,
+      "content": [
+        {
+          "type": "heading",
+          "value": "ps Command"
+        },
+        {
+          "type": "definition",
+          "value": "ps (process status) is a command used to display information about running processes.",
+          "example": "Example: Viewing processes owned by the current user."
+        }
+      ]
+    },
+    {
+      "slideId": 6,
+      "content": [
+        {
+          "type": "heading",
+          "value": "Using ps"
+        },
+        {
+          "type": "code",
+          "command": [
+            "ps",
+            "ps -ef",
+            "ps aux"
+          ],
+          "description": "Displays running processes in various formats."
+        }
+      ]
+    }
+  ]
+}

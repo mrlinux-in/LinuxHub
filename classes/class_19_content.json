@@ -1,0 +1,96 @@
+{
+  "classId": 19,
+  "topic": "Shell Scripting Fundamentals",
+  "slides": [
+    {
+      "slideId": 1,
+      "content": [
+        {
+          "type": "heading",
+          "value": "Shell Scripting Fundamentals"
+        },
+        {
+          "type": "definition",
+          "value": "Shell scripting is the process of writing a series of Linux commands in a file so they can be executed automatically as a program.",
+          "example": "Example: A script that checks disk usage and prints a message."
+        }
+      ],
+      "video": null
+    },
+    {
+      "slideId": 2,
+      "content": [
+        {
+          "type": "text",
+          "value": "Shell scripting allows users to automate repetitive tasks, reduce manual work, and ensure consistency. System administrators use shell scripts for backups, monitoring, software installation, and system maintenance. Even simple scripts can save a lot of time."
+        }
+      ],
+      "video": null
+    },
+    {
+      "slideId": 3,
+      "content": [
+        {
+          "type": "definition",
+          "value": "A shell is a program that interprets user commands and communicates with the Linux operating system.",
+          "example": "Example: Bash (Bourne Again Shell)."
+        },
+        {
+          "type": "list",
+          "items": [
+            "bash – most common and beginner friendly",
+            "sh – original shell",
+            "zsh – advanced interactive shell",
+            "fish – user-friendly shell"
+          ]
+        }
+      ],
+      "video": null
+    },
+    {
+      "slideId": 4,
+      "content": [
+        {
+          "type": "definition",
+          "value": "A shell script is a text file containing Linux commands executed in sequence by a shell.",
+          "example": "Example: A file named backup.sh."
+        },
+        {
+          "type": "text",
+          "value": "Shell scripts usually have the .sh extension. They must have execute permission and start with a special line called a shebang to tell Linux which shell to use."
+        }
+      ],
+      "video": null
+    },
+    {
+      "slideId": 5,
+      "content": [
+        {
+          "type": "code",
+          "value": [
+            "#!/bin/bash",
+            "echo \"Hello, Welcome to Shell Scripting\""
+          ]
+        }
+      ],
+      "video": null
+    },
+    {
+      "slideId": 6,
+      "content": [
+        {
+          "type": "stepByStep",
+          "steps": [
+            "Create a file using nano hello.sh",
+            "Add the shebang line",
+            "Write commands inside the file",
+            "Save and exit",
+            "Give execute permission",
+            "Run the script"
+          ]
+        }
+      ],
+      "video": null
+    }
+  ]
+}

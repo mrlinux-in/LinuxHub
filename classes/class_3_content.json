@@ -1,0 +1,113 @@
+{
+  "classId": 1,
+  "topic": "Linux File System Structure",
+  "slides": [
+    {
+      "slideId": 1,
+      "content": [
+        {
+          "type": "heading",
+          "value": "The Linux File System Structure"
+        },
+        {
+          "type": "text",
+          "value": "The Linux file system structure is the organized layout used by Linux to store files and directories, starting from a single root directory and branching into standard system folders."
+        },
+        {
+          "type": "list",
+          "items": [
+            "Single root directory /",
+            "Hierarchical (tree-like) structure",
+            "Case-sensitive file names",
+            "Everything is treated as a file"
+          ]
+        }
+      ],
+      "video": null
+    },
+    {
+      "slideId": 2,
+      "content": [
+        {
+          "type": "heading",
+          "value": "Key Features of Linux File System"
+        },
+        {
+          "type": "text",
+          "value": "This structured approach helps Linux manage system files, user data, applications, and hardware efficiently."
+        }
+      ],
+      "video": null
+    },
+    {
+      "slideId": 3,
+      "content": [
+        {
+          "type": "heading",
+          "value": "Important Linux Directories"
+        },
+        {
+          "type": "list",
+          "items": [
+            "/ – Root directory",
+            "/home – User home directories",
+            "/bin – Essential user commands",
+            "/sbin – System administration commands",
+            "/etc – Configuration files",
+            "/var – Variable data like logs",
+            "/tmp – Temporary files",
+            "/usr – User applications and libraries"
+          ]
+        }
+      ],
+      "video": null
+    },
+    {
+      "slideId": 4,
+      "content": [
+        {
+          "type": "heading",
+          "value": "Path"
+        },
+        {
+          "type": "definition",
+          "value": "A path is the location of a file or directory in the Linux file system.",
+          "example": "Example: /home/user/file.txt"
+        }
+      ],
+      "video": null
+    },
+    {
+      "slideId": 5,
+      "content": [
+        {
+          "type": "heading",
+          "value": "Absolute and Relative Paths"
+        },
+        {
+          "type": "text",
+          "value": "An absolute path starts from the root directory / and shows the full location of a file or directory, regardless of the current working directory."
+        }
+      ],
+      "video": null
+    },
+    {
+      "slideId": 6,
+      "content": [
+        {
+          "type": "heading",
+          "value": "Code – Viewing Directory Structure"
+        },
+        {
+          "type": "code",
+          "value": [
+            "ls /",
+            "ls /home",
+            "tree /"
+          ]
+        }
+      ],
+      "video": null
+    }
+  ]
+}

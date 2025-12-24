@@ -1,0 +1,116 @@
+{
+  "classId": 26,
+  "topic": "Linux Security and Firewall",
+  "slides": [
+    {
+      "slideId": 1,
+      "content": [
+        {
+          "type": "heading",
+          "value": "Linux Security and Firewall"
+        },
+        {
+          "type": "definition",
+          "value": "Linux security involves protecting the system from unauthorized access and attacks, while firewalls control network traffic entering and leaving the system.",
+          "example": "Example: Allowing only SSH traffic and blocking all other incoming connections."
+        },
+        {
+          "type": "text",
+          "value": "Linux systems often run critical servers and services. Without proper security, systems can be compromised, data can be stolen, and services can be disrupted. Linux security uses user privileges, firewalls, and security policies to protect the system and ensure safe operation."
+        }
+      ],
+      "video": null
+    },
+    {
+      "slideId": 2,
+      "content": [
+        {
+          "type": "heading",
+          "value": "Why sudo Is Safer Than Root Login"
+        },
+        {
+          "type": "text",
+          "value": "Using sudo avoids logging in as root, reduces accidental damage, and keeps a log of administrative actions. This improves system security and accountability."
+        },
+        {
+          "type": "code",
+          "command": "sudo apt install nginx",
+          "description": "Runs the command with administrator privileges."
+        }
+      ],
+      "video": null
+    },
+    {
+      "slideId": 3,
+      "content": [
+        {
+          "type": "heading",
+          "value": "UFW (Uncomplicated Firewall)"
+        },
+        {
+          "type": "definition",
+          "value": "UFW is a simple firewall management tool for Linux.",
+          "example": "Example: Allowing SSH access through the firewall."
+        },
+        {
+          "type": "code",
+          "command": "sudo ufw enable",
+          "description": "Enables the UFW firewall."
+        }
+      ],
+      "video": null
+    },
+    {
+      "slideId": 4,
+      "content": [
+        {
+          "type": "heading",
+          "value": "Allowing and Blocking Ports"
+        },
+        {
+          "type": "code",
+          "value": [
+            "sudo ufw allow ssh",
+            "sudo ufw allow 80",
+            "sudo ufw deny 23"
+          ]
+        }
+      ],
+      "video": null
+    },
+    {
+      "slideId": 5,
+      "content": [
+        {
+          "type": "heading",
+          "value": "Checking Firewall Status"
+        },
+        {
+          "type": "text",
+          "value": "You can check firewall rules and status to verify what traffic is allowed or blocked."
+        },
+        {
+          "type": "code",
+          "command": "sudo ufw status",
+          "description": "Displays firewall rules and status."
+        }
+      ],
+      "video": null
+    },
+    {
+      "slideId": 6,
+      "content": [
+        {
+          "type": "heading",
+          "value": "firewalld"
+        },
+        {
+          "type": "definition",
+          "value": "firewalld is a dynamic firewall manager commonly used on Red Hat–based Linux systems.",
+          "example": "Example: Managing firewall rules using zones."
+        }
+      ],
+      "video": null
+    }
+  ]
+}

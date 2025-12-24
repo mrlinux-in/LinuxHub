@@ -1,0 +1,102 @@
+{
+  "classId": 12,
+  "topic": "Pipes and Text Processing",
+  "slides": [
+    {
+      "slideId": 1,
+      "content": [
+        {
+          "type": "heading",
+          "value": "Pipes and Text Processing"
+        },
+        {
+          "type": "definition",
+          "value": "Pipes and text processing in Linux allow users to combine multiple commands so that the output of one command becomes the input of another command."
+        },
+        {
+          "type": "text",
+          "value": "Linux commands are designed to do one job well. Pipes allow users to connect these small commands together to perform complex tasks efficiently."
+        }
+      ],
+      "video": null
+    },
+    {
+      "slideId": 2,
+      "content": [
+        {
+          "type": "heading",
+          "value": "Basic Pipe Example"
+        },
+        {
+          "type": "code",
+          "command": "ls | sort",
+          "description": "Lists files and sorts them alphabetically."
+        }
+      ],
+      "video": null
+    },
+    {
+      "slideId": 3,
+      "content": [
+        {
+          "type": "heading",
+          "value": "Understanding Command Pipelines"
+        },
+        {
+          "type": "text",
+          "value": "A pipeline can have two or more commands connected by pipes. Data flows from left to right through the pipeline."
+        }
+      ],
+      "video": null
+    },
+    {
+      "slideId": 4,
+      "content": [
+        {
+          "type": "heading",
+          "value": "Using sort"
+        },
+        {
+          "type": "code",
+          "value": [
+            "sort names.txt",
+            "sort -n numbers.txt",
+            "sort -r names.txt"
+          ]
+        }
+      ],
+      "video": null
+    },
+    {
+      "slideId": 5,
+      "content": [
+        {
+          "type": "heading",
+          "value": "Using uniq"
+        },
+        {
+          "type": "code",
+          "value": [
+            "sort names.txt | uniq",
+            "sort names.txt | uniq -c"
+          ]
+        }
+      ],
+      "video": null
+    },
+    {
+      "slideId": 6,
+      "content": [
+        {
+          "type": "heading",
+          "value": "Why sort Is Needed Before uniq"
+        },
+        {
+          "type": "text",
+          "value": "The uniq command only removes duplicate lines that are next to each other. Therefore, input must be sorted first to group identical lines together."
+        }
+      ],
+      "video": null
+    }
+  ]
+}

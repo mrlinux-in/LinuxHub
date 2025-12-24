@@ -1,0 +1,127 @@
+{
+  "classId": 2,
+  "topic": "Linux Installation and Desktop Environment",
+  "slides": [
+    {
+      "slideId": 1,
+      "content": [
+        {
+          "type": "heading",
+          "value": "Linux Installation and Desktop Environment"
+        },
+        {
+          "type": "definition",
+          "value": "The process of setting up a Linux operating system on a computer or virtual machine so that users can start using Linux features, applications, and commands.",
+          "example": "Installing Ubuntu Linux on a laptop or inside VirtualBox."
+        },
+        {
+          "type": "text",
+          "value": "Installing Linux allows users to learn, practice, and use Linux in real-world environments. Linux can be installed alongside another operating system or inside a virtual machine, making it safe and flexible for beginners. Learning installation also helps users understand system setup and configuration."
+        },
+        {
+          "type": "list",
+          "items": [
+            "Install Linux on a physical computer",
+            "Install Linux using a virtual machine",
+            "Dual boot Linux with another operating system",
+            "Use Linux in live mode (without installation)"
+          ]
+        }
+      ],
+      "video": null
+    },
+    {
+      "slideId": 2,
+      "content": [
+        {
+          "type": "heading",
+          "value": "Why Beginners Should Use Virtual Machines"
+        },
+        {
+          "type": "text",
+          "value": "Virtual machines are best for beginners because they do not affect the existing operating system. If anything goes wrong, the virtual machine can be deleted and recreated easily. This makes learning Linux safe and stress-free."
+        },
+        {
+          "type": "list",
+          "items": [
+            "No risk to your main operating system",
+            "Easy to create and delete",
+            "Run multiple operating systems",
+            "Ideal for practice and experiments"
+          ]
+        }
+      ],
+      "video": null
+    },
+    {
+      "slideId": 3,
+      "content": [
+        {
+          "type": "heading",
+          "value": "Step By Step – Installing Linux Using VirtualBox"
+        },
+        {
+          "type": "stepByStep",
+          "steps": [
+            "Download and install VirtualBox on your computer",
+            "Download a Linux ISO file (for example, Ubuntu)",
+            "Open VirtualBox and create a new virtual machine",
+            "Select the downloaded Linux ISO file",
+            "Allocate memory and disk space",
+            "Start the virtual machine",
+            "Follow on-screen installation instructions",
+            "Restart after installation is complete"
+          ]
+        }
+      ],
+      "video": null
+    },
+    {
+      "slideId": 4,
+      "content": [
+        {
+          "type": "heading",
+          "value": "Tip – Why Ubuntu for Beginners?"
+        },
+        {
+          "type": "tip",
+          "value": "Always choose Ubuntu for your first Linux installation because it is beginner-friendly and well-documented."
+        }
+      ],
+      "video": null
+    },
+    {
+      "slideId": 5,
+      "content": [
+        {
+          "type": "heading",
+          "value": "What Is a Desktop Environment?"
+        },
+        {
+          "type": "text",
+          "value": "A desktop environment is the graphical user interface (GUI) that allows users to interact with Linux using windows, icons, menus, and mouse clicks instead of commands."
+        }
+      ],
+      "video": null
+    },
+    {
+      "slideId": 6,
+      "content": [
+        {
+          "type": "heading",
+          "value": "Popular Linux Desktop Environments"
+        },
+        {
+          "type": "list",
+          "items": [
+            "GNOME – modern and simple",
+            "KDE Plasma – highly customizable",
+            "XFCE – lightweight and fast",
+            "LXDE – very low resource usage"
+          ]
+        }
+      ],
+      "video": null
+    }
+  ]
+}

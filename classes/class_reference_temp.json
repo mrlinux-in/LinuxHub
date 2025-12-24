@@ -1,0 +1,143 @@
+{
+  "classId": 0,
+  "topic": "REPLACE_WITH_TOPIC_TITLE",
+  "slides": [
+    {
+      "slideId": 1,
+      "content": [
+        {
+          "type": "heading",
+          "value": "Slide 1 main heading"
+        },
+        {
+          "type": "definition",
+          "value": "Short, clear definition of the key concept for this slide.",
+          "example": "Example: \"An operating system is software that manages hardware and other software on a computer.\""
+        },
+        {
+          "type": "text",
+          "value": "A few sentences that explain the concept in simple language. Try to keep each paragraph focused on one idea.",
+          "example": "You can add a real-world analogy here to make the idea easier to understand."
+        },
+        {
+          "type": "list",
+          "items": [
+            "First key point about this concept",
+            "Second key point that adds more detail",
+            "Third key point or example"
+          ]
+        },
+        {
+          "type": "tip",
+          "value": "A friendly tip, best practice, or common mistake to avoid related to this concept."
+        }
+      ],
+      "video": {
+        "platform": "youtube",
+        "url": "https://youtu.be/rrB13utjYV4?si=lJEaVz7FKX9KWfwT"
+      }
+    },
+
+    {
+      "slideId": 2,
+      "content": [
+        {
+          "type": "heading",
+          "value": "Hands‑on practice / example"
+        },
+        {
+          "type": "text",
+          "value": "Use this slide to walk the learner through a practical example or demo.",
+          "example": "For example, show how to run a basic Linux command and interpret the output."
+        },
+        {
+          "type": "stepByStep",
+          "steps": [
+            "Describe step 1 of the process in simple language.",
+            "Describe step 2, including what the learner should see.",
+            "Describe step 3, and mention how to confirm it worked."
+          ]
+        },
+        {
+          "type": "code",
+          "command": "example command or code snippet",
+          "description": "Explain what this command/snippet does and when to use it."
+        }
+      ],
+      "video": null
+    },
+
+    {
+      "slideId": 3,
+      "content": [
+        {
+          "type": "heading",
+          "value": "Visual example / diagram"
+        },
+        {
+          "type": "text",
+          "value": "Use images to show visual concepts, diagrams, screenshots, or examples that help learners understand better."
+        },
+        {
+          "type": "image",
+          "url": "https://example.com/path/to/your/image.png",
+          "alt": "Descriptive caption explaining what the image shows"
+        },
+        {
+          "type": "text",
+          "value": "Add explanatory text below the image to provide context or point out important details."
+        }
+      ],
+      "video": null
+    },
+
+    {
+      "slideId": 4,
+      "content": [
+        {
+          "type": "heading",
+          "value": "Comparison / summary table (optional)"
+        },
+        {
+          "type": "table",
+          "value": [
+            ["Column 1 header", "Column 2 header"],
+            ["Row 1 label", "Row 1 value"],
+            ["Row 2 label", "Row 2 value"]
+          ]
+        },
+        {
+          "type": "text",
+          "value": "Use this slide to compare options or to summarize what was learned on previous slides."
+        }
+      ],
+      "video": null
+    },
+
+    {
+      "slideId": 5,
+      "content": [
+        {
+          "type": "heading",
+          "value": "Quick knowledge check"
+        },
+        {
+          "type": "quiz",
+          "question": "Write a clear, single‑concept question to check understanding.",
+          "options": [
+            "Option A (incorrect)",
+            "Option B (correct)",
+            "Option C (incorrect)",
+            "Option D (incorrect)"
+          ],
+          "correctAnswer": 1
+        },
+        {
+          "type": "tip",
+          "value": "Optionally add a short explanation for why the correct answer is right."
+        }
+      ],
+      "video": null
+    }
+  ]
+}

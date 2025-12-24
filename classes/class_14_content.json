@@ -1,0 +1,101 @@
+{
+  "classId": 14,
+  "topic": "Disk and File System Management",
+  "slides": [
+    {
+      "slideId": 1,
+      "content": [
+        {
+          "type": "heading",
+          "value": "Introduction"
+        },
+        {
+          "type": "definition",
+          "value": "Disk and file system management in Linux involves checking disk usage, understanding storage devices, and mounting or unmounting file systems.",
+          "example": "Example: Checking free disk space using the df command."
+        }
+      ],
+      "video": null
+    },
+    {
+      "slideId": 2,
+      "content": [
+        {
+          "type": "heading",
+          "value": "Why Disk Management Is Important"
+        },
+        {
+          "type": "text",
+          "value": "Linux systems rely on disks to store operating system files, applications, and user data. If a disk becomes full, the system may slow down or stop working correctly."
+        }
+      ],
+      "video": null
+    },
+    {
+      "slideId": 3,
+      "content": [
+        {
+          "type": "heading",
+          "value": "Common Linux File Systems"
+        },
+        {
+          "type": "list",
+          "items": [
+            "ext4 – Most commonly used",
+            "xfs – High-performance file system",
+            "vfat – Used for USB drives",
+            "ntfs – Windows file system (supported in Linux)"
+          ]
+        }
+      ],
+      "video": null
+    },
+    {
+      "slideId": 4,
+      "content": [
+        {
+          "type": "heading",
+          "value": "df Command"
+        },
+        {
+          "type": "definition",
+          "value": "df (disk free) is a command used to display available and used disk space on file systems.",
+          "example": "Example: Checking how much disk space is left."
+        }
+      ],
+      "video": null
+    },
+    {
+      "slideId": 5,
+      "content": [
+        {
+          "type": "heading",
+          "value": "Using df"
+        },
+        {
+          "type": "code",
+          "value": [
+            "df",
+            "df -h"
+          ]
+        }
+      ],
+      "video": null
+    },
+    {
+      "slideId": 6,
+      "content": [
+        {
+          "type": "heading",
+          "value": "du Command"
+        },
+        {
+          "type": "definition",
+          "value": "du (disk usage) is a command used to check the size of files and directories.",
+          "example": "Example: Finding which directory uses the most space."
+        }
+      ],
+      "video": null
+    }
+  ]
+}

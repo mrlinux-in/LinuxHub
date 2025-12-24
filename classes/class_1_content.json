@@ -1,0 +1,110 @@
+{
+  "classId": 1,
+  "topic": "Introduction to Linux",
+  "slides": [
+    {
+      "slideId": 1,
+      "content": [
+        {
+          "type": "heading",
+          "value": "What is an Operating System?"
+        },
+        {
+          "type": "definition",
+          "value": "Linux is a free and open-source operating system that manages computer hardware and software resources and allows users to interact with the system using graphical interfaces or command-line tools.",
+          "example": "Example: Ubuntu, Fedora, and CentOS are popular Linux operating systems."
+        },
+        {
+          "type": "text",
+          "value": "An operating system (OS) is the main software that controls a computer. It acts as a bridge between the user and the hardware. Without an operating system, a computer cannot perform tasks like running applications, managing files, or connecting to the internet."
+        }
+      ],
+      "video": {
+        "platform": "youtube",
+        "url": "https://youtu.be/zA3vmx0GaO8?si=l3zf_WdxKM9hQMDW"
+      }
+    },
+    {
+      "slideId": 2,
+      "content": [
+        {
+          "type": "heading",
+          "value": "History of Linux"
+        },
+        {
+          "type": "text",
+          "value": "Linux was created in 1991 by a student named Linus Torvalds. He wanted to build a free operating system kernel that anyone could use, modify, and share. Over time, developers from around the world contributed to Linux, making it powerful, stable, and secure."
+        }
+      ],
+      "video": null
+    },
+    {
+      "slideId": 3,
+      "content": [
+        {
+          "type": "heading",
+          "value": "Why Linux Was Created"
+        },
+        {
+          "type": "list",
+          "items": [
+            "To create a free alternative to expensive operating systems",
+            "To allow users to modify and customize the system",
+            "To encourage collaboration and learning",
+            "To build a stable and secure operating system"
+          ]
+        }
+      ],
+      "video": null
+    },
+    {
+      "slideId": 4,
+      "content": [
+        {
+          "type": "heading",
+          "value": "Open Source Concept"
+        },
+        {
+          "type": "definition",
+          "value": "Open source means that the source code of software is publicly available and anyone can view, modify, and distribute it legally.",
+          "example": "Example: Linux source code can be downloaded and customized by anyone."
+        }
+      ],
+      "video": null
+    },
+    {
+      "slideId": 5,
+      "content": [
+        {
+          "type": "heading",
+          "value": "Benefits of Open Source Software"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Free to use",
+            "Highly secure due to community review",
+            "Customizable for different needs",
+            "No vendor lock-in",
+            "Large community support"
+          ]
+        }
+      ],
+      "video": null
+    },
+    {
+      "slideId": 6,
+      "content": [
+        {
+          "type": "heading",
+          "value": "Advantages of Linux"
+        },
+        {
+          "type": "text",
+          "value": "Linux is known for its performance, security, and flexibility. Unlike many commercial operating systems, Linux does not require expensive licenses and works efficiently even on older hardware."
+        }
+      ],
+      "video": null
+    }
+  ]
+}
