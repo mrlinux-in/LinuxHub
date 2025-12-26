@@ -1,153 +1,51 @@
-# 🌐 **LinuxHub**
-### _Learn Linux the Smart Way — One Lesson at a Time_
+# LinuxHub - Master Linux on the Go!
+
+![Kotlin](https://img.shields.io/badge/Kotlin-Current-purple?logo=kotlin&logoColor=white) ![Android](https://img.shields.io/badge/Platform-Android-green?logo=android&logoColor=white) [![Web App](https://img.shields.io/badge/Web_App-Available-blue?logo=google-chrome&logoColor=white)](https://linuxhub.mrlinux.in)
+
+**LinuxHub** is your ultimate pocket guide to mastering the Linux command line. Whether you are a beginner taking your first steps or a seasoned pro looking for a quick reference, LinuxHub offers a seamless, interactive, and modern learning experience.
 
 <p align="center">
-  <img src="https://img.shields.io/badge/Platform-Android-blue?style=for-the-badge" />
-  <img src="https://img.shields.io/badge/Version-1.0.0-green?style=for-the-badge" />
-  <img src="https://img.shields.io/badge/Status-Active-success?style=for-the-badge" />
-  <img src="https://img.shields.io/badge/License-MIT-lightgrey?style=for-the-badge" />
+  <a href="https://play.google.com/store/apps/details?id=in.mrlinux.linuxhub">
+    <img alt="Get it on Google Play" height="80" src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png"/>
+  </a>
+  &nbsp;&nbsp;&nbsp;&nbsp;
+  <a href="https://linuxhub.mrlinux.in">
+    <img alt="Try on Web" height="80" src="https://img.shields.io/badge/Try_on_Web-Click_Here-blue?style=for-the-badge&logo=google-chrome&logoColor=white"/>
+  </a>
 </p>
 
----
+## 🚀 Why LinuxHub?
 
-## 🚀 About LinuxHub
-**LinuxHub** is a beginner-friendly Android learning app designed to teach Linux step by step.  
-It provides structured lessons, real command examples, in-app videos, and guidance without overwhelming new learners.
+LinuxHub isn't just a cheat sheet; it's a complete learning ecosystem.
 
-If you're someone who wants to understand Linux from scratch — **this app is made for you.**
+*   📚 **Massive Library**: Access over **6000+** Linux commands and **500+** essential tips curated for all skill levels.
+*   🧠 **Test Your Knowledge**: Challenge yourself with **3000+** interactive quiz questions to reinforce your learning.
+*   🏆 **Global Leaderboard**: Compete with Linux geeks from around the world and climb the ranks to prove your expertise.
+*   🌍 **Cross-Platform Learning**: Start on your phone and continue on the web at **[linuxhub.mrlinux.in](https://linuxhub.mrlinux.in)**.
+*   🌙 **Premium Experience**: Enjoy a sleek, modern UI with a fully supported Dark Mode that's easy on the eyes.
+*   ⚡ **Offline Capable**: Learn anytime, anywhere.
 
----
+## 🛠️ Tech Stack
 
-## 📱 Key Features
-- 📚 Beginner-focused Linux lessons  
-- 💡 Real command examples (`ls`, `pwd`, `cd`, etc.)
-- ▶️ YouTube lessons inside the app (no external browser)
-- 🔔 Firebase push notifications for new topics
-- 🔄 Auto-fetches updated content from GitHub
-- 🔐 Lesson integrity protected with SHA-256 hash validation
-- 🧭 Simple, clean UI made for learners
+Built with modern Android development practices to ensure performance and maintainability.
 
----
+*   **Language**: Kotlin
+*   **Architecture**: MVVM (Model-View-ViewModel)
+*   **UI**: Material Design 3, ViewBinding, Spring Animations
+*   **Data**: Room Database (Local), Firebase Realtime Database (Remote)
+*   **Networking**: Retrofit
+*   **Auth**: Firebase Authentication (Google/Email)
+*   **Other**: Coroutines, Jetpack Navigation, Firebase Cloud Messaging
 
-## 🧩 How the App Works
-```
-Android App
-    ↓
-Loads index → cloud_linux_classes_index.json
-    ↓
-Fetches lesson files → class_<ID>_content.json
-    ↓
-Displays lesson (text + commands + video)
-```
+## 🌟 Support the Project
+
+If you found LinuxHub helpful or simply like what we're building, please consider giving this repository a star! It helps us reach more learners.
+
+**[Click here to Star the Repo!](https://github.com/mrlinux-in/MrLinux)** 
+*(Note: Replace with actual repo link if different)*
 
 ---
-
-## 📂 Project Structure
-
-```
-LinuxHub/
-│
-├── classes/
-│   ├── class_1_content.json
-│   ├── class_2_content.json
-│   ├── ...
-│   ├── cloud_linux_classes_index.json   # All lessons listed here
-│
-├── txt_classes/                         # Raw lesson sources before processing
-│
-├── scripts/
-│   └── update-class-hashes.ps1          # Generates SHA256 and updates index
-│
-├── app/                                 # Android source code
-│
-└── README.md
-```
-
----
-
-## 🌐 Content Fetch URLs (Used by App)
-
-| Purpose | URL |
-|--------|-----|
-| Index file | `https://raw.githubusercontent.com/mrlinux-in/LinuxHub/main/classes/cloud_linux_classes_index.json` |
-| Class file format | `https://raw.githubusercontent.com/mrlinux-in/LinuxHub/main/classes/class_<ID>_content.json` |
-
-Example:
-```
-https://raw.githubusercontent.com/mrlinux-in/LinuxHub/main/classes/class_1_content.json
-```
-
----
-
-## 🔄 Content Update Workflow
-
-1. Add/edit text in `txt_classes/classX.txt`
-2. Run Python script to generate JSON
-3. Run hash script:
-   ```powershell
-   ./scripts/update-class-hashes.ps1
-   ```
-4. Commit & push to GitHub
-5. The app automatically pulls new content
-
----
-
-## 🛠️ Development Setup
-
-### Clone the repo
-```bash
-git clone https://github.com/mrlinux-in/LinuxHub.git
-cd LinuxHub
-```
-
-### Update lesson hashes
-```powershell
-.\scripts\update-class-hashes.ps1
-```
-
-### Open in Android Studio
-```
-File → Open → Select project folder → Run
-```
-
----
-
-## 🔥 Roadmap
-- [ ] Offline lesson mode
-- [ ] Fullscreen & improved video player
-- [ ] Progress tracking & profiles
-- [ ] In-app quizzes and practice tasks
-- [ ] Terminal simulation (beginner safe)
-- [ ] Shareable certificates for completion
-
----
-
-## ❤️ Contributing
-We welcome:
-- 🐞 Bug reports
-- 💡 Feature suggestions
-- 📚 Lesson content improvements
-- 🤝 Pull requests
-
-Open an issue or PR anytime!
-👉 https://github.com/mrlinux-in/LinuxHub/issues
-
----
-
-## 📄 License
-This project is available under the **MIT License**.  
-Feel free to use, modify, improve & share.
-
----
-
-## ⭐ Support the Project
-If you like LinuxHub or want more lessons:
-**Please star the repo! It really helps.**
-
-👉 https://github.com/mrlinux-in/LinuxHub ⭐
-
----
-
+*Happy Learning!*
 <p align="center">
   Made with ❤️ for Linux learners  
 </p>
