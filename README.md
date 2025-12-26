@@ -6,11 +6,11 @@
 
 <p align="center">
   <a href="https://play.google.com/store/apps/details?id=in.mrlinux.linuxhub">
-    <img alt="Get it on Google Play" height="80" src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png"/>
+    <img alt="Get it on Google Play" height="60" src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png"/>
   </a>
   &nbsp;&nbsp;&nbsp;&nbsp;
   <a href="https://linuxhub.mrlinux.in">
-    <img alt="Try on Web" height="80" src="https://img.shields.io/badge/Try_on_Web-Click_Here-blue?style=for-the-badge&logo=google-chrome&logoColor=white"/>
+    <img alt="Open Web App" height="60" src="https://img.shields.io/badge/OPEN_WEB_APP-4285F4?style=for-the-badge&logo=google-chrome&logoColor=white"/>
   </a>
 </p>
 
@@ -41,11 +41,11 @@ Built with modern Android development practices to ensure performance and mainta
 
 If you found LinuxHub helpful or simply like what we're building, please consider giving this repository a star! It helps us reach more learners.
 
-**[Click here to Star the Repo!](https://github.com/mrlinux-in/MrLinux)** 
-*(Note: Replace with actual repo link if different)*
+**[Click here to Star the Repo!](https://github.com/mrlinux-in/LinuxHub)**
 
 ---
 *Happy Learning!*
+---
 <p align="center">
   Made with ❤️ for Linux learners  
 </p>
