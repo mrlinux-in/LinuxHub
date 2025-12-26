@@ -10,7 +10,7 @@
   </a>
   &nbsp;&nbsp;
   <a href="https://linuxhub.mrlinux.in">
-    <img src="https://img.shields.io/badge/OPEN_WEB_APP-000000?style=for-the-badge&logo=google-chrome&logoColor=white" height="55" alt="Open Web App" valign="middle" />
+    <img src="https://img.shields.io/badge/OPEN_WEB_APP-000000?style=for-the-badge&logo=google-chrome&logoColor=white" height="80" alt="Open Web App" valign="middle" />
   </a>
 </div>
 
@@ -40,8 +40,6 @@ Built with modern Android development practices to ensure performance and mainta
 ## 🌟 Support the Project
 
 If you found LinuxHub helpful or simply like what we're building, please consider giving this repository a star! It helps us reach more learners.
-
-**[Click here to Star the Repo!](https://github.com/mrlinux-in/LinuxHub)**
 
 ## 👨‍💻 Developer
 
