@@ -11,17 +11,17 @@
         },
         {
           "type": "definition",
-          "value": "Linux is an open-source operating system (OS) designed by Linus Torvalds in 1991. The term 'Linux' refers to the kernel (the core part of the OS) and the operating system as a whole. Although it's often confused with Unix, Linux is different. While Unix is a proprietary OS, Linux is open-source, meaning anyone can access, modify, and distribute its code.",
+          "value": "An operating system (OS) is the main software that controls a computer. It acts as a bridge between the user and the hardware. Without an operating system, a computer cannot perform tasks like running applications, managing files, or connecting to the internet.",
           "example": "Example: Ubuntu, Fedora, and CentOS are popular Linux operating systems."
         },
         {
           "type": "text",
-          "value": "An operating system (OS) is the main software that controls a computer. It acts as a bridge between the user and the hardware. Without an operating system, a computer cannot perform tasks like running applications, managing files, or connecting to the internet."
+          "value": "Linux is an open-source operating system (OS) designed by Linus Torvalds in 1991. The term 'Linux' refers to the kernel (the core part of the OS) and the operating system as a whole. Although it's often confused with Unix, Linux is different. While Unix is a proprietary OS, Linux is open-source, meaning anyone can access, modify, and distribute its code."
         }
       ],
       "video": {
         "platform": "youtube",
-        "url": "https://youtu.be/zA3vmx0GaO8?si=l3zf_WdxKM9hQMDW"
+        "url": "https://www.youtube.com/shorts/KyOA2iUXAIM"
       }
     },
     {
@@ -29,11 +29,21 @@
       "content": [
         {
           "type": "heading",
-          "value": "History of Linux"
+          "value": "Why Choose Linux?"
         },
         {
           "type": "text",
-          "value": "Linux was created in 1991 by a student named Linus Torvalds. He wanted to build a free operating system kernel that anyone could use, modify, and share. Over time, developers from around the world contributed to Linux, making it powerful, stable, and secure."
+          "value": "So what makes Linux special? Here are some key features that make it an attractive choice for many users:"
+        },
+        {
+          "type": "list",
+          "items": [
+                      "Open-Source: Being open-source means you can customize the OS to meet your specific needs or preferences, and even contribute back to the community.",
+                      "Free: Unlike other operating systems, Linux is free to download and use, making it a cost-effective alternative for both individuals and organizations.",
+                      "Portability: Linux runs on various devices, from smartphones to servers and supercomputers.",
+                      "Customizability: With the flexibility to customize every aspect of the OS, you can create a computing environment tailored to your preferences.",
+                      "Security: Known for its robust security features, Linux has a lower risk of viruses and malware compared to other operating systems."
+                    ] 
         }
       ],
       "video": null
@@ -43,16 +53,21 @@
       "content": [
         {
           "type": "heading",
-          "value": "Why Linux Was Created"
+          "value": "Understanding the Linux Architecture"
+        },
+        {
+          "type": "text",
+          "value": "Now that you know what makes Linux unique, let's take a look at its architecture:"
         },
         {
           "type": "list",
           "items": [
-            "To create a free alternative to expensive operating systems",
-            "To allow users to modify and customize the system",
-            "To encourage collaboration and learning",
-            "To build a stable and secure operating system"
-          ]
+                      "Kernel: The core part of the OS, responsible for managing hardware resources and providing an interface between the system and applications.",
+                      "System Libraries: A collection of pre-written code used by various programs to perform common tasks efficiently.",
+                      "Shell: The command-line interface where users interact with the operating system, issuing commands to execute tasks.",
+                      "Graphical User Interface (GUI): A visual environment that allows users to interact with the OS using icons, menus, and other graphical elements.",
+                      "Applications: Programs designed to perform specific tasks, such as word processing, web browsing, or graphic design."
+                    ] 
         }
       ],
       "video": null
@@ -62,12 +77,20 @@
       "content": [
         {
           "type": "heading",
-          "value": "Open Source Concept"
+          "value": "Types of Linux Distributions"
         },
         {
-          "type": "definition",
-          "value": "Open source means that the source code of software is publicly available and anyone can view, modify, and distribute it legally.",
-          "example": "Example: Linux source code can be downloaded and customized by anyone."
+          "type": "text",
+          "value": "Did you know that there are many different versions of Linux called `distributions`? Each distribution has its own unique set of features and focuses on various aspects, making it easier for users to find the perfect fit for their needs. Here are some popular ones:"
+        },
+        {
+          "type": "list",
+          "items": [
+                  "Ubuntu: Known for its user-friendly interface, vast community support, and frequent updates, Ubuntu is a great choice for beginners.",
+                  "Debian: A stable and secure distro with a focus on reliability, Debian is often used in servers and other critical infrastructure systems.",
+                  "Fedora: Designed for early adopters and developers, Fedora offers the latest software updates and innovative technologies.",
+                  "Linux Mint: A user-friendly distro that combines ease of use with power and flexibility, making it an excellent choice for both beginners and advanced users."
+          ] 
         }
       ],
       "video": null
@@ -77,31 +100,17 @@
       "content": [
         {
           "type": "heading",
-          "value": "Benefits of Open Source Software"
+          "value": "Getting Started with Linux"
         },
         {
           "type": "list",
           "items": [
-            "Free to use",
-            "Highly secure due to community review",
-            "Customizable for different needs",
-            "No vendor lock-in",
-            "Large community support"
+            "Choose a distro: Select the distribution that best suits your needs or preferences.",
+            "Install Linux: Download and install Linux on your device (computer, laptop, or even tablet).",
+            "Explore the desktop: Familiarize yourself with the Linux desktop environment, including menus, icons, and file management.",
+            "Learn basic commands: Start with basic terminal commands like navigating directories, creating files, and managing processes.",
+            "Explore more: As you gain confidence, delve deeper into Linux by learning more advanced concepts, such as package management, system administration, and programming."
           ]
-        }
-      ],
-      "video": null
-    },
-    {
-      "slideId": 6,
-      "content": [
-        {
-          "type": "heading",
-          "value": "Advantages of Linux"
-        },
-        {
-          "type": "text",
-          "value": "Linux is known for its performance, security, and flexibility. Unlike many commercial operating systems, Linux does not require expensive licenses and works efficiently even on older hardware."
         }
       ],
       "video": null
