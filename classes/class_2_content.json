@@ -31,7 +31,10 @@
           ]
         }
       ],
-      "video": null
+        "video": {
+        "platform": "youtube",
+        "url": "https://www.youtube.com/watch?v=_BoqSxHTTNs"
+      }
     },
     {
       "slideId": 2,
