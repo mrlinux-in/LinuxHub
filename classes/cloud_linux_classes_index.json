@@ -3,13 +3,13 @@
         "classId": 1,
         "topic": "Introduction to Linux",
         "description": "Overview of Linux, its history, open-source concept, advantages, and comparison with other operating systems.",
-        "version": "1.2"
+        "version": "1.1"
     },
     {
         "classId": 2,
         "topic": "Linux Installation and Desktop Environment",
         "description": "Installing Linux using virtual machines or dual boot and understanding Linux desktop environments and terminal basics.",
-        "version": "1.0"
+        "version": "1.1"
     },
     {
         "classId": 3,

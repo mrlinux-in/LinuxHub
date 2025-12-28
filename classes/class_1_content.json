@@ -12,7 +12,7 @@
         {
           "type": "definition",
           "value": "An operating system (OS) is the main software that controls a computer. It acts as a bridge between the user and the hardware. Without an operating system, a computer cannot perform tasks like running applications, managing files, or connecting to the internet.",
-          "example": "Example: Ubuntu, Fedora, and CentOS are popular Linux operating systems."
+          "example": "Example: Windows, Android, and iOS (Apple's OS)"
         },
         {
           "type": "text",
