@@ -7,11 +7,11 @@
       "content": [
         {
           "type": "heading",
-          "value": "What is an Operating System?"
+          "value": "What is Linux?"
         },
         {
           "type": "definition",
-          "value": "Linux is a free and open-source operating system that manages computer hardware and software resources and allows users to interact with the system using graphical interfaces or command-line tools.",
+          "value": "Linux is an open-source operating system (OS) designed by Linus Torvalds in 1991. The term 'Linux' refers to the kernel (the core part of the OS) and the operating system as a whole. Although it's often confused with Unix, Linux is different. While Unix is a proprietary OS, Linux is open-source, meaning anyone can access, modify, and distribute its code.",
           "example": "Example: Ubuntu, Fedora, and CentOS are popular Linux operating systems."
         },
         {
