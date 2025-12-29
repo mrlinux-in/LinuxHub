@@ -3,31 +3,31 @@
         "classId": 1,
         "topic": "Introduction to Linux",
         "description": "Overview of Linux, its history, open-source concept, advantages, and comparison with other operating systems.",
-        "version": "1.1"
+        "version": "1.2"
     },
     {
         "classId": 2,
         "topic": "Linux Installation and Desktop Environment",
         "description": "Installing Linux using virtual machines or dual boot and understanding Linux desktop environments and terminal basics.",
-        "version": "1.1"
+        "version": "1.2"
     },
     {
         "classId": 3,
         "topic": "Linux File System Structure",
         "description": "Understanding the Linux directory hierarchy, important system directories, and absolute vs relative paths.",
-        "version": "1.0"
+        "version": "1.1"
     },
     {
         "classId": 4,
         "topic": "Navigating the Linux File System",
         "description": "Learning how to move between directories and explore files using basic navigation commands.",
-        "version": "1.0"
+        "version": "1.1"
     },
     {
         "classId": 5,
         "topic": "File and Directory Management",
         "description": "Creating, copying, moving, renaming, and deleting files and directories in Linux.",
-        "version": "1.0"
+        "version": "1.1"
     },
     {
         "classId": 6,

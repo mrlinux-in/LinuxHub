@@ -1,5 +1,5 @@
 {
-  "classId": 1,
+  "classId": 5,
   "topic": "File and Directory Management",
   "slides": [
     {
@@ -11,7 +11,25 @@
         },
         {
           "type": "text",
-          "value": "Managing files and directories is one of the most common tasks in Linux."
+          "value": "In this session, we will learn how to create, copy, move, rename, and delete files and directories in the Linux file system. These skills are essential for managing your files effectively."
+        },
+        {
+          "type": "table",
+          "value": [
+            ["Command", "Description"],
+            ["touch", "Creates a new empty file with the specified name (if it doesn't exist) or updates its timestamp (if it does)."],
+            ["mkdir", "Creates a new directory with the specified name (if it doesn't exist)."]
+          ]
+        },
+        {
+          "type": "code",
+          "command": "touch newfile.txt",
+          "description": "Creates an empty file named 'newfile.txt'"
+        },
+        {
+          "type": "code",
+          "command": "mkdir projects",
+          "description": "Creates a new directory named 'projects'"
         }
       ]
     },
@@ -20,17 +38,39 @@
       "content": [
         {
           "type": "heading",
-          "value": "Definitions"
+          "value": "Copying & Moving"
         },
         {
-          "type": "definition",
-          "value": "A file is a container used to store data such as text, images, or programs.",
-          "example": "Example: notes.txt is a file and Documents is a directory."
+          "type": "table",
+          "value": [
+            ["Command/Option", "Description"],
+            ["cp", "Copies files or directories from one location to another."],
+            ["-r (Recursive)", "Copies a directory and its contents recursively, including subdirectories."]
+          ]
+        },
+        {
+          "type": "table",
+          "value": [
+            ["Command/Option", "Description"],
+            ["mv", "Moves or renames files and directories from one location to another."],
+            ["-t (Target Directory)", "Specifies the target directory for moving a file or directory."],
+            ["-v (Verbose)", "Displays detailed information about the moves and renames performed."]
+          ]
+        },
+        {
+          "type": "code",
+          "command": "cp file.txt /home/user/Documents/",
+          "description": "Copies 'file.txt' to the Documents directory."
+        },
+        {
+          "type": "code",
+          "command": "mv report.txt Documents/",
+          "description": "Moves 'report.txt' into the 'Documents' directory."
         },
         {
           "type": "definition",
           "value": "A directory is a folder that holds files and other directories.",
-          "example": "Example: notes.txt is a file and Documents is a directory."
+          "example": "Example: report.txt is a file and Documents is a directory."
         }
       ]
     },
@@ -39,17 +79,40 @@
       "content": [
         {
           "type": "heading",
-          "value": "Common File Management Tasks"
+          "value": "Renaming & Deleting"
         },
         {
-          "type": "list",
-          "items": [
-            "Creating files",
-            "Creating directories",
-            "Copying files and folders",
-            "Moving and renaming files",
-            "Deleting files and directories"
+          "type": "table",
+          "value": [
+            ["Command/Option", "Description"],
+            ["mv", "Renames a file or directory by specifying its old name, new name, and destination directory (if needed)."],
+            ["-b (Backup)", "Creates a backup copy of the original file before renaming it."],
+            ["-i (Interactive)", "Prompts for confirmation before overwriting an existing file with the same name."]
           ]
+        },
+        {
+          "type": "table",
+          "value": [
+            ["Command/Option", "Description"],
+            ["rm", "Removes files or directories from the Linux file system."],
+            ["-r (Recursive)", "Removes a directory and its contents recursively, including subdirectories."],
+            ["-f (Force)", "Forces removal of files and directories without prompting for confirmation. Use with caution!"]
+          ]
+        },
+        {
+          "type": "code",
+          "command": "mv oldname.txt newname.txt",
+          "description": "Renames 'oldname.txt' to 'newname.txt'."
+        },
+        {
+          "type": "code",
+          "command": "rm unwanted.txt",
+          "description": "Removes the file named 'unwanted.txt'."
+        },
+        {
+          "type": "definition",
+          "value": "A file is a container used to store data such as text, images, or programs.",
+          "example": "Example: notes.txt is a file and Documents is a directory."
         }
       ]
     },
@@ -58,40 +121,19 @@
       "content": [
         {
           "type": "heading",
-          "value": "touch Command"
+          "value": "Practice Exercise"
         },
         {
-          "type": "definition",
-          "value": "touch is a command used to create an empty file or update the timestamp of an existing file.",
-          "example": "Example: Creating a file named file1.txt."
-        }
-      ]
-    },
-    {
-      "slideId": 5,
-      "content": [
-        {
-          "type": "heading",
-          "value": "mkdir Command"
-        },
-        {
-          "type": "definition",
-          "value": "mkdir (make directory) is a command used to create new directories.",
-          "example": "Example: Creating a directory named projects."
-        }
-      ]
-    },
-    {
-      "slideId": 6,
-      "content": [
-        {
-          "type": "heading",
-          "value": "cp Command"
-        },
-        {
-          "type": "definition",
-          "value": "cp (copy) is a command used to copy files and directories from one location to another.",
-          "example": "Example: Copying file1.txt to another folder."
+          "type": "stepByStep",
+          "steps": [
+            "Create a new file named myfile.txt in your home directory using the touch command.",
+            "Create a new directory called test_directory in your home directory using the mkdir command.",
+            "Copy the myfile.txt file to the test_directory directory using the cp command.",
+            "Move the myfile.txt file from the test_directory directory back to your home directory using the mv command.",
+            "Rename the myfile.txt file in your home directory to new_filename.txt.",
+            "Remove the myfile.txt file from your home directory using the rm command.",
+            "Remove the test_directory directory using the rm -r command."
+          ]
         }
       ]
     }

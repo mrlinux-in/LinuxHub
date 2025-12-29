@@ -7,11 +7,25 @@
       "content": [
         {
           "type": "heading",
-          "value": "Navigating the Linux File System"
+          "value": "Basic Navigation Info"
+        },
+        {
+          "type":"text",
+          "value":"In this session, we will focus on learning essential commands for moving between directories and exploring files in the Linux file system. These skills are crucial for efficiently managing your files and directories."
         },
         {
           "type": "definition",
           "value": "Navigating the Linux file system means moving between directories and viewing files using commands in the terminal."
+        },
+        {
+          "type": "table",
+          "value": [
+            ["Symbol", "Meaning"],
+            [".", "Where I am standing now"],
+            ["..", "The folder behind me"],
+            ["~", "My home location"],
+            ["/", "The root of everything"]
+          ]
         }
       ]
     },
@@ -20,11 +34,19 @@
       "content": [
         {
           "type": "heading",
-          "value": "Why File Navigation Is Important"
+          "value": "Basic Navigation Commands"
         },
         {
-          "type": "text",
-          "value": "To work effectively in Linux, users must know how to move around the file system. Most Linux tasks such as editing files, running programs, and managing directories require correct navigation. Understanding navigation commands builds confidence when working in the terminal."
+          "type": "table",
+          "value": [
+            ["Command", "Meaning"],
+            ["pwd", "This tells us where we are right now."],
+            ["ls", "This shows us what is in the room we're currently in."],
+            ["cd folderName", "This is how we walk into a folder."],
+            ["cd ..", "This is how we step back and exit a folder."],
+            ["cd ~", "This teleports us back home instantly."],
+            ["cd /", "This jumps to the root of the system."]
+          ]
         }
       ]
     },
@@ -33,52 +55,58 @@
       "content": [
         {
           "type": "heading",
-          "value": "Current Working Directory"
-        },
-        {
-          "type": "text",
-          "value": "At any moment, the terminal is located in a specific directory called the current working directory. All relative paths and many commands depend on this location."
-        }
-      ]
-    },
-    {
-      "slideId": 4,
-      "content": [
-        {
-          "type": "heading",
-          "value": "pwd Command"
-        },
-        {
-          "type": "definition",
-          "value": "pwd (print working directory) is a command used to display the full path of the current directory."
-        }
-      ]
-    },
-    {
-      "slideId": 5,
-      "content": [
-        {
-          "type": "heading",
-          "value": "Using pwd"
-        },
-        {
-          "type": "code",
-          "command": "pwd",
-          "description": "Shows the current directory location."
-        }
-      ]
-    },
-    {
-      "slideId": 6,
-      "content": [
-        {
-          "type": "heading",
           "value": "ls Command"
         },
         {
           "type": "definition",
           "value": "ls is a command used to list files and directories inside the current directory."
+        },
+        {
+          "type": "code",
+          "command": "ls -a",
+          "description": "Shows all files including hidden files (those starting with a dot)."
+        },
+        {
+          "type": "code",
+          "command": "ls -l",
+          "description": "Displays files in long list format with details like permissions, owner, size, and date."
+        },
+        {
+          "type": "code",
+          "command": "ls -h",
+          "description": "Shows file sizes in a human-readable format (e.g., KB, MB, GB) when used with -l."
+        },
+        {
+          "type": "code",
+          "command": "ls -R",
+          "description": "Recursively lists all subdirectories and their contents."
+        },
+        {
+          "type": "code",
+          "command": "ls -thrl",
+          "description": "Lists files in reverse chronological order with human-readable sizes and long format details."
         }
+      ]
+    },
+    {
+      "slideId": "4",
+      "content":[
+        {
+          "type":"heading",
+          "value": "Practice Exercise"
+        },
+        {
+          "type": "stepByStep",
+          "steps": [
+            "List all the files in your current directory using the ls command with no options.",
+            "Navigate to the /etc directory and list its contents in long format with hidden files included.",
+            "Go back to your home directory and create a new directory called \"my_files\" using the mkdir command.",
+            "Move into the newly created directory by changing directories with cd.",
+            "Create a text file named test.txt within the \"my_files\" directory using the touch command.",
+            "List all files in your current directory (the \"my_files\" directory) using the ls command with human-readable sizes.",
+            "Navigate back to your home directory using the cd command."
+          ]
+         }
       ]
     }
   ]
