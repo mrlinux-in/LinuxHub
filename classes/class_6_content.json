@@ -7,83 +7,126 @@
       "content": [
         {
           "type": "heading",
-          "value": "Viewing and Reading Files"
+          "value": "Viewing and Reading Files in Linux"
         },
         {
           "type": "definition",
-          "value": "Viewing and reading files in Linux means displaying the contents of files on the terminal without modifying them.",
-          "example": "Example: Reading a text file using the cat command."
+          "value": "Viewing files means displaying file content in the terminal without changing or editing it.",
+          "example": "Example: cat notes.txt shows the complete content of the file."
+        },
+        {
+          "type": "text",
+          "value": "In Linux, we often read files through the terminal, especially configuration files, logs, and system messages. This helps in understanding errors, checking system status, and reviewing data quickly.",
+          "example": "Think of these commands like 'Windows Notepad', but inside the terminal."
+        },
+        {
+          "type": "list",
+          "items": [
+            "cat -> Shows the entire file at once",
+            "less -> Scroll and search inside large files",
+            "head/tail -> Read specific parts of the file"
+          ]
+        },
+        {
+          "type": "tip",
+          "value": "Use less for large files; cat is best for short files."
         }
-      ]
+      ],
+      "video": {
+        "platform": "youtube",
+        "url": "https://www.youtube.com/watch?v=5aggnPNnW8I"
+      }
     },
     {
       "slideId": 2,
       "content": [
         {
           "type": "heading",
-          "value": "Why Viewing Files Is Important"
+          "value": "Hands-on: Reading Files Step-by-Step"
         },
         {
           "type": "text",
-          "value": "In Linux, many important files such as configuration files, logs, and scripts are stored as text files. System administrators and users often need to read these files to understand system behavior, check errors, or verify data."
+          "value": "These commands help you view full files, scroll through them, and even monitor live updates."
+        },
+        {
+          "type": "stepByStep",
+          "steps": [
+            "Use cat filename.txt to view the full file (good for small files).",
+            "Use less filename.txt to scroll through page by page. Press Q to exit.",
+            "Use tail -f logfile.log to watch logs update live in real time."
+          ]
+        },
+        {
+          "type": "code",
+          "command": "less logfile.txt",
+          "description": "Scroll with ↑ ↓ or SPACE. Quit with Q. Best for large files like logs."
         }
-      ]
+      ],
+      "video": null
     },
     {
       "slideId": 3,
       "content": [
         {
           "type": "heading",
-          "value": "cat Command"
+          "value": "Command Summary Table"
         },
         {
-          "type": "definition",
-          "value": "cat (concatenate) is a command used to display the entire contents of a file on the terminal.",
-          "example": "Example: Displaying the contents of notes.txt."
+          "type": "table",
+          "value": [
+            [
+              "Command",
+              "Explanation / When to Use"
+            ],
+            [
+              "cat file.txt",
+              "Shows the entire file at once. Best for small files where you just want to quickly read everything."
+            ],
+            [
+              "less file.txt",
+              "Opens the file in a scrollable viewer. Ideal for large files because you can move up/down, search, and exit with Q."
+            ],
+            [
+              "head -n 10 file.txt",
+              "Shows the first 10 lines of a file. Useful when you only need to check the beginning, such as file headers or configs."
+            ],
+            [
+              "tail -n 10 file.txt",
+              "Shows the last 10 lines. Helpful for checking the end of logs, recent changes, or message results."
+            ],
+            [
+              "tail -f logfile.txt",
+              "Live view mode. Continuously updates as the file changes—perfect for monitoring logs and watching errors/events happen in real time."
+            ]
+          ]
+        },
+        {
+          "type": "text",
+          "value": "This slide summarizes when to use each command depending on file size and purpose."
         }
-      ]
+      ],
+      "video": null
     },
     {
       "slideId": 4,
       "content": [
         {
           "type": "heading",
-          "value": "Using cat"
+          "value": "Quick Knowledge Check"
         },
         {
-          "type": "code",
-          "command": "cat notes.txt",
-          "description": "Displays the full content of the file notes.txt."
+          "type": "quiz",
+          "question": "Which command is best for viewing large files and scrolling through them?",
+          "options": [
+            "A: cat",
+            "B: less",
+            "C: head",
+            "D: touch"
+          ],
+          "correctAnswer": 1
         }
-      ]
-    },
-    {
-      "slideId": 5,
-      "content": [
-        {
-          "type": "heading",
-          "value": "less Command"
-        },
-        {
-          "type": "definition",
-          "value": "less is a command used to view file contents one screen at a time, allowing easy navigation through large files.",
-          "example": "Example: Reading a long log file using less."
-        }
-      ]
-    },
-    {
-      "slideId": 6,
-      "content": [
-        {
-          "type": "heading",
-          "value": "Using less"
-        },
-        {
-          "type": "code",
-          "command": "less logfile.txt",
-          "description": "Opens the file and allows scrolling using keyboard keys."
-        }
-      ]
+      ],
+      "video": null
     }
   ]
 }
