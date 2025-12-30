@@ -116,7 +116,7 @@
         {
           "type": "definition",
           "value": "A file is a container used to store data such as text, images, or programs.",
-          "example": "Example: notes.txt is a file and Documents is a directory."
+          "example": "Example: notes.txt is a text based file."
         }
       ]
     },
