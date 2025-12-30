@@ -7,84 +7,126 @@
       "content": [
         {
           "type": "heading",
-          "value": "Text Editing in Linux"
+          "value": "What is Basic Text Editing in Linux?"
         },
         {
           "type": "definition",
-          "value": "Basic text editing in Linux means creating and modifying text files using terminal-based editors."
+          "value": "Text editing in Linux means opening and modifying text files directly inside the terminal using built-in editors."
+        },
+        {
+          "type": "text",
+          "value": "We use text editors like nano, vi, and vim to edit files such as notes, configuration files, scripts, or system settings without needing a graphical app."
+        },
+        {
+          "type": "list",
+          "items": [
+            "nano : easiest editor for beginners",
+            "vi : the traditional Unix editor, available on almost every system",
+            "vim : an improved, modern version of vi with more features"
+          ]
+        },
+        {
+          "type": "tip",
+          "value": "Start with nano → learn the basics. Move to vi → learn system editing. Upgrade to vim → for advanced editing."
         }
       ]
     },
+
     {
       "slideId": 2,
       "content": [
         {
           "type": "heading",
-          "value": "Nano Editor Overview"
+          "value": "Editing with nano (Beginner Friendly)"
         },
         {
           "type": "text",
-          "value": "Nano is the easiest text editor for beginners. It displays helpful shortcuts at the bottom of the screen and does not require special modes."
+          "value": "nano is the easiest editor: the shortcuts are displayed at the bottom and you can start typing immediately."
+        },
+        {
+          "type": "stepByStep",
+          "steps": [
+            "Open a file: nano myfile.txt",
+            "Type normally to write text in the file.",
+            "Save changes: CTRL + O, then press ENTER",
+            "Exit nano: CTRL + X"
+          ]
+        },
+        {
+          "type": "table",
+          "value": [
+            ["Shortcut", "Action / What It Does"],
+            ["CTRL + O", "Save the file (Write Out)"],
+            ["CTRL + X", "Exit nano"],
+            ["CTRL + K", "Cut the selected line or text"],
+            ["CTRL + U", "Paste previously cut text"],
+            ["CTRL + G", "Show help menu and shortcut guide"],
+            ["CTRL + W", "Search for a word inside the file"],
+            ["CTRL + C", "Show current cursor position (line/column)"],
+            ["CTRL + \\\\", "Search and replace text inside the file"],
+            ["CTRL + A", "Move to beginning of line"],
+            ["CTRL + E", "Move to end of line"]
+          ]
+        },
+        {
+          "type": "code",
+          "command": "nano myfile.txt",
+          "description": "Opens the file in nano. If the file doesn't exist, nano will create it."
+        },
+        {
+          "type": "tip",
+          "value": "If you're unsure which editor to start with, nano is the safest and simplest option."
         }
-      ]
+      ],
+      "video": {
+        "platform": "youtube",
+        "url": "https://www.youtube.com/shorts/C85f9SUo9Gw"
+      }
     },
+
     {
       "slideId": 3,
       "content": [
         {
           "type": "heading",
-          "value": "Working Inside nano"
+          "value": "Editing with vi & vim (For Intermediate to Advanced Users)"
         },
         {
           "type": "text",
-          "value": "Once nano is open, you can start typing immediately. There are no special modes."
-        }
-      ]
-    },
-    {
-      "slideId": 4,
-      "content": [
-        {
-          "type": "heading",
-          "value": "Common nano Shortcuts"
+          "value": "vi and vim are modal editors, meaning you switch between typing text and running commands. They are fast and powerful once you learn the basics."
         },
         {
-          "type": "list",
-          "items": [
-            "Ctrl + O – Save the file",
-            "Ctrl + X – Exit nano",
-            "Ctrl + W – Search text",
-            "Ctrl + K – Cut a line",
-            "Ctrl + U – Paste a line"
+          "type": "table",
+          "value": [
+            ["Action", "Command in vi/vim"],
+            ["Open file", "vi myfile.txt or vim myfile.txt"],
+            ["Enter insert mode (start typing)", "Press i"],
+            ["Save changes", ":w"],
+            ["Quit without saving", ":q!"],
+            ["Save and exit", ":wq"]
           ]
-        }
-      ]
-    },
-    {
-      "slideId": 5,
-      "content": [
-        {
-          "type": "heading",
-          "value": "Introduction to vi Editor"
         },
         {
           "type": "text",
-          "value": "The vi editor is a powerful text editor available on almost all Linux systems."
-        }
-      ]
-    },
-    {
-      "slideId": 6,
-      "content": [
-        {
-          "type": "heading",
-          "value": "vi Modes Explained"
+          "value": "vi is the original editor and is installed by default on almost every Unix/Linux system. vim (Vi IMproved) is a newer, feature-rich version with syntax highlighting, plugins, undo history, and better navigation."
         },
         {
-          "type": "text",
-          "value": "The vi editor mainly works with three modes. Understanding these modes is key to using vi successfully."
+          "type": "table",
+          "value": [
+            ["Editor", "Use Case"],
+            ["vi", "For basic editing on older or minimal Linux systems (like servers or rescue mode)."],
+            ["vim", "For daily development work, coding, configuration editing, and advanced text operations."]
+          ]
+        },
+        {
+          "type": "tip",
+          "value": "Quick memory trick: If the system has vim, use vim. If not, vi will always be available."
         }
-      ]
+      ],
+      "video": {
+        "platform": "youtube",
+        "url": "https://www.youtube.com/shorts/6MTMKL4OMvc"
+      }
     }
   ]
 }

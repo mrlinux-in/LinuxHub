@@ -33,31 +33,31 @@
         "classId": 6,
         "topic": "Viewing and Reading Files",
         "description": "Viewing file contents using different commands and handling large text files efficiently.",
-        "version": "1.0"
+        "version": "1.1"
     },
     {
         "classId": 7,
         "topic": "Basic Text Editing",
         "description": "Editing text files using terminal-based editors like nano and vi.",
-        "version": "1.0"
+        "version": "1.1"
     },
     {
         "classId": 8,
         "topic": "File Permissions and Ownership",
         "description": "Understanding Linux file permissions, ownership, and managing access using chmod and chown.",
-        "version": "1.0"
+        "version": "1.1"
     },
     {
         "classId": 9,
         "topic": "Searching Files and Text",
         "description": "Searching for files and patterns within files using Linux search and filtering tools.",
-        "version": "1.0"
+        "version": "1.1"
     },
     {
         "classId": 10,
         "topic": "Linux Help System and Revision",
         "description": "Using manual pages and help commands along with practice and revision of beginner-level concepts.",
-        "version": "1.0"
+        "version": "1.1"
     },
     {
         "classId": 11,

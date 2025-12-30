@@ -7,112 +7,149 @@
       "content": [
         {
           "type": "heading",
-          "value": "Searching Files and Text"
+          "value": "How to Search for Files and Text in Linux"
         },
         {
           "type": "definition",
-          "value": "Searching files and text in Linux means finding files by name, type, or location and searching for specific words or patterns inside files.",
-          "example": "Example: Finding a file named config.txt or searching for the word error in log files."
+          "value": "Searching in Linux means finding files or locating text inside files using terminal tools like find, grep, and locate."
         },
         {
           "type": "text",
-          "value": "Linux systems can contain thousands of files. Searching manually is slow and inefficient. Linux provides powerful search tools that help users quickly locate files and specific text inside files. These tools are essential for troubleshooting, system administration, and daily work."
+          "value": "This is useful when you don't know where a file is stored, need to check configuration files, or want to find specific words or errors inside documents."
+        },
+        {
+          "type": "list",
+          "items": [
+            "find : search for files by name, size, or type",
+            "grep : search inside files for words or patterns",
+            "locate : fastest way to find files using a system database"
+          ]
+        },
+        {
+          "type": "tip",
+          "value": "If you're looking for a file: use find or locate. If you're searching inside a file: use grep."
         }
       ]
     },
+
     {
       "slideId": 2,
       "content": [
         {
           "type": "heading",
-          "value": "find Command"
+          "value": "Searching for Files (find & locate)"
         },
         {
-          "type": "definition",
-          "value": "find is a command used to search for files and directories based on name, type, size, or other properties.",
-          "example": "Example: Finding a file named notes.txt."
+          "type": "text",
+          "value": "Use these commands when you need to find where a file is stored or filter files by name or type."
         },
         {
           "type": "code",
-          "command": [
-            "find /home -name notes.txt",
-            "find . -type f",
-            "find . -type d"
-          ],
-          "description": "Explain what this command/snippet does and when to use it."
+          "command": "find /home -name file.txt",
+          "description": "Search for a file named file.txt inside /home."
+        },
+        {
+          "type": "code",
+          "command": "find / -type d -name documents",
+          "description": "Find a directory named 'documents'."
+        },
+        {
+          "type": "code",
+          "command": "locate notes.txt",
+          "description": "Fast search for a file named notes.txt using the system's database."
+        },
+        {
+          "type": "tip",
+          "value": "If locate doesn't find anything, update its database using: sudo updatedb"
         }
-      ]
+      ],
+      "video": {
+        "platform": "youtube",
+        "url": "https://www.youtube.com/shorts/odt8mvGByZM"
+      }
     },
+
     {
       "slideId": 3,
       "content": [
         {
           "type": "heading",
-          "value": "How find Works"
+          "value": "Searching Inside Files (grep)"
         },
         {
           "type": "text",
-          "value": "The find command searches directories recursively, meaning it looks inside all subdirectories. This makes it powerful but sometimes slow on very large file systems."
+          "value": "grep searches for matching text inside files. It is commonly used to find words, errors, usernames, or code patterns."
+        },
+        {
+          "type": "code",
+          "command": "grep \"error\" logfile.txt",
+          "description": "Search for the word 'error' inside logfile.txt."
+        },
+        {
+          "type": "code",
+          "command": "grep -i \"login\" /var/log/auth.log",
+          "description": "Search case-insensitively for 'login' in system logs."
+        },
+        {
+          "type": "code",
+          "command": "grep -r \"keyword\" /etc",
+          "description": "Search for a keyword inside all files in the /etc directory (recursive)."
+        },
+        {
+          "type": "table",
+          "value": [
+            ["Option", "Meaning"],
+            ["-i", "Ignore case while searching"],
+            ["-r", "Search inside folders recursively"],
+            ["-n", "Show line numbers of matches"],
+            ["-v", "Show lines that do NOT match the text"]
+          ]
+        },
+        {
+          "type": "tip",
+          "value": "Use grep -n to quickly see where the matching text is located in the file."
         }
-      ]
+      ],
+      "video": {
+        "platform": "youtube",
+        "url": "https://www.youtube.com/shorts/uSX8m1addz4"
+      }
     },
     {
       "slideId": 4,
       "content": [
         {
           "type": "heading",
-          "value": "locate Command"
+          "value": "Quick Quiz: Check Your Understanding"
         },
         {
-          "type": "definition",
-          "value": "locate is a command used to quickly find files using a prebuilt database.",
-          "example": "Example: Instantly locating a file anywhere on the system."
-        },
-        {
-          "type": "code",
-          "command": [
-            "locate notes.txt",
-            "sudo updatedb"
+          "type": "quiz",
+          "question": "Which command searches for text *inside* files?",
+          "options": [
+            "A: find",
+            "B: grep",
+            "C: locate",
+            "D: mkdir"
           ],
-          "description": "Explain what this command/snippet does and when to use it."
-        }
-      ]
-    },
-    {
-      "slideId": 5,
-      "content": [
-        {
-          "type": "heading",
-          "value": "find vs locate"
+          "correctAnswer": 1
         },
         {
-          "type": "text",
-          "value": "The locate command is much faster than find because it uses an index. However, it may not show recently created files unless the database is updated."
-        }
-      ]
-    },
-    {
-      "slideId": 6,
-      "content": [
-        {
-          "type": "heading",
-          "value": "grep Command"
-        },
-        {
-          "type": "definition",
-          "value": "grep is a command used to search for specific text patterns inside files.",
-          "example": "Example: Searching for the word error inside a log file."
-        },
-        {
-          "type": "code",
-          "command": [
-            "grep error logfile.txt",
-            "grep -i warning logfile.txt",
-            "grep -n error logfile.txt"
+          "type": "quiz",
+          "question": "Which command is fastest for finding files?",
+          "options": [
+            "A: find",
+            "B: locate",
+            "C: cat",
+            "D: tail"
           ],
-          "description": "Explain what this command/snippet does and when to use it."
+          "correctAnswer": 1
+        },
+        {
+          "type": "tip",
+          "value": "Remember: find = search files, grep = search text, locate = fastest file search."
         }
-      ]
+      ],
+      "video": null
     }
   ]
 }

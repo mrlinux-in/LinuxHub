@@ -16,20 +16,20 @@
         },
         {
           "type": "text",
-          "value": "In Linux, we often read files through the terminal, especially configuration files, logs, and system messages. This helps in understanding errors, checking system status, and reviewing data quickly.",
-          "example": "Think of these commands like 'Windows Notepad', but inside the terminal."
+          "value": "In Linux, we often read files through the terminal, especially configuration files, logs, and system messages. This helps in understanding errors, checking system status, and reviewing data quickly."
         },
         {
           "type": "list",
           "items": [
-            "cat -> Shows the entire file at once",
-            "less -> Scroll and search inside large files",
-            "head/tail -> Read specific parts of the file"
+            "cat : Shows the entire file at once",
+            "less : Scroll and search inside large files",
+            "more : View a long file page-by-page (basic viewer)",
+            "head/tail : Read specific parts of the file"
           ]
         },
         {
           "type": "tip",
-          "value": "Use less for large files; cat is best for short files."
+          "value": "Use less for large files; more is a simpler pager; cat is best for short files."
         }
       ],
       "video": {
@@ -37,6 +37,7 @@
         "url": "https://www.youtube.com/watch?v=5aggnPNnW8I"
       }
     },
+
     {
       "slideId": 2,
       "content": [
@@ -46,24 +47,26 @@
         },
         {
           "type": "text",
-          "value": "These commands help you view full files, scroll through them, and even monitor live updates."
+          "value": "These commands help you view full files, scroll through them, or monitor updates."
         },
         {
           "type": "stepByStep",
           "steps": [
             "Use cat filename.txt to view the full file (good for small files).",
-            "Use less filename.txt to scroll through page by page. Press Q to exit.",
+            "Use more filename.txt to read page-by-page (simpler pager).",
+            "Use less filename.txt to scroll, search, and exit with Q.",
             "Use tail -f logfile.log to watch logs update live in real time."
           ]
         },
         {
           "type": "code",
-          "command": "less logfile.txt",
-          "description": "Scroll with ↑ ↓ or SPACE. Quit with Q. Best for large files like logs."
+          "command": "more filename.txt",
+          "description": "Displays the file one screen at a time; press SPACE to move forward and q to exit."
         }
       ],
       "video": null
     },
+
     {
       "slideId": 3,
       "content": [
@@ -74,39 +77,23 @@
         {
           "type": "table",
           "value": [
-            [
-              "Command",
-              "Explanation / When to Use"
-            ],
-            [
-              "cat file.txt",
-              "Shows the entire file at once. Best for small files where you just want to quickly read everything."
-            ],
-            [
-              "less file.txt",
-              "Opens the file in a scrollable viewer. Ideal for large files because you can move up/down, search, and exit with Q."
-            ],
-            [
-              "head -n 10 file.txt",
-              "Shows the first 10 lines of a file. Useful when you only need to check the beginning, such as file headers or configs."
-            ],
-            [
-              "tail -n 10 file.txt",
-              "Shows the last 10 lines. Helpful for checking the end of logs, recent changes, or message results."
-            ],
-            [
-              "tail -f logfile.txt",
-              "Live view mode. Continuously updates as the file changes—perfect for monitoring logs and watching errors/events happen in real time."
-            ]
+            ["Command", "Explanation / When to Use"],
+            ["cat file.txt", "Shows the entire file. Best for short text files."],
+            ["more file.txt", "Displays the file page-by-page. Good for medium-sized files."],
+            ["less file.txt", "Scroll through large files; navigate & search; exit with Q."],
+            ["head -n 10 file.txt", "Views the first part of the file (first 10 lines)."],
+            ["tail -n 10 file.txt", "Views the last part of the file (last 10 lines)."],
+            ["tail -f logfile.log", "Live log monitoring — updates in real time as new lines appear."]
           ]
         },
         {
           "type": "text",
-          "value": "This slide summarizes when to use each command depending on file size and purpose."
+          "value": "Choose the right command based on file size: cat (small), more (medium), less (large)."
         }
       ],
       "video": null
     },
+
     {
       "slideId": 4,
       "content": [
@@ -116,12 +103,12 @@
         },
         {
           "type": "quiz",
-          "question": "Which command is best for viewing large files and scrolling through them?",
+          "question": "Which command is best for scrolling page-by-page in medium-sized files?",
           "options": [
             "A: cat",
-            "B: less",
-            "C: head",
-            "D: touch"
+            "B: more",
+            "C: tail",
+            "D: echo"
           ],
           "correctAnswer": 1
         }

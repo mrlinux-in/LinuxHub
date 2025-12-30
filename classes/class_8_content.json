@@ -7,81 +7,162 @@
       "content": [
         {
           "type": "heading",
-          "value": "File Permissions and Ownership"
+          "value": "What Are File Permissions in Linux?"
         },
         {
           "type": "definition",
-          "value": "Linux defines who can read, write, or execute a file or directory.",
-          "example": "Example: Allowing only the owner to edit a file while others can only read it."
+          "value": "File permissions control who can read, modify, or execute a file in Linux. They protect the system from unwanted changes."
+        },
+        {
+          "type": "text",
+          "value": "Every file has an owner, a group, and permissions that decide what actions are allowed. Permissions prevent accidental or unauthorized access."
+        },
+        {
+          "type": "table",
+          "value": [
+            ["Access", "Meaning"],
+            ["r (read)", "View or read the file content"],
+            ["w (write)", "Modify or delete the file"],
+            ["x (execute)", "Run the file as a program/script"]
+          ]
+        },
+        {
+          "type": "tip",
+          "value": "If you're not sure about a file permission, check it with ls -l before changing anything."
         }
-      ]
+      ],
+      "video": {
+        "platform": "youtube",
+        "url": "https://www.youtube.com/watch?v=LnKoncbQBsM"
+      }
     },
+
+
     {
       "slideId": 2,
       "content": [
         {
           "type": "heading",
-          "value": "Why Permissions Are Important"
+          "value": "Using chmod to Change Permissions"
         },
         {
           "type": "text",
-          "value": "Linux is a multi-user operating system. File permissions protect files from unauthorized access, accidental deletion, and security threats."
+          "value": "chmod changes permission rules. You can use letters (r,w,x) or numbers (chmod 755 file)."
+        },
+        {
+          "type": "code",
+          "command": "ls -l file.txt",
+          "description": "Check file permissions before modifying."
+        },
+        {
+          "type": "code",
+          "command": "chmod 755 script.sh",
+          "description": "Owner: read/write/execute | Group & Others: read/execute (common for scripts)."
+        },
+        {
+          "type": "code",
+          "command": "chmod u+rwx file.txt",
+          "description": "Give the owner full permissions."
+        },
+        {
+          "type": "table",
+          "value": [
+            ["Numeric", "Meaning"],
+            ["7 = rwx", "Full access"],
+            ["6 = rw-", "Read & write"],
+            ["5 = r-x", "Read & execute"],
+            ["4 = r--", "Read only"]
+          ]
+        },
+        {
+          "type": "image",
+          "url": "https://cdn.hashnode.com/res/hashnode/image/upload/v1682516642007/1faffae6-8424-453b-a824-8f8348a727d4.png?auto=compress,format&format=webp",
+          "alt": "Example: One can check and understand these permissions by ls -ltr command and get a better understanding of the permissions of files and directories in their system"
+        },
+        {
+          "type": "image",
+          "url": "https://github.coventry.ac.uk/pages/CUEH/245CT/4_Privesc/images/perms1.png",
+          "alt": "Explaination of this output."
+        },
+        {
+          "type": "tip",
+          "value": "chmod 755 is one of the safest defaults for executable scripts."
         }
-      ]
+      ],
+      "video": null
     },
     {
       "slideId": 3,
       "content": [
         {
           "type": "heading",
-          "value": "File Ownership"
+          "value": "Using chown to Change Ownership"
         },
         {
-          "type": "definition",
-          "value": "Every file in Linux has an owner and a group that control access to the file.",
-          "example": "Example: A file owned by user john and group developers."
+          "type": "text",
+          "value": "chown changes who owns the file. Normally only the root or original owner can transfer ownership."
+        },
+        {
+          "type": "code",
+          "command": "chown user file.txt",
+          "description": "Make a specific user the new owner."
+        },
+        {
+          "type": "code",
+          "command": "chown user:group file.txt",
+          "description": "Change both owner and group at the same time."
+        },
+        {
+          "type": "table",
+          "value": [
+            ["Command", "Purpose"],
+            ["chown user file", "Give file to a new user"],
+            ["chown user:group file", "Change both file owner & group"],
+            ["sudo chown ...", "Required when changing ownership outside your user"]
+          ]
+        },
+        {
+          "type": "tip",
+          "value": "Always double-check owner and group after changes using ls -l."
         }
-      ]
+      ],
+      "video": null
     },
-    {
+        {
       "slideId": 4,
       "content": [
         {
           "type": "heading",
-          "value": "Ownership Types"
+          "value": "Quick Knowledge Check"
         },
         {
-          "type": "text",
-          "value": "Linux divides ownership into three categories: owner, group, and others."
-        }
-      ]
-    },
-    {
-      "slideId": 5,
-      "content": [
-        {
-          "type": "heading",
-          "value": "File Permissions"
+          "type": "quiz",
+          "question": "Which command gives ownership of file.txt to a user named alex?",
+          "options": [
+            "A: chmod alex file.txt",
+            "B: chown alex file.txt",
+            "C: chown file.txt alex",
+            "D: chmod 777 file.txt"
+          ],
+          "correctAnswer": 1
         },
         {
-          "type": "definition",
-          "value": "File permissions define what actions users can perform on a file or directory.",
-          "example": "Example: Read, write, or execute access."
-        }
-      ]
-    },
-    {
-      "slideId": 6,
-      "content": [
-        {
-          "type": "heading",
-          "value": "Viewing File Permissions"
+          "type": "quiz",
+          "question": "Which permission number means 'read & write only'?",
+          "options": [
+            "A: 7 (rwx)",
+            "B: 6 (rw-)",
+            "C: 5 (r-x)",
+            "D: 4 (r--)"
+          ],
+          "correctAnswer": 1
         },
         {
-          "type": "text",
-          "value": "You can view file permissions using the ls -l command."
+          "type": "tip",
+          "value": "Remember: chmod changes permissions, chown changes ownership."
         }
-      ]
+      ],
+      "video": null
     }
   ]
 }

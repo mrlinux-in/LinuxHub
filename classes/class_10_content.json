@@ -7,100 +7,161 @@
       "content": [
         {
           "type": "heading",
-          "value": "Introduction"
+          "value": "How to Get Help in Linux"
         },
         {
           "type": "definition",
-          "value": "The Linux help system provides built-in tools that help users understand commands, options, and usage without needing the internet.",
-          "example": "Example: Using the man command to learn how ls works."
+          "value": "The Linux help system provides built-in tools for learning commands, understanding options, and solving problems without the internet."
         },
         {
           "type": "text",
-          "value": "Linux has thousands of commands and options. It is impossible to memorize everything. The Linux help system allows users to quickly find information about commands directly from the terminal."
+          "value": "Use these tools to learn commands, explore features, and troubleshoot issues directly in the terminal."
+        },
+        {
+          "type": "table",
+          "value": [
+            ["Command/Tool", "Purpose"],
+            ["man", "Shows detailed manual pages for commands (full documentation)."],
+            ["command --help", "Quick summary of options and usage (beginner-friendly)."],
+            ["help command", "Help for built-in shell commands (like cd, echo, exit)."],
+            ["info", "Extended documentation with deeper technical details."],
+            ["whatis", "Displays a one-line summary of what a command does."]
+          ]
+        },
+        {
+          "type": "tip",
+          "value": "If you're stuck: try whatis → man → --help → help command (in that order)."
         }
       ],
-      "video": null
+      "video": {
+        "platform": "youtube",
+        "url": "https://www.youtube.com/watch?v=qdOCK3cj8AI"
+      }
     },
+
     {
       "slideId": 2,
       "content": [
         {
           "type": "heading",
-          "value": "man Command"
+          "value": "Getting Help with Commands (Examples)"
         },
         {
-          "type": "definition",
-          "value": "man (manual) is a command that displays detailed documentation for Linux commands.",
-          "example": "Example: Reading the manual page for the ls command."
+          "type": "code",
+          "command": "man ls",
+          "description": "Show the full manual page for ls (detailed information)."
+        },
+        {
+          "type": "code",
+          "command": "ls --help",
+          "description": "Quick help list of options and usage format."
+        },
+        {
+          "type": "code",
+          "command": "help cd",
+          "description": "Shows help information for shell built-ins like cd."
+        },
+        {
+          "type": "code",
+          "command": "info coreutils",
+          "description": "Open detailed documentation for Linux system utilities."
+        },
+        {
+          "type": "code",
+          "command": "whatis grep",
+          "description": "Shows a single-line explanation of what grep does."
+        },
+        {
+          "type": "list",
+          "items": [
+            "Use ↑ ↓ or Page Up/Down to scroll",
+            "Press SPACE to jump page by page",
+            "Press Q to exit help pages",
+            "Use /word to search inside help pages"
+          ]
+        },
+        {
+          "type": "tip",
+          "value": "For quick learning: try man <command> and search using /keyword."
         }
       ],
       "video": null
     },
+
     {
       "slideId": 3,
       "content": [
         {
           "type": "heading",
-          "value": "Using man"
+          "value": "Revision: What We've Learned So Far"
         },
         {
-          "type": "code",
-          "command": "man ls",
-          "description": "Opens the manual page for the ls command."
+          "type": "table",
+          "value": [
+            ["Topic", "Concept / Commands"],
+            ["Navigating Files", "cd, ls, pwd, absolute & relative paths"],
+            ["Viewing Files", "cat, less, head, tail, tail -f"],
+            ["Editing Files", "nano basics, vi/vim modes and commands"],
+            ["Permissions", "chmod to modify access, chown to change ownership"],
+            ["Searching", "find & locate for files, grep for text patterns"],
+            ["Help System", "man, --help, help, info, whatis"]
+          ]
+        },
+        {
+          "type": "text",
+          "value": "These skills form the foundation of Linux. With them, students can navigate, search, edit, fix permissions, and learn independently."
+        },
+        {
+          "type": "tip",
+          "value": "Don't try to memorize — focus on understanding when to use each command."
         }
       ],
       "video": null
     },
+
     {
       "slideId": 4,
       "content": [
         {
           "type": "heading",
-          "value": "man Page Navigation"
+          "value": "Knowledge Check (Quiz)"
         },
         {
-          "type": "list",
-          "items": [
-            "Up / Down Arrow – Move line by line",
-            "Space – Move one page down",
-            "b – Move one page up",
-            "/word – Search for a word",
-            "q – Quit manual page"
-          ]
-        }
-      ],
-      "video": null
-    },
-    {
-      "slideId": 5,
-      "content": [
-        {
-          "type": "heading",
-          "value": "--help Option"
-        },
-        {
-          "type": "definition",
-          "value": "The --help option shows a short summary of how a command works and lists its options.",
-          "example": "Example: Viewing help for the cp command."
-        }
-      ],
-      "video": null
-    },
-    {
-      "slideId": 6,
-      "content": [
-        {
-          "type": "heading",
-          "value": "Using --help"
-        },
-        {
-          "type": "code",
-          "command": [
-            "ls --help",
-            "cp --help",
-            "grep --help"
+          "type": "quiz",
+          "question": "Which command shows a detailed manual page for a command?",
+          "options": [
+            "A: ls --help",
+            "B: man ls",
+            "C: help ls",
+            "D: info ls"
           ],
-          "description": ""
+          "correctAnswer": 1
+        },
+        {
+          "type": "quiz",
+          "question": "Which tool gives a one-line explanation of a command?",
+          "options": [
+            "A: info",
+            "B: man",
+            "C: whatis",
+            "D: help"
+          ],
+          "correctAnswer": 2
+        },
+        {
+          "type": "quiz",
+          "question": "Which command is best for shell built-in commands like cd?",
+          "options": [
+            "A: help cd",
+            "B: man cd",
+            "C: ls --help",
+            "D: whatis cd"
+          ],
+          "correctAnswer": 0
+        },
+        {
+          "type": "tip",
+          "value": "If you're confused, start with whatis or --help before reading the manual."
         }
       ],
       "video": null
