@@ -7,86 +7,159 @@
       "content": [
         {
           "type": "heading",
-          "value": "What is a Database?"
+          "value": "Introduction to Databases on Linux"
         },
         {
           "type": "definition",
-          "value": "A database is an organized collection of data that can be stored, managed, and accessed efficiently using database software.",
-          "example": "Example: Storing user login details in a database."
+          "value": "A database is a structured system used to store, manage, and retrieve data efficiently. On Linux, we commonly install and manage database servers like MySQL/MariaDB or PostgreSQL."
+        },
+        {
+          "type": "text",
+          "value": "Databases run as services, accept client connections, and allow commands through a CLI or GUI tools. Linux provides easy management of users, permissions, and backups from the terminal."
+        },
+        {
+          "type": "table",
+          "value": [
+            ["Database Server", "Purpose"],
+            ["MySQL / MariaDB", "Popular relational DB for web apps (WordPress, PHP, LAMP)"],
+            ["PostgreSQL", "Advanced relational DB with powerful features & performance"],
+            ["SQLite", "Lightweight DB stored in a single file"]
+          ]
+        },
+        {
+          "type": "tip",
+          "value": "MySQL/MariaDB = beginners & websites | PostgreSQL = enterprise & big systems"
         }
-      ]
+      ],
+      "video": {
+        "platform": "youtube",
+        "url": "https://www.youtube.com/watch?v=zsjvFFKOm3c"
+      }
     },
+
+
+
     {
       "slideId": 2,
       "content": [
         {
           "type": "heading",
-          "value": "Why Databases Are Important"
+          "value": "Installing & Starting Database Services"
         },
         {
           "type": "text",
-          "value": "Databases are used by almost all modern applications such as websites, mobile apps, and enterprise systems. Linux is widely used to host database servers because it is stable, secure, and efficient."
+          "value": "Databases are installed using package managers and controlled using systemctl, just like web servers."
+        },
+        {
+          "type": "code",
+          "command": "sudo apt install mysql-server -y",
+          "description": "Install MySQL/MariaDB on Ubuntu/Debian."
+        },
+        {
+          "type": "code",
+          "command": "sudo apt install postgresql -y",
+          "description": "Install PostgreSQL on Ubuntu/Debian."
+        },
+        {
+          "type": "code",
+          "command": "sudo systemctl start mysql\nsudo systemctl enable mysql",
+          "description": "Start and enable MySQL service at boot."
+        },
+        {
+          "type": "code",
+          "command": "sudo systemctl start postgresql\nsudo systemctl enable postgresql",
+          "description": "Start and enable PostgreSQL service at boot."
+        },
+        {
+          "type": "tip",
+          "value": "If service won't start → check logs with: sudo journalctl -u mysql"
         }
-      ]
+      ],
+      "video": {
+        "platform": "youtube",
+        "url": "http://youtube.com/watch?v=3PF7To4E1Z8"
+      }
     },
+
+
+
     {
       "slideId": 3,
       "content": [
         {
           "type": "heading",
-          "value": "What is a Database Server?"
+          "value": "Basic Database Usage & Commands"
         },
         {
-          "type": "definition",
-          "value": "A database server is software that manages databases and allows users or applications to store and retrieve data.",
-          "example": "Example: MySQL and PostgreSQL database servers."
+          "type": "stepByStep",
+          "steps": [
+            "Login to database server using CLI tools",
+            "Create a database",
+            "Create a user and give permissions",
+            "Insert and view basic data"
+          ]
+        },
+        {
+          "type": "code",
+          "command": "sudo mysql -u root -p",
+          "description": "Login to MySQL/MariaDB as administrator"
+        },
+        {
+          "type": "code",
+          "command": "CREATE DATABASE school;",
+          "description": "Create a new database"
+        },
+        {
+          "type": "code",
+          "command": "CREATE USER 'student'@'localhost' IDENTIFIED BY 'password';\nGRANT ALL PRIVILEGES ON school.* TO 'student'@'localhost';\nFLUSH PRIVILEGES;",
+          "description": "Create a database user and give access rights"
+        },
+        {
+          "type": "code",
+          "command": "USE school;\nCREATE TABLE students(id INT, name VARCHAR(50));\nINSERT INTO students VALUES(1, 'Amit');\nSELECT * FROM students;",
+          "description": "Create a table and insert/view data"
+        },
+        {
+          "type": "tip",
+          "value": "Always grant access to specific databases, not global access unless necessary."
         }
-      ]
+      ],
+      "video": null
     },
+
+
+
     {
       "slideId": 4,
       "content": [
         {
           "type": "heading",
-          "value": "Popular Databases on Linux"
+          "value": "Quick Quiz"
         },
         {
-          "type": "list",
-          "items": [
-            "MySQL – Widely used relational database",
-            "PostgreSQL – Advanced open-source database",
-            "MariaDB – MySQL-compatible database",
-            "SQLite – Lightweight file-based database"
-          ]
-        }
-      ]
-    },
-    {
-      "slideId": 5,
-      "content": [
-        {
-          "type": "heading",
-          "value": "MySQL Installation"
+          "type": "quiz",
+          "question": "Which command installs MySQL on Ubuntu/Debian?",
+          "options": ["A: apt get sql", "B: sudo apt install mysql-server", "C: install-db mysql", "D: db-setup install"],
+          "correctAnswer": 1
         },
         {
-          "type": "code",
-          "command": "sudo apt install mysql-server",
-          "description": "Installs the MySQL database server."
-        }
-      ]
-    },
-    {
-      "slideId": 6,
-      "content": [
-        {
-          "type": "heading",
-          "value": "Managing MySQL Service"
+          "type": "quiz",
+          "question": "Which database is best for large enterprise systems?",
+          "options": ["A: MySQL", "B: PostgreSQL", "C: SQLite", "D: EXCEL"],
+          "correctAnswer": 1
         },
         {
-          "type": "text",
-          "value": "After installation, the database service must be running to accept connections."
+          "type": "quiz",
+          "question": "Which command creates a new database?",
+          "options": ["A: CREATE NEWDB;", "B: MAKE DB school;", "C: CREATE DATABASE school;", "D: new database school;"],
+          "correctAnswer": 2
+        },
+        {
+          "type": "tip",
+          "value": "Good practice: create a database, create a user, assign privileges → then start using it."
         }
-      ]
+      ],
+      "video": null
     }
   ]
 }

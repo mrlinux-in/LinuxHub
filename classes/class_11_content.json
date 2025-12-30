@@ -7,85 +7,140 @@
       "content": [
         {
           "type": "heading",
-          "value": "Input and Output Redirection"
+          "value": "What Is Input and Output Redirection?"
         },
         {
           "type": "definition",
-          "value": "Input and output redirection in Linux allows users to control where command input comes from and where command output goes.",
-          "example": "Example: Saving command output to a file instead of showing it on the screen."
+          "value": "Redirection in Linux means controlling where a command reads input from and where it sends its output."
+        },
+        {
+          "type": "text",
+          "value": "Linux commands normally take input from the keyboard and show output on the terminal. With redirection, we can send output to files, take input from files, or capture error messages."
+        },
+        {
+          "type": "table",
+          "value": [
+            ["Symbol", "Purpose"],
+            [">", "Send/overwrite output to a file"],
+            [">>", "Append output to a file without overwriting"],
+            ["<", "Take input from a file"],
+            ["2>", "Redirect error messages"],
+            ["&>", "Redirect both output and errors"]
+          ]
+        },
+        {
+          "type": "tip",
+          "value": "Think of > and >> like writing to a notebook: > replaces the page, >> adds to the page."
         }
-      ]
+      ],
+      "video": {
+        "platform": "youtube",
+        "url": "https://www.youtube.com/watch?v=YYz8Y_UBrvw"
+      }
     },
+
+
     {
       "slideId": 2,
       "content": [
         {
           "type": "heading",
-          "value": "Why Redirection Is Important"
+          "value": "Redirecting Output to a File"
         },
         {
           "type": "text",
-          "value": "By default, Linux commands take input from the keyboard and display output on the screen. Redirection allows users to send output to files, take input from files, and separate normal output from error messages."
+          "value": "Use > to create or overwrite a file. Use >> to add/append without removing existing content."
+        },
+        {
+          "type": "code",
+          "command": "echo \"Hello\" > output.txt",
+          "description": "Saves the word Hello to output.txt, replacing existing text."
+        },
+        {
+          "type": "code",
+          "command": "echo \"New line\" >> output.txt",
+          "description": "Adds New line to the file without deleting previous text."
+        },
+        {
+          "type": "code",
+          "command": "ls > filelist.txt",
+          "description": "Stores the output of ls into filelist.txt instead of printing it."
+        },
+        {
+          "type": "tip",
+          "value": "Use > for new files, >> for logs, notes, and growing files over time."
         }
-      ]
+      ],
+      "video": null
     },
+
+
     {
       "slideId": 3,
       "content": [
         {
           "type": "heading",
-          "value": "Standard Streams"
+          "value": "Input & Error Redirection"
         },
         {
-          "type": "list",
-          "items": [
-            "Standard Input (stdin) – takes input (keyboard)",
-            "Standard Output (stdout) – shows normal output",
-            "Standard Error (stderr) – shows error messages"
-          ]
+          "type": "text",
+          "value": "We can feed a file into a command, and we can capture errors separately by redirecting standard error."
+        },
+        {
+          "type": "code",
+          "command": "sort < names.txt",
+          "description": "Reads names.txt as input and sorts it (instead of typing names manually)."
+        },
+        {
+          "type": "code",
+          "command": "ls /fakefolder 2> errors.log",
+          "description": "Sends only error messages to errors.log."
+        },
+        {
+          "type": "code",
+          "command": "ls /fakefolder &> output.log",
+          "description": "Sends both normal output AND errors to the same file."
+        },
+        {
+          "type": "tip",
+          "value": "Redirecting errors helps you debug without cluttering the screen."
         }
-      ]
+      ],
+      "video": null
     },
+
+
     {
       "slideId": 4,
       "content": [
         {
           "type": "heading",
-          "value": "Default Behavior of Commands"
+          "value": "Quick Quiz"
         },
         {
-          "type": "text",
-          "value": "Normally, commands read input from the keyboard and display both output and errors on the terminal screen. Redirection changes this default behavior."
-        }
-      ]
-    },
-    {
-      "slideId": 5,
-      "content": [
-        {
-          "type": "heading",
-          "value": "Output Redirection (>)"
+          "type": "quiz",
+          "question": "Which redirection operator APPENDS text to a file?",
+          "options": ["A: >", "B: >>", "C: <", "D: 2>"],
+          "correctAnswer": 1
         },
         {
-          "type": "code",
-          "command": "ls > files.txt",
-          "description": "Saves a directory listing to a file."
-        }
-      ]
-    },
-    {
-      "slideId": 6,
-      "content": [
-        {
-          "type": "heading",
-          "value": "Append Output (>>)"
+          "type": "quiz",
+          "question": "Which operator sends error messages to a file?",
+          "options": ["A: 2>", "B: >>", "C: &>", "D: <"],
+          "correctAnswer": 0
         },
         {
-          "type": "code",
-          "command": "echo \"Hello\" >> notes.txt",
-          "description": "Appends output to the end of a file."
+          "type": "quiz",
+          "question": "Which operator takes input from a file?",
+          "options": ["A: >", "B: <","C: >>", "D: 2>"],
+          "correctAnswer": 1
+        },
+        {
+          "type": "tip",
+          "value": "Remember: > writes, >> adds, < reads, 2> catches errors."
         }
-      ]
+      ],
+      "video": null
     }
   ]
 }

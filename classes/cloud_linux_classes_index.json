@@ -63,120 +63,120 @@
         "classId": 11,
         "topic": "Input and Output Redirection",
         "description": "Understanding standard input, output, and error streams and redirecting command output.",
-        "version": "1.0"
+        "version": "1.2"
     },
     {
         "classId": 12,
         "topic": "Pipes and Text Processing",
         "description": "Combining multiple commands using pipes and processing text with filters like sort, awk, and sed.",
-        "version": "1.0"
+        "version": "1.1"
     },
     {
         "classId": 13,
         "topic": "Process Management",
         "description": "Managing running processes, background and foreground jobs, and terminating processes.",
-        "version": "1.0"
+        "version": "1.1"
     },
     {
         "classId": 14,
         "topic": "Disk and File System Management",
         "description": "Monitoring disk usage, mounting and unmounting file systems, and understanding storage devices.",
-        "version": "1.0"
+        "version": "1.1"
     },
     {
         "classId": 15,
         "topic": "User and Group Management",
         "description": "Creating and managing users and groups and controlling access through permissions.",
-        "version": "1.0"
+        "version": "1.1"
     },
     {
         "classId": 16,
         "topic": "Package Management",
         "description": "Installing, updating, and removing software packages using Linux package managers.",
-        "version": "1.0"
+        "version": "1.1"
     },
     {
         "classId": 17,
         "topic": "Networking Basics",
         "description": "Understanding basic networking concepts, IP addressing, and testing network connectivity.",
-        "version": "1.0"
+        "version": "1.1"
     },
     {
         "classId": 18,
         "topic": "Archiving and Compression",
         "description": "Creating and extracting compressed archives using tar, zip, and gzip tools.",
-        "version": "1.0"
+        "version": "1.1"
     },
     {
         "classId": 19,
         "topic": "Shell Scripting Fundamentals",
         "description": "Introduction to shell scripting, variables, input/output, and writing simple scripts.",
-        "version": "1.0"
+        "version": "1.1"
     },
     {
         "classId": 20,
         "topic": "Task Scheduling with Cron",
         "description": "Automating repetitive tasks using cron jobs and understanding cron syntax.",
-        "version": "1.0"
+        "version": "1.1"
     },
     {
         "classId": 21,
         "topic": "Linux Boot Process and systemd",
         "description": "Understanding the Linux boot sequence, system initialization, and managing services with systemd.",
-        "version": "1.0"
+        "version": "1.1"
     },
     {
         "classId": 22,
         "topic": "System Monitoring and Logs",
         "description": "Monitoring system performance and analyzing system logs for troubleshooting.",
-        "version": "1.0"
+        "version": "1.1"
     },
     {
         "classId": 23,
         "topic": "Advanced Shell Scripting",
         "description": "Using conditions, loops, and functions to write more powerful and efficient shell scripts.",
-        "version": "1.0"
+        "version": "1.1"
     },
     {
         "classId": 24,
         "topic": "File System Internals and Links",
         "description": "Understanding inodes, file metadata, and creating hard and symbolic links.",
-        "version": "1.0"
+        "version": "1.1"
     },
     {
         "classId": 25,
         "topic": "Advanced Networking and Remote Access",
         "description": "Secure remote access and file transfer using SSH, SCP, and rsync.",
-        "version": "1.0"
+        "version": "1.1"
     },
     {
         "classId": 26,
         "topic": "Linux Security and Firewall",
         "description": "Managing system security using sudo, firewalls, and basic SELinux concepts.",
-        "version": "1.0"
+        "version": "1.1"
     },
     {
         "classId": 27,
         "topic": "Web Server Setup",
         "description": "Installing and managing web servers like Apache or Nginx and hosting a basic website.",
-        "version": "1.0"
+        "version": "1.1"
     },
     {
         "classId": 28,
         "topic": "Database Basics on Linux",
         "description": "Introduction to database servers, basic database operations, and management using Linux.",
-        "version": "1.0"
+        "version": "1.1"
     },
     {
         "classId": 29,
         "topic": "Backup and Recovery",
         "description": "Planning and implementing backup strategies and restoring data using Linux tools.",
-        "version": "1.0"
+        "version": "1.1"
     },
     {
         "classId": 30,
         "topic": "Troubleshooting and Final Project",
         "description": "Diagnosing common Linux issues and applying learned skills in a practical final project.",
-        "version": "1.0"
+        "version": "1.1"
     }
 ]

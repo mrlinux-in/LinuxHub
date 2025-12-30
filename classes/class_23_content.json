@@ -7,79 +7,161 @@
       "content": [
         {
           "type": "heading",
-          "value": "Advanced Shell Scripting"
+          "value": "What is Advanced Shell Scripting?"
         },
         {
           "type": "definition",
-          "value": "Advanced shell scripting involves using conditions, loops, and functions to create more powerful, flexible, and reusable Linux scripts."
+          "value": "Advanced shell scripting uses logic, conditions, loops, and functions to automate complex tasks in Linux."
+        },
+        {
+          "type": "text",
+          "value": "This lets us make decisions in scripts, repeat tasks automatically, and organize code into reusable functions—just like small programs."
+        },
+        {
+          "type": "table",
+          "value": [
+            ["Concept", "Purpose"],
+            ["Conditions (if)", "Make decisions based on situations"],
+            ["Loops (for/while)", "Repeat tasks automatically"],
+            ["Functions", "Reusable blocks of code"],
+            ["Exit Codes", "Check if commands succeeded or failed"]
+          ]
+        },
+        {
+          "type": "tip",
+          "value": "Always start small: build scripts in pieces, test often!"
         }
       ]
     },
+
+
     {
       "slideId": 2,
       "content": [
         {
           "type": "heading",
-          "value": "Why Advanced Scripting Is Important"
+          "value": "Conditions (if/else Statements)"
         },
         {
           "type": "text",
-          "value": "Basic scripts run commands in sequence, but real-world automation often requires decision-making, repetition, and organization. Advanced scripting features allow scripts to respond to different situations, process large amounts of data, and perform complex administrative tasks automatically."
+          "value": "Conditions help scripts behave differently depending on user input or system state."
+        },
+        {
+          "type": "code",
+          "command": "#!/bin/bash\nif [ -f file.txt ]; then\n  echo \"file exists\"\nelse\n  echo \"file not found\"\nfi",
+          "description": "Check if a file exists before taking action."
+        },
+        {
+          "type": "code",
+          "command": "if [ $age -ge 18 ]; then echo \"Adult\"; else echo \"Minor\"; fi",
+          "description": "Number comparison using -eq, -lt, -gt, -ge, -le."
+        },
+        {
+          "type": "tip",
+          "value": "Space matters in conditions: [ value -eq 10 ] ✔️  NOT [value- eq10] ❌"
         }
-      ]
+      ],
+    "video": {
+        "platform": "youtube",
+        "url": "https://www.youtube.com/watch?v=0Mk2i_sBXzg"
+      }
     },
+
+
     {
       "slideId": 3,
       "content": [
         {
           "type": "heading",
-          "value": "Conditional Statements"
+          "value": "Loops (for, while)"
         },
         {
-          "type": "definition",
-          "value": "Conditional statements allow a script to make decisions based on conditions."
+          "type": "text",
+          "value": "Loops repeat tasks—great for backups, automation, processing files, and system checks."
+        },
+        {
+          "type": "code",
+          "command": "for file in *.txt; do\n  echo \"Processing $file\"\ndone",
+          "description": "Loop through all text files in a directory."
+        },
+        {
+          "type": "code",
+          "command": "while true; do\n  echo \"Running...\"\n  sleep 2\ndone",
+          "description": "An infinite loop (use CTRL + C to stop)."
+        },
+        {
+          "type": "tip",
+          "value": "for = repeat over a list; while = repeat until condition stops."
         }
-      ]
+      ],
+    "video": {
+        "platform": "youtube",
+        "url": "https://www.youtube.com/watch?v=K5NAhnEZfGk"
+      }
     },
+
+
     {
       "slideId": 4,
       "content": [
         {
           "type": "heading",
-          "value": "if Statement"
+          "value": "Functions (Reusable Code Blocks)"
         },
         {
-          "type": "definition",
-          "value": "The if statement executes commands only if a condition is true."
+          "type": "text",
+          "value": "Functions organize logic and make scripts cleaner, easier to maintain, and reusable."
+        },
+        {
+          "type": "code",
+          "command": "greet() {\n  echo \"Hello, $1\"\n}\ngreet \"student\"",
+          "description": "$1 means the first argument passed to the function."
+        },
+        {
+          "type": "code",
+          "command": "backup() {\n  cp -r /data /backup\n  echo \"Backup completed!\"\n}\nbackup",
+          "description": "Example: creating a backup function."
+        },
+        {
+          "type": "tip",
+          "value": "Functions must be defined before they are used in most shells."
         }
-      ]
+      ],
+      "video": null
     },
+
+
     {
       "slideId": 5,
       "content": [
         {
           "type": "heading",
-          "value": "Basic if Statement"
+          "value": "Quick Quiz"
         },
         {
-          "type": "code",
-          "command": "[ if [ -f file.txt ] then echo \"File exists\" fi ]",
-          "description": "Explain what this command does and when to use it."
-        }
-      ]
-    },
-    {
-      "slideId": 6,
-      "content": [
-        {
-          "type": "heading",
-          "value": "Loops"
+          "type": "quiz",
+          "question": "Which scripting feature repeats tasks automatically?",
+          "options": ["A: if condition", "B: variable", "C: loop", "D: function"],
+          "correctAnswer": 2
         },
         {
-          "type": "definition",
-          "value": "Loops allow scripts to repeat commands multiple times automatically."
+          "type": "quiz",
+          "question": "What does $1 represent inside a function?",
+          "options": ["A: Script name", "B: First argument", "C: Loop counter", "D: Error code"],
+          "correctAnswer": 1
+        },
+        {
+          "type": "quiz",
+          "question": "Which command checks if a file exists?",
+          "options": ["A: [ -f file ]", "B: file ?", "C: check file", "D: exists file"],
+          "correctAnswer": 0
+        },
+        {
+          "type": "tip",
+          "value": "Start using conditions + loops + functions → your scripts become real programs!"
         }
-      ]
+      ],
+      "video": null
     }
   ]
 }

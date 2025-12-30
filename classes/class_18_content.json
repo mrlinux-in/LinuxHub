@@ -7,90 +7,173 @@
       "content": [
         {
           "type": "heading",
-          "value": "Archiving and Compression"
+          "value": "Introduction to Archiving & Compression"
         },
         {
           "type": "definition",
-          "value": "Combining multiple files into a single file to save storage space and make file transfer easier."
+          "value": "Archiving and compression allow us to combine multiple files or folders and reduce their size so they are easier to store, transfer, or back up."
         },
         {
           "type": "text",
-          "value": "Linux systems often handle many files. Archiving helps combine multiple files, while compression reduces file size."
+          "value": "Linux uses tools like tar, zip, and gzip to create compressed archives. These help save disk space, package project files, and share data efficiently."
+        },
+        {
+          "type": "table",
+          "value": [
+            ["Tool", "Purpose"],
+            ["tar", "Archive multiple files together (can compress too)"],
+            ["zip", "Create compressed .zip files (cross-platform friendly)"],
+            ["unzip", "Extract .zip files"],
+            ["gzip", "Compress a single file (.gz format)"],
+            ["gunzip", "Extract .gz compressed files"]
+          ]
+        },
+        {
+          "type": "tip",
+          "value": "tar is most common in Linux; zip is best for sharing with Windows users."
         }
-      ]
+      ],
+      "video": {
+        "platform": "youtube",
+        "url": "https://www.youtube.com/watch?v=KucqplDh7LI"
+      }
     },
+
+
+
     {
       "slideId": 2,
       "content": [
         {
           "type": "heading",
-          "value": "Definition - Archive"
+          "value": "Working With tar Archives (.tar, .tar.gz)"
         },
         {
-          "type": "definition",
-          "value": "A single file that contains multiple files and directories."
+          "type": "text",
+          "value": "tar is the standard Linux tool for archiving folders and optionally compressing them using gzip."
+        },
+        {
+          "type": "code",
+          "command": "tar -cf archive.tar foldername/",
+          "description": "Create an archive (no compression)."
+        },
+        {
+          "type": "code",
+          "command": "tar -czf archive.tar.gz foldername/",
+          "description": "Create a compressed archive (.tar.gz)."
+        },
+        {
+          "type": "code",
+          "command": "tar -xzf archive.tar.gz",
+          "description": "Extract a compressed archive."
+        },
+        {
+          "type": "table",
+          "value": [
+            ["Flag", "Meaning"],
+            ["-c", "Create archive"],
+            ["-x", "Extract archive"],
+            ["-z", "Compress using gzip"],
+            ["-f", "File name will follow"]
+          ]
+        },
+        {
+          "type": "tip",
+          "value": "Remember: c = create, x = extract, z = zip compression, f = file"
         }
-      ]
+      ],
+      "video": null
     },
+
+
+
     {
       "slideId": 3,
       "content": [
         {
           "type": "heading",
-          "value": "Definition - Compression"
+          "value": "Working With zip & gzip Compression"
         },
         {
-          "type": "definition",
-          "value": "Reduces the size of files by removing redundant data."
+          "type": "text",
+          "value": "zip is easier for sharing with Windows users, while gzip is commonly used for single files in Linux."
+        },
+        {
+          "type": "code",
+          "command": "zip myfiles.zip file1 file2 file3",
+          "description": "Create a zip archive."
+        },
+        {
+          "type": "code",
+          "command": "unzip myfiles.zip",
+          "description": "Extract a .zip archive."
+        },
+        {
+          "type": "code",
+          "command": "gzip file.txt",
+          "description": "Compress a single file into file.txt.gz"
+        },
+        {
+          "type": "code",
+          "command": "gunzip file.txt.gz",
+          "description": "Decompress a .gz file"
+        },
+        {
+          "type": "tip",
+          "value": "Use zip for folders, gzip for large single files."
         }
-      ]
+      ],
+      "video": null
     },
+
+
+
     {
       "slideId": 4,
       "content": [
         {
           "type": "heading",
-          "value": "List - Common Archive and Compression Tools"
+          "value": "Quick Quiz"
         },
         {
-          "type": "list",
-          "items": [
-            "tar",
-            "gzip",
-            "gunzip",
-            "zip",
-            "unzip"
-          ]
-        }
-      ]
-    },
-    {
-      "slideId": 5,
-      "content": [
-        {
-          "type": "heading",
-          "value": "Code - Creating a tar Archive"
+          "type": "quiz",
+          "question": "Which command creates a compressed tar file?",
+          "options": [
+            "A: tar -czf archive.tar.gz foldername/",
+            "B: zip archive.zip foldername/",
+            "C: tar -cf archive.tar foldername/",
+            "D: gzip foldername/"
+          ],
+          "correctAnswer": 0
         },
         {
-          "type": "code",
-          "command": "tar -cvf backup.tar Documents",
-          "description": "Creates an archive named backup.tar from the Documents directory."
-        }
-      ]
-    },
-    {
-      "slideId": 6,
-      "content": [
-        {
-          "type": "heading",
-          "value": "Code - Extracting a tar Archive"
+          "type": "quiz",
+          "question": "Which tool is best for sharing archives with Windows users?",
+          "options": [
+            "A: tar",
+            "B: gzip",
+            "C: zip",
+            "D: gunzip"
+          ],
+          "correctAnswer": 2
         },
         {
-          "type": "code",
-          "command": "tar -xvf backup.tar",
-          "description": "Extracts the contents of backup.tar."
+          "type": "quiz",
+          "question": "What does the -x flag do in tar?",
+          "options": [
+            "A: create",
+            "B: extract",
+            "C: compress",
+            "D: list"
+          ],
+          "correctAnswer": 1
+        },
+        {
+          "type": "tip",
+          "value": "Use tar for Linux backups, zip for sharing, gzip for single files."
         }
-      ]
+      ],
+      "video": null
     }
   ]
 }

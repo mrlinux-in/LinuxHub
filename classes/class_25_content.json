@@ -7,82 +7,158 @@
       "content": [
         {
           "type": "heading",
-          "value": "Advanced Networking and Remote Access"
+          "value": "Secure Remote Access with SSH"
         },
         {
           "type": "definition",
-          "value": "Linux servers are often located in data centers or cloud environments and are managed remotely. Remote access allows administrators to control servers, troubleshoot issues, and transfer files without being physically present."
+          "value": "SSH (Secure Shell) allows you to remotely connect to another Linux machine securely over a network."
+        },
+        {
+          "type": "text",
+          "value": "SSH encrypts the connection, so passwords, commands, and data stay protected from attackers while accessing remote servers."
+        },
+        {
+          "type": "table",
+          "value": [
+            ["Command / Concept", "Meaning"],
+            ["ssh user@ip", "Connect to a remote system"],
+            ["ssh -p 2222 user@ip", "Connect using a custom port"],
+            ["ssh-copy-id user@ip", "Copy SSH key for passwordless login"],
+            ["~/.ssh/id_rsa", "Private key (keep safe!)"],
+            ["~/.ssh/authorized_keys", "Remote server key list"]
+          ]
+        },
+        {
+          "type": "tip",
+          "value": "Never share your private key. Use ssh-copy-id to set up key authentication safely."
         }
       ],
-      "video": null
+      "video": {
+        "platform": "youtube",
+        "url": "https://www.youtube.com/watch?v=v45p_kJV9i4"
+      }
     },
+
+
+
     {
       "slideId": 2,
       "content": [
         {
           "type": "heading",
-          "value": "Why Remote Access Is Important"
+          "value": "File Transfer: SCP & rsync"
         },
         {
           "type": "text",
-          "value": "Linux servers are often located in data centers or cloud environments and are managed remotely. Remote access allows administrators to control servers, troubleshoot issues, and transfer files without being physically present."
+          "value": "SCP copies files securely over SSH. rsync is faster and smarter, syncing only changed parts."
+        },
+        {
+          "type": "code",
+          "command": "scp file.txt user@192.168.1.10:/home/user/",
+          "description": "Copy a file to a remote server."
+        },
+        {
+          "type": "code",
+          "command": "scp -r folder/ user@192.168.1.10:/home/user/",
+          "description": "Copy folders recursively."
+        },
+        {
+          "type": "code",
+          "command": "rsync -avz folder/ user@192.168.1.10:/backup/",
+          "description": "Sync folders efficiently (compress, only changed files)."
+        },
+        {
+          "type": "code",
+          "command": "rsync -avz user@192.168.1.10:/backup/ localfolder/",
+          "description": "Download backup from remote server."
+        },
+        {
+          "type": "table",
+          "value": [
+            ["Tool", "Best Use"],
+            ["SCP", "Simple secure copy between systems"],
+            ["rsync", "Fast backup, sync, resume, and incremental transfer"],
+            ["SSH Keys", "Passwordless secure login for automation"]
+          ]
+        },
+        {
+          "type": "tip",
+          "value": "Use rsync for backups and syncing projects; it's faster than SCP."
         }
       ],
-      "video": null
+      "video": {
+        "platform": "youtube",
+        "url": "https://www.youtube.com/watch?v=iSM9FJIMKdQ"
+      }
     },
+
+
+
     {
       "slideId": 3,
       "content": [
         {
           "type": "heading",
-          "value": "SSH"
+          "value": "Remote Server Management (Practical)"
         },
         {
-          "type": "definition",
-          "value": "SSH (Secure Shell) is a protocol that allows secure remote login and command execution over a network."
+          "type": "stepByStep",
+          "steps": [
+            "Connect to server: ssh user@server_ip",
+            "Check system status: top, df -h, free -h",
+            "Transfer files using scp or rsync",
+            "Automate backups using rsync + cron",
+            "Enable passwordless login: ssh-copy-id user@server"
+          ]
+        },
+        {
+          "type": "code",
+          "command": "ssh-copy-id user@192.168.1.10",
+          "description": "Install your public key on the remote server for passwordless login."
+        },
+        {
+          "type": "code",
+          "command": "ssh -i ~/.ssh/id_rsa user@192.168.1.10",
+          "description": "Login using a private key file."
+        },
+        {
+          "type": "tip",
+          "value": "Passwordless SSH is safer than using passwords repeatedly."
         }
       ],
       "video": null
     },
+
+
+
     {
       "slideId": 4,
       "content": [
         {
           "type": "heading",
-          "value": "How SSH Works"
+          "value": "Quick Quiz"
         },
         {
-          "type": "text",
-          "value": "SSH encrypts all data sent between the client and the server, protecting usernames, passwords, and commands from being intercepted. It replaces older, insecure protocols like Telnet."
-        }
-      ],
-      "video": null
-    },
-    {
-      "slideId": 5,
-      "content": [
-        {
-          "type": "heading",
-          "value": "Connecting to a Remote Server"
+          "type": "quiz",
+          "question": "Which tool is best for syncing large folders efficiently?",
+          "options": ["A: ssh", "B: scp", "C: rsync", "D: ftp"],
+          "correctAnswer": 2
         },
         {
-          "type": "code",
-          "command": "ssh user@remote_ip",
-          "description": "Connects to a remote Linux system using SSH."
-        }
-      ],
-      "video": null
-    },
-    {
-      "slideId": 6,
-      "content": [
-        {
-          "type": "heading",
-          "value": "SSH Key Authentication"
+          "type": "quiz",
+          "question": "Which command connects to a remote server?",
+          "options": ["A: connect user@ip", "B: net user@ip", "C: ssh user@ip", "D: server user@ip"],
+          "correctAnswer": 2
         },
         {
-          "type": "definition",
-          "value": "SSH key authentication uses a pair of cryptographic keys to authenticate users without passwords."
+          "type": "quiz",
+          "question": "What is required for passwordless SSH login?",
+          "options": ["A: IP address", "B: SSH keys", "C: root access", "D: VPN"],
+          "correctAnswer": 1
+        },
+        {
+          "type": "tip",
+          "value": "Use SSH + rsync for secure remote management and backups."
         }
       ],
       "video": null

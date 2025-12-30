@@ -7,83 +7,197 @@
       "content": [
         {
           "type": "heading",
-          "value": "Cron Overview"
+          "value": "What is Cron?"
         },
         {
           "type": "definition",
-          "value": "Cron is a Linux scheduling system that allows users to run commands or scripts automatically at specified times or intervals."
+          "value": "Cron is a time-based job scheduler in Linux that automatically runs commands or scripts at specific times, dates, or intervals."
         },
         {
           "type": "text",
-          "value": "Many system tasks need to be performed regularly, such as backups, log cleanup, system updates, and monitoring. Manually running these tasks is inefficient and error-prone. Cron allows Linux to execute tasks automatically without user interaction, saving time and ensuring reliability."
+          "value": "We use cron to automate repetitive tasks like backups, system maintenance, alerts, and log cleaning. Cron jobs run in the background without user interaction."
+        },
+        {
+          "type": "table",
+          "value": [
+            ["Common Use Case", "Example"],
+            ["Daily backup", "Run a script every midnight"],
+            ["Weekly cleanup", "Delete temp files every Sunday"],
+            ["Hourly check", "Monitor system memory every hour"],
+            ["Scheduled alert", "Send email reminders automatically"]
+          ]
+        },
+        {
+          "type": "tip",
+          "value": "Cron = Automation. Write once → let it run forever."
         }
-      ]
+      ],
+      "video": {
+        "platform": "youtube",
+        "url": "https://www.youtube.com/watch?v=v952m13p-b4"
+      }
     },
     {
       "slideId": 2,
       "content": [
         {
           "type": "heading",
-          "value": "Cron Job Definition"
+          "value": "Cron Syntax (Timing Structure)"
         },
         {
-          "type": "definition",
-          "value": "A cron job is a scheduled task that runs automatically according to a defined time and date."
+          "type": "text",
+          "value": "Cron follows a 5-field timing format to decide when a job runs. Each field controls a time unit."
+        },
+        {
+          "type": "table",
+          "value": [
+            ["Field", "Meaning", "Example"],
+            ["Minute", "0–59", "0 = start of hour"],
+            ["Hour", "0–23", "2 = 2 AM"],
+            ["Day of Month", "1–31", "15 = 15th day"],
+            ["Month", "1–12", "1 = January"],
+            ["Day of Week", "0–6", "0/7 = Sunday"]
+          ]
+        },
+        {
+          "type": "code",
+          "command": "* * * * * command",
+          "description": "Runs every minute (wildcards everywhere)."
+        },
+        {
+          "type": "image",
+          "url": "https://contabo.com/blog/wp-content/uploads/2023/05/blog-head_syntax-of-cron.jpg",
+          "alt": "Cron timing structure diagram showing the 5 fields"
+        },
+        {
+          "type": "tip",
+          "value": "Think of * as 'any value' → run at all times."
         }
-      ]
+      ],
+      "video": null
     },
     {
       "slideId": 3,
       "content": [
         {
           "type": "heading",
-          "value": "Crontab Definition"
+          "value": "Common Cron Job Examples"
         },
         {
-          "type": "definition",
-          "value": "crontab is a file and command used to create, view, edit, and manage cron jobs."
+          "type": "code",
+          "command": "crontab -e",
+          "description": "Open cron editor to add or modify cron jobs."
+        },
+        {
+          "type": "code",
+          "command": "@reboot /home/user/script.sh",
+          "description": "Runs once every time system boots."
+        },
+        {
+          "type": "code",
+          "command": "0 0 * * * /home/user/backup.sh",
+          "description": "Run backup script every day at midnight."
+        },
+        {
+          "type": "code",
+          "command": "0 */1 * * * free -h >> /home/user/memory.log",
+          "description": "Log memory usage every hour."
+        },
+        {
+          "type": "code",
+          "command": "30 9 * * 1 echo \"Happy Monday!\"",
+          "description": "Send reminder every Monday at 9:30 AM."
+        },
+        {
+          "type": "tip",
+          "value": "Use full file paths inside cron — it doesn't load user paths like normal terminal."
         }
-      ]
+      ],
+      "video": null
     },
+
+
     {
       "slideId": 4,
       "content": [
         {
           "type": "heading",
-          "value": "Viewing Existing Cron Jobs"
+          "value": "Managing Cron Jobs"
+        },
+        {
+          "type": "text",
+          "value": "Cron jobs are handled through crontab (cron table). You can view, edit, and remove entries easily."
+        },
+        {
+          "type": "code",
+          "command": "crontab -e",
+          "description": "Edit/add cron jobs"
         },
         {
           "type": "code",
           "command": "crontab -l",
-          "description": "Lists all cron jobs for the current user."
+          "description": "List all cron jobs"
+        },
+        {
+          "type": "code",
+          "command": "crontab -r",
+          "description": "Remove all cron jobs (use carefully!)"
+        },
+        {
+          "type": "tip",
+          "value": "Always test your script manually before putting it into cron."
         }
-      ]
+      ],
+      "video": null
     },
+
+
     {
       "slideId": 5,
       "content": [
         {
           "type": "heading",
-          "value": "Editing Cron Jobs"
+          "value": "Quick Quiz"
         },
         {
-          "type": "definition",
-          "value": "Editing cron jobs allows users to add or modify scheduled tasks."
-        }
-      ]
-    },
-    {
-      "slideId": 6,
-      "content": [
-        {
-          "type": "heading",
-          "value": "Cron Time Format"
+          "type": "quiz",
+          "question": "Which command opens the cron scheduler to add a task?",
+          "options": [
+            "A: cron start",
+            "B: crontab -e",
+            "C: schedule -c",
+            "D: autostart"
+          ],
+          "correctAnswer": 1
         },
         {
-          "type": "text",
-          "value": "A cron job uses five time fields followed by the command to execute. Each field represents a specific unit of time."
+          "type": "quiz",
+          "question": "What does this job do? `0 0 * * * /script.sh`",
+          "options": [
+            "A: Runs every minute",
+            "B: Runs at midnight daily",
+            "C: Runs every Sunday",
+            "D: Runs at system startup"
+          ],
+          "correctAnswer": 1
+        },
+        {
+          "type": "quiz",
+          "question": "Which cron keyword runs a job after boot?",
+          "options": [
+            "A: @daily",
+            "B: @reboot",
+            "C: @hourly",
+            "D: @startup"
+          ],
+          "correctAnswer": 1
+        },
+        {
+          "type": "tip",
+          "value": "Cron = Repetition. Use it for backups, monitoring, cleanup, automation."
         }
-      ]
+      ],
+      "video": null
     }
   ]
 }

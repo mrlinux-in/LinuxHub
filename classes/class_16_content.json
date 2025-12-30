@@ -7,93 +7,191 @@
       "content": [
         {
           "type": "heading",
-          "value": "Package Management"
+          "value": "Introduction to Package Management"
         },
         {
           "type": "definition",
-          "value": "The process of installing, updating, upgrading, and removing software using package manager tools.",
-          "example": "Example: Installing a text editor using a single command."
+          "value": "Package management is the process of installing, updating, and removing software on Linux using built-in tools called package managers."
         },
         {
           "type": "text",
-          "value": "In Linux, software is usually installed from trusted online sources called repositories. Package managers automatically handle downloading software, installing required dependencies, and keeping applications updated."
+          "value": "Different Linux distributions use different package managers. Debian and Ubuntu use apt, while RedHat and CentOS use yum or dnf. These tools help install software safely with all necessary dependencies."
+        },
+        {
+          "type": "table",
+          "value": [
+            ["Distribution", "Package Manager"],
+            ["Ubuntu / Debian", "apt / dpkg"],
+            ["CentOS / RHEL", "yum / dnf"],
+            ["Arch Linux", "pacman"],
+            ["SUSE / OpenSUSE", "zypper"]
+          ]
+        },
+        {
+          "type": "tip",
+          "value": "Always update package lists before installing new software to avoid errors."
         }
       ],
-      "video": null
+      "video": {
+        "platform": "youtube",
+        "url": "https://www.youtube.com/watch?v=lkii2cGuKao"
+      }
     },
+
+
     {
       "slideId": 2,
       "content": [
         {
           "type": "heading",
-          "value": "Why Package Management Is Important"
+          "value": "Managing Packages on Ubuntu/Debian (APT)"
         },
         {
           "type": "text",
-          "value": "Package managers automatically handle downloading software, installing required dependencies, and keeping applications updated. This makes Linux software management fast, secure, and reliable compared to manual installation."
+          "value": "APT is the most common package manager for beginner-friendly Linux distributions."
+        },
+        {
+          "type": "code",
+          "command": "sudo apt update",
+          "description": "Refreshes package list (check for new versions). Run this first!"
+        },
+        {
+          "type": "code",
+          "command": "sudo apt install packageName",
+          "description": "Installs a new software package."
+        },
+        {
+          "type": "code",
+          "command": "sudo apt remove packageName",
+          "description": "Removes an installed package but keeps configuration files."
+        },
+        {
+          "type": "code",
+          "command": "sudo apt purge packageName",
+          "description": "Completely removes package & configuration files."
+        },
+        {
+          "type": "code",
+          "command": "sudo apt upgrade",
+          "description": "Updates all installed packages to latest versions."
+        },
+        {
+          "type": "tip",
+          "value": "Use apt update before apt upgrade to get the newest package info."
         }
       ],
       "video": null
     },
+
+
     {
       "slideId": 3,
       "content": [
         {
           "type": "heading",
-          "value": "Popular Linux Package Managers"
+          "value": "Managing Packages on RHEL/CentOS (YUM/DNF)"
         },
         {
-          "type": "list",
-          "items": [
-            "apt – Debian / Ubuntu based systems",
-            "dnf – Fedora / RHEL based systems",
-            "yum – Older RHEL / CentOS systems",
-            "pacman – Arch Linux"
-          ]
+          "type": "text",
+          "value": "YUM and DNF are package managers used on RedHat-based systems like CentOS, Fedora, and RHEL."
+        },
+        {
+          "type": "code",
+          "command": "sudo dnf install packageName",
+          "description": "Install software (DNF is the modern version of YUM)."
+        },
+        {
+          "type": "code",
+          "command": "sudo dnf remove packageName",
+          "description": "Remove an installed package."
+        },
+        {
+          "type": "code",
+          "command": "sudo dnf update",
+          "description": "Update all packages to the newest version."
+        },
+        {
+          "type": "tip",
+          "value": "On older systems, yum is used instead of dnf."
         }
       ],
       "video": null
     },
+
+
     {
       "slideId": 4,
       "content": [
         {
           "type": "heading",
-          "value": "Software Repositories"
+          "value": "Low-Level Package Tools (dpkg & rpm)"
         },
         {
           "type": "text",
-          "value": "Repositories are online servers that store software packages. Linux systems download packages from repositories instead of random websites, which improves security and stability."
+          "value": "These tools install local package files when you don’t use online repositories."
+        },
+        {
+          "type": "code",
+          "command": "sudo dpkg -i package.deb",
+          "description": "Install a .deb file (Debian/Ubuntu)."
+        },
+        {
+          "type": "code",
+          "command": "sudo rpm -ivh package.rpm",
+          "description": "Install an .rpm file (RedHat/CentOS)."
+        },
+        {
+          "type": "tip",
+          "value": "If dpkg shows dependency errors, fix them with: sudo apt --fix-broken install"
         }
       ],
       "video": null
     },
+
+
     {
       "slideId": 5,
       "content": [
         {
           "type": "heading",
-          "value": "Updating Package List"
+          "value": "Quick Quiz"
         },
         {
-          "type": "code",
-          "command": "sudo apt update",
-          "description": "Updates the list of available packages from repositories."
-        }
-      ],
-      "video": null
-    },
-    {
-      "slideId": 6,
-      "content": [
-        {
-          "type": "heading",
-          "value": "Upgrading Installed Packages"
+          "type": "quiz",
+          "question": "Which command updates package lists in Ubuntu/Debian?",
+          "options": [
+            "A: apt remove",
+            "B: apt update",
+            "C: yum install",
+            "D: dpkg -i"
+          ],
+          "correctAnswer": 1
         },
         {
-          "type": "code",
-          "command": "sudo apt upgrade",
-          "description": "Upgrades all installed packages to the latest versions."
+          "type": "quiz",
+          "question": "Which command installs a package on RedHat/CentOS?",
+          "options": [
+            "A: apt install",
+            "B: dnf install",
+            "C: dpkg install",
+            "D: purge install"
+          ],
+          "correctAnswer": 1
+        },
+        {
+          "type": "quiz",
+          "question": "Which tool installs .deb files?",
+          "options": [
+            "A: rpm",
+            "B: dpkg",
+            "C: htop",
+            "D: pacman"
+          ],
+          "correctAnswer": 1
+        },
+        {
+          "type": "tip",
+          "value": "Remember: APT = Ubuntu/Debian | DNF/YUM = CentOS/RedHat"
         }
       ],
       "video": null

@@ -7,26 +7,66 @@
       "content": [
         {
           "type": "heading",
-          "value": "File System Internals and Links"
+          "value": "Understanding File System Internals"
         },
         {
           "type": "definition",
-          "value": "File system internals describe how Linux stores file information internally, while links allow multiple references to the same file.",
-          "example": "Example: Two different filenames pointing to the same data."
+          "value": "Linux file systems store files using inodes, which contain metadata like ownership, permissions, size, and location on disk."
+        },
+        {
+          "type": "text",
+          "value": "Every file has an inode number. The inode does not store the file name—names belong to directory entries. This is why multiple names can point to the same data."
+        },
+        {
+          "type": "table",
+          "value": [
+            ["Term", "Meaning"],
+            ["Inode", "Data structure storing file info (metadata, disk location)"],
+            ["Metadata", "Information like size, owner, permissions, timestamps"],
+            ["Directory Entry", "Maps file names to inode numbers"],
+            ["Data Blocks", "Where actual file content is stored"]
+          ]
+        },
+        {
+          "type": "tip",
+          "value": "inode = identity of a file. Name = just a label pointing to that identity."
         }
-      ],
-      "video": null
+      ]
     },
     {
       "slideId": 2,
       "content": [
         {
           "type": "heading",
-          "value": "Why File System Internals Matter"
+          "value": "Checking Inodes & Metadata"
         },
         {
           "type": "text",
-          "value": "Understanding file system internals helps users manage storage efficiently, troubleshoot file issues, and avoid accidental data loss. Links are commonly used in system directories, software installations, and shortcuts."
+          "value": "We can view a file's inode number and metadata using ls and stat commands."
+        },
+        {
+          "type": "code",
+          "command": "ls -i file.txt",
+          "description": "Shows the inode number of the file."
+        },
+        {
+          "type": "code",
+          "command": "stat file.txt",
+          "description": "Displays detailed metadata of a file."
+        },
+        {
+          "type": "table",
+          "value": [
+            ["Metadata Field", "Description"],
+            ["Size", "File size in bytes"],
+            ["Access/Modify Time", "When file was opened or changed"],
+            ["UID/GID", "File owner and group owner"],
+            ["Permissions", "rw-r--r-- style access control settings"]
+          ]
+        },
+        {
+          "type": "tip",
+          "value": "Two files can look different but share the same inode → hard link."
         }
       ],
       "video": null
@@ -36,62 +76,68 @@
       "content": [
         {
           "type": "heading",
-          "value": "Inode"
+          "value": "Hard Links vs Soft (Symbolic) Links"
         },
         {
-          "type": "definition",
-          "value": "An inode is a data structure that stores information about a file except its name and actual data.",
-          "example": "Example: File permissions and ownership are stored in the inode."
+          "type": "text",
+          "value": "Links are alternate ways to access a file. Hard links share the same inode; symbolic links point to the filename."
+        },
+        {
+          "type": "table",
+          "value": [
+            ["Type", "Points To", "Breaks If Original Deleted?", "Cross Filesystem?"],
+            ["Hard Link", "Inode / actual data", "❌ No", "❌ No"],
+            ["Symbolic Link (symlink)", "Original file name path", "✔️ Yes", "✔️ Yes"]
+          ]
+        },
+        {
+          "type": "code",
+          "command": "ln file.txt hardlink.txt",
+          "description": "Creates a hard link (same inode, same data)."
+        },
+        {
+          "type": "code",
+          "command": "ln -s file.txt symlink.txt",
+          "description": "Creates a symbolic link (shortcut-like pointer)."
+        },
+        {
+          "type": "tip",
+          "value": "Hard link = clone of file reference. Symlink = shortcut to file."
         }
       ],
-      "video": null
+      "video": {
+        "platform": "youtube",
+        "url": "https://www.youtube.com/watch?v=4-vye3QFTFo"
+      }
     },
     {
       "slideId": 4,
       "content": [
         {
           "type": "heading",
-          "value": "Information Stored in an Inode"
+          "value": "Quick Quiz"
         },
         {
-          "type": "list",
-          "items": [
-            "File type",
-            "File permissions",
-            "Owner and group",
-            "File size",
-            "Timestamps",
-            "Disk location"
-          ]
-        }
-      ],
-      "video": null
-    },
-    {
-      "slideId": 5,
-      "content": [
-        {
-          "type": "heading",
-          "value": "Filename vs Inode"
+          "type": "quiz",
+          "question": "Where is file metadata stored?",
+          "options": ["A: Data blocks", "B: Directory entry", "C: Inode", "D: Filename"],
+          "correctAnswer": 2
         },
         {
-          "type": "text",
-          "value": "In Linux, filenames are not stored inside the file itself. Instead, filenames point to inodes. This allows multiple filenames (links) to reference the same inode."
-        }
-      ],
-      "video": null
-    },
-    {
-      "slideId": 6,
-      "content": [
-        {
-          "type": "heading",
-          "value": "Viewing Inode Number"
+          "type": "quiz",
+          "question": "Which type of link breaks if the original file is deleted?",
+          "options": ["A: Hard link", "B: Symbolic link", "C: Both", "D: Neither"],
+          "correctAnswer": 1
         },
         {
-          "type": "code",
-          "command": "ls -li",
-          "description": "Displays files along with their inode numbers."
+          "type": "quiz",
+          "question": "Which command creates a symbolic link?",
+          "options": ["A: ln file.txt link", "B: ln -s file.txt link", "C: link file.txt", "D: symlink file.txt"],
+          "correctAnswer": 1
+        },
+        {
+          "type": "tip",
+          "value": "If a symlink breaks, it becomes a 'dangling link' — pointing to nothing."
         }
       ],
       "video": null

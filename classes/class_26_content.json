@@ -7,107 +7,195 @@
       "content": [
         {
           "type": "heading",
-          "value": "Linux Security and Firewall"
+          "value": "Introduction to Linux Security"
         },
         {
           "type": "definition",
-          "value": "Linux security involves protecting the system from unauthorized access and attacks, while firewalls control network traffic entering and leaving the system.",
-          "example": "Example: Allowing only SSH traffic and blocking all other incoming connections."
+          "value": "Linux security protects the system from unauthorized access, misuse, or damage by controlling permissions, users, and network access."
         },
         {
           "type": "text",
-          "value": "Linux systems often run critical servers and services. Without proper security, systems can be compromised, data can be stolen, and services can be disrupted. Linux security uses user privileges, firewalls, and security policies to protect the system and ensure safe operation."
+          "value": "Linux provides multiple layers of security: user permissions, sudo for admin control, firewall rules for network protection, and SELinux for system policy enforcement."
+        },
+        {
+          "type": "table",
+          "value": [
+            ["Security Component", "Purpose"],
+            ["sudo", "Run admin commands safely without logging in as root"],
+            ["ufw/firewalld", "Firewall to control allowed/blocked network traffic"],
+            ["SELinux", "Advanced security policy enforcement (mandatory access control)"],
+            ["Permissions (rwx)", "Controls who can read/write/execute files"],
+            ["Ownership", "Determines which user/group controls the file"]
+          ]
+        },
+        {
+          "type": "tip",
+          "value": "Security rule: Never work as root full-time. Use sudo only when required."
         }
-      ],
-      "video": null
+      ]
     },
+
+
+
     {
       "slideId": 2,
       "content": [
         {
           "type": "heading",
-          "value": "Why sudo Is Safer Than Root Login"
+          "value": "Using sudo for Secure Privileged Access"
         },
         {
           "type": "text",
-          "value": "Using sudo avoids logging in as root, reduces accidental damage, and keeps a log of administrative actions. This improves system security and accountability."
+          "value": "sudo allows a normal user to run admin commands with permission, instead of logging in as root. This reduces security risks and logs actions."
         },
         {
           "type": "code",
-          "command": "sudo apt install nginx",
-          "description": "Runs the command with administrator privileges."
+          "command": "sudo apt update",
+          "description": "Run system updates using admin privileges."
+        },
+        {
+          "type": "code",
+          "command": "sudo usermod -aG sudo student",
+          "description": "Add a user to sudo group (grant admin access)."
+        },
+        {
+          "type": "code",
+          "command": "sudo visudo",
+          "description": "Safely edit sudo permissions configuration file."
+        },
+        {
+          "type": "tip",
+          "value": "visudo prevents mistakes that could lock you out of admin access."
         }
       ],
-      "video": null
+      "video": {
+        "platform": "youtube",
+        "url": "https://www.youtube.com/shorts/ET9HA2fv6rM"
+      }
     },
+
+
+
     {
       "slideId": 3,
       "content": [
         {
           "type": "heading",
-          "value": "UFW (Uncomplicated Firewall)"
+          "value": "Firewall Basics (ufw & firewalld)"
         },
         {
-          "type": "definition",
-          "value": "UFW is a simple firewall management tool for Linux.",
-          "example": "Example: Allowing SSH access through the firewall."
+          "type": "text",
+          "value": "Firewalls control which incoming/outgoing connections are allowed. They block suspicious access and protect services."
         },
         {
           "type": "code",
           "command": "sudo ufw enable",
-          "description": "Enables the UFW firewall."
+          "description": "Enable firewall (Ubuntu/Debian)."
+        },
+        {
+          "type": "code",
+          "command": "sudo ufw allow 22",
+          "description": "Allow SSH on port 22."
+        },
+        {
+          "type": "code",
+          "command": "sudo ufw status",
+          "description": "Check allowed services and ports."
+        },
+        {
+          "type": "code",
+          "command": "sudo firewall-cmd --add-service=http --permanent",
+          "description": "Allow HTTP service (CentOS/RHEL)."
+        },
+        {
+          "type": "code",
+          "command": "sudo firewall-cmd --reload",
+          "description": "Apply firewall rule changes."
+        },
+        {
+          "type": "tip",
+          "value": "Only open the ports you actually need: SSH, HTTP, HTTPS, Database, etc."
         }
       ],
-      "video": null
+      "video": {
+        "platform": "youtube",
+        "url": "https://www.youtube.com/shorts/u8ePspcaeyo"
+      }
     },
+
+
+
     {
       "slideId": 4,
       "content": [
         {
           "type": "heading",
-          "value": "Allowing and Blocking Ports"
+          "value": "Intro to SELinux (Security-Enhanced Linux)"
+        },
+        {
+          "type": "text",
+          "value": "SELinux enforces security policies system-wide. It controls which programs can access which files, even if permissions seem correct."
+        },
+        {
+          "type": "table",
+          "value": [
+            ["Mode", "Meaning"],
+            ["Enforcing", "SELinux blocks unauthorized actions (recommended)"],
+            ["Permissive", "Logs warnings but does not block"],
+            ["Disabled", "Turns off SELinux (not recommended)"]
+          ]
         },
         {
           "type": "code",
-          "value": [
-            "sudo ufw allow ssh",
-            "sudo ufw allow 80",
-            "sudo ufw deny 23"
-          ]
+          "command": "sestatus",
+          "description": "Check if SELinux is running."
+        },
+        {
+          "type": "code",
+          "command": "sudo setenforce 0   # Permissive\nsudo setenforce 1   # Enforcing",
+          "description": "Temporarily change SELinux mode."
+        },
+        {
+          "type": "tip",
+          "value": "If a service fails but permissions look fine → SELinux might be blocking it."
         }
       ],
-      "video": null
+      "video": {
+        "platform": "youtube",
+        "url": "https://www.youtube.com/watch?v=KkTDdHDAaYI"
+      }
     },
+
+
+
     {
       "slideId": 5,
       "content": [
         {
           "type": "heading",
-          "value": "Checking Firewall Status"
+          "value": "Quick Quiz"
         },
         {
-          "type": "text",
-          "value": "You can check firewall rules and status to verify what traffic is allowed or blocked."
+          "type": "quiz",
+          "question": "Which command enables the firewall in Ubuntu?",
+          "options": ["A: sudo open firewall", "B: sudo ufw enable", "C: sudo firewall start", "D: sudo secure-on"],
+          "correctAnswer": 1
         },
         {
-          "type": "code",
-          "command": "sudo ufw status",
-          "description": "Displays firewall rules and status."
-        }
-      ],
-      "video": null
-    },
-    {
-      "slideId": 6,
-      "content": [
-        {
-          "type": "heading",
-          "value": "firewalld"
+          "type": "quiz",
+          "question": "SELinux Enforcing mode means:",
+          "options": ["A: No security applied", "B: Warnings only", "C: Blocks unauthorized actions", "D: Disables firewall"],
+          "correctAnswer": 2
         },
         {
-          "type": "definition",
-          "value": "firewalld is a dynamic firewall manager commonly used on Red Hat–based Linux systems.",
-          "example": "Example: Managing firewall rules using zones."
+          "type": "quiz",
+          "question": "Which is safer for admin tasks?",
+          "options": ["A: Always use root login", "B: Use sudo when required", "C: Disable passwords", "D: Turn off firewall"],
+          "correctAnswer": 1
+        },
+        {
+          "type": "tip",
+          "value": "Security mindset: Least privilege, controlled access, monitored activity."
         }
       ],
       "video": null

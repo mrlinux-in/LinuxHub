@@ -7,83 +7,151 @@
       "content": [
         {
           "type": "heading",
-          "value": "Networking in Linux"
+          "value": "Introduction to Networking Basics"
         },
         {
           "type": "definition",
-          "value": "The ability to connect a system to other computers and the internet to share data and communicate.",
-          "example": "Example: Checking internet connectivity using the ping command."
+          "value": "Networking in Linux means connecting your system to other devices, networks, or the internet using IP addresses and communication tools."
+        },
+        {
+          "type": "text",
+          "value": "Every device that connects to a network receives an IP address. DNS helps convert website names to IPs, and HTTP/HTTPS are the rules (protocols) used for web communication."
+        },
+        {
+          "type": "table",
+          "value": [
+            ["Concept", "Meaning"],
+            ["IP", "Unique address of a device on a network (like a home address)"],
+            ["DNS", "Phone book of the internet; converts domain names to IPs"],
+            ["HTTP", "Protocol used for web communication (not secure / port 80)"],
+            ["HTTPS", "Secure/encrypted web communication (SSL/TLS / port 443)"],
+            ["Gateway", "Connects your network to the internet or other networks"],
+            ["Ports", "Logical channels for communication (e.g., 22, 80, 443)"]
+          ]
+        },
+        {
+          "type": "tip",
+          "value": "If internet fails: Check IP → Gateway → DNS → HTTP/HTTPS connection."
         }
-      ]
+      ],
+      "video": {
+        "platform": "youtube",
+        "url": "https://www.youtube.com/watch?v=qAkbEfe0bPA"
+      }
     },
     {
       "slideId": 2,
       "content": [
         {
           "type": "heading",
-          "value": "Why Networking Is Important"
+          "value": "Checking Network Configuration & Devices"
         },
         {
-          "type": "text",
-          "value": "Most Linux systems are connected to networks. Servers must communicate with clients, and administrators must troubleshoot connectivity issues."
+          "type": "code",
+          "command": "ip a",
+          "description": "Shows network interfaces and assigned IP addresses."
+        },
+        {
+          "type": "code",
+          "command": "ip route",
+          "description": "Displays default gateway (path to internet)."
+        },
+        {
+          "type": "code",
+          "command": "nmcli dev status",
+          "description": "Shows status of Wi-Fi/Ethernet network devices."
+        },
+        {
+          "type": "code",
+          "command": "netstat -tulnp",
+          "description": "Shows open ports and active network services (e.g., web servers)."
+        },
+        {
+          "type": "tip",
+          "value": "Use netstat to check if a service is running or if a port is open."
         }
-      ]
+      ],
+      "video": {
+        "platform": "youtube",
+        "url": "https://www.youtube.com/watch?v=vDWY3PuHMX8"
+      }
     },
+
     {
       "slideId": 3,
       "content": [
         {
           "type": "heading",
-          "value": "Network Interface"
+          "value": "Testing Connectivity & Websites"
         },
         {
-          "type": "definition",
-          "value": "A hardware or virtual component that connects a computer to a network.",
-          "example": "Example: Ethernet or Wi-Fi adapter."
+          "type": "text",
+          "value": "These tools help check network connection, DNS issues, and HTTP/website accessibility."
+        },
+        {
+          "type": "code",
+          "command": "ping google.com",
+          "description": "Checks if you can reach internet via DNS name."
+        },
+        {
+          "type": "code",
+          "command": "ping 8.8.8.8",
+          "description": "Checks if network works without DNS (direct IP)."
+        },
+        {
+          "type": "code",
+          "command": "nslookup google.com",
+          "description": "Check if domain name is resolving to an IP."
+        },
+        {
+          "type": "code",
+          "command": "curl https://example.com",
+          "description": "Requests a webpage from a server; great for testing websites & APIs."
+        },
+        {
+          "type": "code",
+          "command": "traceroute google.com",
+          "description": "Shows hop-by-hop path to a server; useful for slow/blocked network routes."
+        },
+        {
+          "type": "tip",
+          "value": "If ping works but curl doesn’t → website/server might be down, not your internet."
         }
-      ]
+      ],
+      "video": null
     },
+
     {
       "slideId": 4,
       "content": [
         {
           "type": "heading",
-          "value": "Viewing Network Interfaces"
+          "value": "Quick Quiz"
         },
         {
-          "type": "code",
-          "command": "ip a",
-          "description": "Displays all network interfaces and IP addresses."
-        }
-      ]
-    },
-    {
-      "slideId": 5,
-      "content": [
-        {
-          "type": "heading",
-          "value": "ping Command"
+          "type": "quiz",
+          "question": "Which command tests if a website is responding?",
+          "options": ["A: curl example.com", "B: ip a", "C: netstat -tulnp", "D: ls"],
+          "correctAnswer": 0
         },
         {
-          "type": "definition",
-          "value": "A command used to test network connectivity between two systems.",
-          "example": "Example: Checking if a server is reachable."
-        }
-      ]
-    },
-    {
-      "slideId": 6,
-      "content": [
-        {
-          "type": "heading",
-          "value": "Using ping"
+          "type": "quiz",
+          "question": "Which command shows open ports and running network services?",
+          "options": ["A: netstat -tulnp", "B: ping 8.8.8.8", "C: nmcli dev status", "D: curl google.com"],
+          "correctAnswer": 0
         },
         {
-          "type": "code",
-          "command": "[\"ping google.com\", \"ping -c 4 8.8.8.8\"]",
-          "description": "Displays the system hostname."
+          "type": "quiz",
+          "question": "If DNS is broken, which command will still work?",
+          "options": ["A: ping google.com", "B: ping 8.8.8.8", "C: curl google.com", "D: nslookup google.com"],
+          "correctAnswer": 1
+        },
+        {
+          "type": "tip",
+          "value": "curl = web check | netstat = ports check | ping = connection check"
         }
-      ]
+      ],
+      "video": null
     }
   ]
 }

@@ -7,92 +7,163 @@
       "content": [
         {
           "type": "heading",
-          "value": "Introduction"
+          "value": "Introduction to Disk & File System Management"
         },
         {
           "type": "definition",
-          "value": "Disk and file system management in Linux involves checking disk usage, understanding storage devices, and mounting or unmounting file systems.",
-          "example": "Example: Checking free disk space using the df command."
+          "value": "Disk and file system management means checking disk usage, identifying storage devices, and mounting or unmounting drives to access data."
+        },
+        {
+          "type": "text",
+          "value": "In Linux, storage devices such as hard drives, USB drives, and partitions must be mounted before you can use them. Monitoring disk space helps prevent crashes, data loss, and performance issues."
+        },
+        {
+          "type": "table",
+          "value": [
+            ["Command", "Purpose"],
+            ["df -h", "Check available disk space on all filesystems (GB/MB)"],
+            ["du -sh folder/", "Check disk usage of a folder"],
+            ["lsblk", "List block devices like HDD, SSD, USB drives"],
+            ["mount", "Mount a device to a directory"],
+            ["umount", "Safely unmount a device"]
+          ]
+        },
+        {
+          "type": "tip",
+          "value": "Rule: If you can’t access files, the device might not be mounted yet."
         }
       ],
-      "video": null
+      "video": {
+        "platform": "youtube",
+        "url": "https://www.youtube.com/watch?v=eNyp-ehZcWE"
+      }
     },
+
     {
       "slideId": 2,
       "content": [
         {
           "type": "heading",
-          "value": "Why Disk Management Is Important"
+          "value": "Checking Disk Usage & Storage Devices"
         },
         {
           "type": "text",
-          "value": "Linux systems rely on disks to store operating system files, applications, and user data. If a disk becomes full, the system may slow down or stop working correctly."
+          "value": "Before mounting or managing storage, verify what devices are connected and how much space is available."
+        },
+        {
+          "type": "code",
+          "command": "df -h",
+          "description": "Shows disk space in a readable format (h = human-readable)."
+        },
+        {
+          "type": "code",
+          "command": "du -sh Documents/",
+          "description": "Shows space used by a specific folder."
+        },
+        {
+          "type": "code",
+          "command": "lsblk",
+          "description": "Shows all disks and partitions (e.g., sda, sdb for USB/HDD)."
+        },
+        {
+          "type": "tip",
+          "value": "Use lsblk first when connecting new drives or USB devices."
         }
       ],
       "video": null
     },
+
     {
       "slideId": 3,
       "content": [
         {
           "type": "heading",
-          "value": "Common Linux File Systems"
+          "value": "Mounting and Unmounting File Systems"
         },
         {
-          "type": "list",
-          "items": [
-            "ext4 – Most commonly used",
-            "xfs – High-performance file system",
-            "vfat – Used for USB drives",
-            "ntfs – Windows file system (supported in Linux)"
-          ]
+          "type": "text",
+          "value": "Mounting attaches a device to a folder path so you can access its contents. Unmounting safely disconnects it before removal."
+        },
+        {
+          "type": "code",
+          "command": "sudo mount /dev/sdb1 /mnt/usb",
+          "description": "Mount device (USB or drive) to /mnt/usb."
+        },
+        {
+          "type": "code",
+          "command": "sudo umount /mnt/usb",
+          "description": "Unmount device safely before unplugging."
+        },
+        {
+          "type": "code",
+          "command": "sudo mkdir /mnt/usb",
+          "description": "Create a mount point folder if it doesn't exist."
+        },
+        {
+          "type": "tip",
+          "value": "Never remove USB drives without unmounting — it can cause corruption."
         }
       ],
       "video": null
     },
+
     {
       "slideId": 4,
       "content": [
         {
           "type": "heading",
-          "value": "df Command"
+          "value": "Understanding File Systems"
         },
         {
-          "type": "definition",
-          "value": "df (disk free) is a command used to display available and used disk space on file systems.",
-          "example": "Example: Checking how much disk space is left."
+          "type": "text",
+          "value": "Different file systems are designed for different purposes. Linux commonly uses ext4, while USB drives often use FAT32 or NTFS."
+        },
+        {
+          "type": "table",
+          "value": [
+            ["File System", "Where It's Used"],
+            ["ext4", "Most common Linux disk format"],
+            ["NTFS", "Windows drives; Linux can read/write with drivers"],
+            ["FAT32/exFAT", "USB drives and memory cards (universal compatibility)"],
+            ["xfs/btrfs", "Enterprise & server storage systems"]
+          ]
+        },
+        {
+          "type": "tip",
+          "value": "ext4 is the default for Linux — reliable and stable for daily use."
         }
       ],
       "video": null
     },
+
     {
       "slideId": 5,
       "content": [
         {
           "type": "heading",
-          "value": "Using df"
+          "value": "Quick Quiz"
         },
         {
-          "type": "code",
-          "value": [
-            "df",
-            "df -h"
-          ]
-        }
-      ],
-      "video": null
-    },
-    {
-      "slideId": 6,
-      "content": [
-        {
-          "type": "heading",
-          "value": "du Command"
+          "type": "quiz",
+          "question": "Which command shows disk space in a human-readable format?",
+          "options": ["A: du -sh", "B: df -h", "C: lsblk", "D: mount"],
+          "correctAnswer": 1
         },
         {
-          "type": "definition",
-          "value": "du (disk usage) is a command used to check the size of files and directories.",
-          "example": "Example: Finding which directory uses the most space."
+          "type": "quiz",
+          "question": "What should you always do before removing a USB drive?",
+          "options": ["A: lsblk", "B: kill -9", "C: umount", "D: df -h"],
+          "correctAnswer": 2
+        },
+        {
+          "type": "quiz",
+          "question": "Which command shows all block devices like HDD/SSD/USB?",
+          "options": ["A: df", "B: lsblk", "C: du", "D: fg"],
+          "correctAnswer": 1
+        },
+        {
+          "type": "tip",
+          "value": "Check: lsblk → mount → df -h to confirm."
         }
       ],
       "video": null

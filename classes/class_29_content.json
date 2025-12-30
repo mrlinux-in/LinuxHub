@@ -7,93 +7,158 @@
       "content": [
         {
           "type": "heading",
-          "value": "Backup and Recovery"
+          "value": "Understanding Backup & Recovery"
         },
         {
           "type": "definition",
-          "value": "The process of creating copies of data to protect against loss and restoring that data when needed.",
-          "example": "Example: Restoring files after accidental deletion or system failure."
+          "value": "Backup is creating copies of important files or systems so they can be restored if deleted, corrupted, or lost. Recovery is the process of restoring this data back to a working state."
         },
         {
           "type": "text",
-          "value": "Data loss can happen due to hardware failure, accidental deletion, malware, or system crashes. Backups ensure that important data can be recovered quickly."
+          "value": "Linux provides multiple tools to back up files, directories, databases, and entire systems. Good backup strategy protects you against accidental deletion, power failure, viruses, or system crashes."
+        },
+        {
+          "type": "table",
+          "value": [
+            ["Backup Type", "Explanation"],
+            ["Full Backup", "Complete copy of data (largest & safest)"],
+            ["Incremental Backup", "Copies only changed files since last backup"],
+            ["Differential Backup", "Copies changes since last full backup"],
+            ["Local Backup", "Stored on same system or drive"],
+            ["Remote Backup", "Stored on external server/cloud"]
+          ]
+        },
+        {
+          "type": "tip",
+          "value": "Golden Rule: 3 copies → 2 storage types → 1 offsite (3-2-1 backup rule)"
         }
-      ],
-      "video": null
+      ]
     },
+
+
     {
       "slideId": 2,
       "content": [
         {
           "type": "heading",
-          "value": "Why Backup and Recovery Are Important"
+          "value": "Backup Tools in Linux"
         },
         {
           "type": "text",
-          "value": "Data loss can happen due to hardware failure, accidental deletion, malware, or system crashes. Backups ensure that important data can be recovered quickly."
+          "value": "We can back up files using cp, tar, rsync, or mysqldump (for databases) depending on the situation."
+        },
+        {
+          "type": "code",
+          "command": "cp -r /home/user/documents /backup/",
+          "description": "Simple directory backup (local copy)"
+        },
+        {
+          "type": "code",
+          "command": "tar -czf backup.tar.gz /home/user/documents",
+          "description": "Archive & compress backup folder"
+        },
+        {
+          "type": "code",
+          "command": "rsync -avz /home/user/ user@192.168.1.10:/remote-backup/",
+          "description": "Remote incremental backup over SSH"
+        },
+        {
+          "type": "code",
+          "command": "mysqldump -u root -p school > school_backup.sql",
+          "description": "Backup a MySQL/MariaDB database"
+        },
+        {
+          "type": "tip",
+          "value": "Use rsync for regular backups; tar for packaged archives; mysqldump for databases."
         }
       ],
       "video": null
     },
+
+
     {
       "slideId": 3,
       "content": [
         {
           "type": "heading",
-          "value": "Types of Backups"
+          "value": "Restoring Files & Databases"
         },
         {
-          "type": "list",
-          "items": [
-            "Full backup – Copies all selected data",
-            "Incremental backup – Copies only changed data",
-            "Differential backup – Copies data changed since last full backup"
+          "type": "stepByStep",
+          "steps": [
+            "Locate the backup source file or archive",
+            "Choose restore destination (where data will go)",
+            "Verify space, permissions, and users before restoring",
+            "Restore files or databases using correct commands"
           ]
+        },
+        {
+          "type": "code",
+          "command": "tar -xzf backup.tar.gz -C /restore-location",
+          "description": "Restore from tar archive"
+        },
+        {
+          "type": "code",
+          "command": "rsync -avz user@192.168.1.10:/remote-backup/ /home/user/restore/",
+          "description": "Restore from remote backup"
+        },
+        {
+          "type": "code",
+          "command": "mysql -u root -p school < school_backup.sql",
+          "description": "Restore MySQL database from SQL backup"
+        },
+        {
+          "type": "table",
+          "value": [
+            ["Restore Check", "Why It Matters"],
+            ["Disk Space", "Avoid half-restored backups"],
+            ["Permissions", "Some files need sudo to write"],
+            ["Database User Exists", "Must exist before restoring DB"],
+            ["Firewall/SSH Access", "Needed for remote backup restore"]
+          ]
+        },
+        {
+          "type": "tip",
+          "value": "Always test restore on a safe test location before replacing real data."
         }
       ],
       "video": null
     },
+
+
     {
       "slideId": 4,
       "content": [
         {
           "type": "heading",
-          "value": "Backup Strategy"
+          "value": "Quick Quiz"
         },
         {
-          "type": "definition",
-          "value": "A backup strategy defines how often backups are taken, where they are stored, and how recovery is performed.",
-          "example": "Example: Daily backups stored on a remote server."
-        }
-      ],
-      "video": null
-    },
-    {
-      "slideId": 5,
-      "content": [
-        {
-          "type": "heading",
-          "value": "tar for Backup"
+          "type": "quiz",
+          "question": "Which tool is best for remote incremental backups?",
+          "options": ["A: cp", "B: tar", "C: rsync", "D: echo"],
+          "correctAnswer": 2
         },
         {
-          "type": "definition",
-          "value": "tar can be used to create archive backups of files and directories.",
-          "example": "Example: Backing up a home directory."
-        }
-      ],
-      "video": null
-    },
-    {
-      "slideId": 6,
-      "content": [
-        {
-          "type": "heading",
-          "value": "Creating a Backup with tar"
+          "type": "quiz",
+          "question": "Which command creates a compressed backup archive?",
+          "options": ["A: tar -czf", "B: rsync -avz", "C: cp -r", "D: mysql -u"],
+          "correctAnswer": 0
         },
         {
-          "type": "code",
-          "command": "tar -czvf home_backup.tar.gz /home/user",
-          "description": "Creates a compressed backup of the user’s home directory."
+          "type": "quiz",
+          "question": "Which command restores a MySQL database?",
+          "options": [
+            "A: mysql -u root -p database < backup.sql",
+            "B: open backup.sql",
+            "C: import backup.sql",
+            "D: sql-restore backup.sql"
+          ],
+          "correctAnswer": 0
+        },
+        {
+          "type": "tip",
+          "value": "Backup is useless if restore doesn't work — always test recovery!"
         }
       ],
       "video": null

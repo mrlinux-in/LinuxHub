@@ -7,87 +7,173 @@
       "content": [
         {
           "type": "heading",
-          "value": "Shell Scripting Fundamentals"
+          "value": "What is Shell Scripting?"
         },
         {
           "type": "definition",
-          "value": "Shell scripting is the process of writing a series of Linux commands in a file so they can be executed automatically as a program.",
-          "example": "Example: A script that checks disk usage and prints a message."
+          "value": "A shell script is a file that contains a series of Linux commands that run automatically, making tasks faster and repeatable."
+        },
+        {
+          "type": "text",
+          "value": "Instead of typing many commands over and over, we save them in a .sh file and execute it. This is how automation starts in Linux."
+        },
+        {
+          "type": "table",
+          "value": [
+            ["Concept", "Meaning"],
+            ["Shell", "The command interpreter (bash, sh, zsh)"],
+            ["Script", "A file with commands to automate tasks"],
+            ["#!/bin/bash", "Shebang: tells system which shell will run the script"],
+            [".sh file", "The file extension used for shell scripts (optional, but common)"]
+          ]
+        },
+        {
+          "type": "tip",
+          "value": "A shell script is like a recipe: you write steps once and run them anytime."
         }
       ],
-      "video": null
+      "video": {
+        "platform": "youtube",
+        "url": "https://www.youtube.com/watch?v=boqC9QenshY"
+      }
     },
+
+
     {
       "slideId": 2,
       "content": [
         {
-          "type": "text",
-          "value": "Shell scripting allows users to automate repetitive tasks, reduce manual work, and ensure consistency. System administrators use shell scripts for backups, monitoring, software installation, and system maintenance. Even simple scripts can save a lot of time."
+          "type": "heading",
+          "value": "Writing Your First Script"
+        },
+        {
+          "type": "stepByStep",
+          "steps": [
+            "Create a file: nano script.sh",
+            "Add the shebang at the top: #!/bin/bash",
+            "Write some commands (echo, date, ls, etc.)",
+            "Save & exit (CTRL+O, ENTER, CTRL+X)",
+            "Make it executable: chmod +x script.sh",
+            "Run it: ./script.sh"
+          ]
+        },
+        {
+          "type": "code",
+          "command": "#!/bin/bash\necho \"Hello, this is my first script!\"\ndate\nls",
+          "description": "A simple shell script that prints a message, shows the date, and lists files."
+        },
+        {
+          "type": "tip",
+          "value": "If a script won't run, check execute permission: chmod +x script.sh"
         }
       ],
       "video": null
     },
+
+
     {
       "slideId": 3,
       "content": [
         {
-          "type": "definition",
-          "value": "A shell is a program that interprets user commands and communicates with the Linux operating system.",
-          "example": "Example: Bash (Bourne Again Shell)."
+          "type": "heading",
+          "value": "Variables & User Input"
         },
         {
-          "type": "list",
-          "items": [
-            "bash – most common and beginner friendly",
-            "sh – original shell",
-            "zsh – advanced interactive shell",
-            "fish – user-friendly shell"
-          ]
+          "type": "text",
+          "value": "Variables store data, and read lets the user type input. This helps create interactive scripts."
+        },
+        {
+          "type": "code",
+          "command": "name=\"John\"\necho \"Hello $name\"",
+          "description": "Storing a value in a variable and using it."
+        },
+        {
+          "type": "code",
+          "command": "read username\necho \"Welcome, $username!\"",
+          "description": "Asking the user for input during script execution."
+        },
+        {
+          "type": "code",
+          "command": "#!/bin/bash\necho \"Enter your name:\"\nread name\necho \"Nice to meet you, $name!\"",
+          "description": "A small user-interaction script."
+        },
+        {
+          "type": "tip",
+          "value": "No spaces before/after = in variables: name=value ✔️ / name = value ❌"
         }
       ],
       "video": null
     },
+
+
     {
       "slideId": 4,
       "content": [
         {
-          "type": "definition",
-          "value": "A shell script is a text file containing Linux commands executed in sequence by a shell.",
-          "example": "Example: A file named backup.sh."
+          "type": "heading",
+          "value": "Simple Script Example (Automation)"
         },
         {
           "type": "text",
-          "value": "Shell scripts usually have the .sh extension. They must have execute permission and start with a special line called a shebang to tell Linux which shell to use."
+          "value": "Here’s an example that creates a backup folder and copies files into it."
+        },
+        {
+          "type": "code",
+          "command": "#!/bin/bash\nfolder=backup_$(date +%Y-%m-%d)\nmkdir $folder\ncp *.txt $folder\necho \"All text files backed up to $folder\"",
+          "description": "Automates backup by creating a folder with the current date."
+        },
+        {
+          "type": "tip",
+          "value": "Use $(command) to store command results in a variable (command substitution)."
         }
       ],
       "video": null
     },
+
+
     {
       "slideId": 5,
       "content": [
         {
-          "type": "code",
-          "value": [
-            "#!/bin/bash",
-            "echo \"Hello, Welcome to Shell Scripting\""
-          ]
-        }
-      ],
-      "video": null
-    },
-    {
-      "slideId": 6,
-      "content": [
+          "type": "heading",
+          "value": "Quick Quiz"
+        },
         {
-          "type": "stepByStep",
-          "steps": [
-            "Create a file using nano hello.sh",
-            "Add the shebang line",
-            "Write commands inside the file",
-            "Save and exit",
-            "Give execute permission",
-            "Run the script"
-          ]
+          "type": "quiz",
+          "question": "What does #!/bin/bash represent in a script?",
+          "options": [
+            "A: The script name",
+            "B: A comment line",
+            "C: The shell used to run the script",
+            "D: A variable"
+          ],
+          "correctAnswer": 2
+        },
+        {
+          "type": "quiz",
+          "question": "Which command makes a script executable?",
+          "options": [
+            "A: chmod +x script.sh",
+            "B: run script.sh",
+            "C: ./bash script.sh",
+            "D: exec script.sh"
+          ],
+          "correctAnswer": 0
+        },
+        {
+          "type": "quiz",
+          "question": "How do you read input into a variable?",
+          "options": [
+            "A: var=input",
+            "B: read var",
+            "C: input > var",
+            "D: name read"
+          ],
+          "correctAnswer": 1
+        },
+        {
+          "type": "tip",
+          "value": "Start small: automate daily tasks → build logic → create helpful tools."
         }
       ],
       "video": null

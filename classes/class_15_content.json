@@ -7,88 +7,193 @@
       "content": [
         {
           "type": "heading",
-          "value": "Why User and Group Management Is Important"
+          "value": "Introduction to User & Group Management"
+        },
+        {
+          "type": "definition",
+          "value": "User & group management means creating accounts, organizing them into groups, and controlling what they can access on the system."
         },
         {
           "type": "text",
-          "value": "Linux is a multi-user operating system. Many users can work on the same system at the same time. User and group management allows administrators to control who can access the system, what files they can use, and what actions they are allowed to perform."
+          "value": "Linux uses users and groups to decide who can use files, run programs, and manage the system. This keeps data secure and prevents unauthorized actions."
+        },
+        {
+          "type": "table",
+          "value": [
+            ["Command", "Purpose"],
+            ["useradd", "Create a new user"],
+            ["passwd", "Set or update a user's password"],
+            ["groupadd", "Create a new group"],
+            ["usermod", "Modify a user (add to group, change shell, etc.)"],
+            ["id", "Show user ID and group memberships"],
+            ["whoami", "Display currently logged-in user"]
+          ]
+        },
+        {
+          "type": "tip",
+          "value": "Every user belongs to a primary group and may be a member of other secondary groups."
         }
       ],
-      "video": null
+      "video": {
+        "platform": "youtube",
+        "url": "https://www.youtube.com/watch?v=bI3Ta0-7xCw"
+      }
     },
+
+
     {
       "slideId": 2,
       "content": [
         {
           "type": "heading",
-          "value": "Definition of a User"
+          "value": "Creating Users & Setting Passwords"
         },
         {
-          "type": "definition",
-          "value": "A user is an individual account that can log in to a Linux system and perform actions based on assigned permissions.",
-          "example": "Example: A user named alice."
+          "type": "text",
+          "value": "Admins create users and assign passwords so they can securely log in."
+        },
+        {
+          "type": "code",
+          "command": "sudo useradd john",
+          "description": "Creates a new user named john."
+        },
+        {
+          "type": "code",
+          "command": "sudo passwd john",
+          "description": "Assigns or changes john's password."
+        },
+        {
+          "type": "code",
+          "command": "id john",
+          "description": "Check user ID and group memberships."
+        },
+        {
+          "type": "tip",
+          "value": "Run id after creating a user to confirm the account was created successfully."
         }
       ],
       "video": null
     },
+
+
     {
       "slideId": 3,
       "content": [
         {
           "type": "heading",
-          "value": "Definition of a Group"
+          "value": "Group Management & Access Control"
         },
         {
-          "type": "definition",
-          "value": "A group is a collection of users that share common permissions.",
-          "example": "Example: A group named developers."
+          "type": "text",
+          "value": "Groups allow multiple users to share access to files, folders, or tasks."
+        },
+        {
+          "type": "code",
+          "command": "sudo groupadd developers",
+          "description": "Creates a group named developers."
+        },
+        {
+          "type": "code",
+          "command": "sudo usermod -aG developers john",
+          "description": "Adds user john to the developers group (-aG = append to group)."
+        },
+        {
+          "type": "code",
+          "command": "groups john",
+          "description": "Check which groups john belongs to."
+        },
+        {
+          "type": "table",
+          "value": [
+            ["Purpose", "Command"],
+            ["Create group", "groupadd groupname"],
+            ["Add user to group", "usermod -aG groupname username"],
+            ["Check membership", "groups username"],
+            ["Remove user from group", "gpasswd -d username groupname"]
+          ]
+        },
+        {
+          "type": "tip",
+          "value": "usermod -aG is very important! Without -a, the user could be removed from other groups by mistake."
         }
       ],
       "video": null
     },
+
+
     {
       "slideId": 4,
       "content": [
         {
           "type": "heading",
-          "value": "Types of Users in Linux"
+          "value": "Connecting Permissions to Users & Groups"
         },
         {
-          "type": "list",
-          "items": [
-            "Root user – system administrator",
-            "Normal users – regular system users",
-            "System users – used by services and applications"
-          ]
+          "type": "text",
+          "value": "After creating users and groups, permissions decide what they can read, edit, or execute."
+        },
+        {
+          "type": "code",
+          "command": "chown john:developers project.txt",
+          "description": "Gives ownership of the file to user john and group developers."
+        },
+        {
+          "type": "code",
+          "command": "chmod 770 project.txt",
+          "description": "Owner and group can read/write/execute; others get no access."
+        },
+        {
+          "type": "tip",
+          "value": "User → owns the file | Group → shared access | Others → everyone else"
         }
       ],
       "video": null
     },
+
+
     {
       "slideId": 5,
       "content": [
         {
           "type": "heading",
-          "value": "The Root User"
+          "value": "Quick Quiz"
         },
         {
-          "type": "text",
-          "value": "The root user is the superuser in Linux. It has full access to the system and can perform any action. Because of its power, the root account must be used carefully to avoid accidental system damage."
-        }
-      ],
-      "video": null
-    },
-    {
-      "slideId": 6,
-      "content": [
-        {
-          "type": "heading",
-          "value": "sudo Command"
+          "type": "quiz",
+          "question": "Which command adds an existing user to a new group?",
+          "options": [
+            "A: useradd john",
+            "B: usermod -aG groupname john",
+            "C: passwd john",
+            "D: groups john"
+          ],
+          "correctAnswer": 1
         },
         {
-          "type": "definition",
-          "value": "sudo allows a normal user to execute commands with administrator (root) privileges.",
-          "example": "Example: Installing software using sudo."
+          "type": "quiz",
+          "question": "Which command creates a new group?",
+          "options": [
+            "A: groupadd",
+            "B: chown",
+            "C: id",
+            "D: chmod"
+          ],
+          "correctAnswer": 0
+        },
+        {
+          "type": "quiz",
+          "question": "Which command changes file ownership to a user and group?",
+          "options": [
+            "A: chown john:developers file.txt",
+            "B: usermod -aG developers john",
+            "C: chmod 755 file.txt",
+            "D: whoami"
+          ],
+          "correctAnswer": 0
+        },
+        {
+          "type": "tip",
+          "value": "Remember: useradd = new user, usermod = edit user, chown/chmod = control access."
         }
       ],
       "video": null

@@ -7,93 +7,183 @@
       "content": [
         {
           "type": "heading",
-          "value": "Linux Boot Process and systemd"
+          "value": "Understanding the Linux Boot Process"
         },
         {
           "type": "definition",
-          "value": "The Linux boot process is the sequence of steps the system follows to start up and become ready for use, while systemd is the system manager that controls services during and after boot.",
-          "example": "Example: Starting the SSH service automatically when the system boots."
+          "value": "The Linux boot process is the sequence of steps that start the system from powering on to loading the operating system and services."
         },
         {
           "type": "text",
-          "value": "Understanding how Linux boots helps users troubleshoot startup issues, manage services, and control what runs automatically. System administrators often need to start, stop, or disable services to improve performance and security."
+          "value": "When a computer powers on, it initializes hardware, loads the bootloader, starts the Linux kernel, and finally launches system services through systemd."
+        },
+        {
+          "type": "stepByStep",
+          "steps": [
+            "BIOS/UEFI checks hardware and chooses the boot device.",
+            "GRUB Bootloader loads and presents OS choices, then loads the Linux kernel.",
+            "Kernel starts, detects hardware, and mounts the root filesystem.",
+            "systemd takes control, starts services, and prepares the system for user login."
+          ]
+        },
+        {
+          "type": "tip",
+          "value": "If the system fails to boot, the issue is often with GRUB, Kernel, or a failed systemd service."
         }
       ],
-      "video": null
+      "video": {
+        "platform": "youtube",
+        "url": "https://www.youtube.com/watch?v=XpFsMB6FoOs"
+      }
     },
     {
       "slideId": 2,
       "content": [
         {
           "type": "heading",
-          "value": "Why Understanding the Boot Process Is Important"
+          "value": "What is systemd?"
         },
         {
-          "type": "text",
-          "value": "Understanding how Linux boots helps users troubleshoot startup issues, manage services, and control what runs automatically. System administrators often need to start, stop, or disable services to improve performance and security."
+          "type": "definition",
+          "value": "systemd is the initialization system (PID 1) that manages services, processes, startup tasks, and shutdown on most modern Linux systems."
+        },
+        {
+          "type": "table",
+          "value": [
+            ["Component", "Purpose"],
+            ["systemd", "Main init system controlling services"],
+            ["systemctl", "Command to manage services"],
+            ["journalctl", "View logs managed by systemd"],
+            [".service files", "Configuration files that define service behavior"]
+          ]
+        },
+        {
+          "type": "image",
+          "url": "https://www.linuxjournal.com/sites/default/files/inline-images/BGKI-process.jpg",
+          "alt": "Simple diagram of Linux boot to systemd service startup"
+        },
+        {
+          "type": "tip",
+          "value": "systemd = startup + services + logs + shutdown controller."
         }
       ],
       "video": null
     },
+
+
     {
       "slideId": 3,
       "content": [
         {
           "type": "heading",
-          "value": "Stages of the Linux Boot Process"
+          "value": "Managing Services with systemctl"
         },
         {
-          "type": "list",
-          "items": [
-            "BIOS or UEFI",
-            "Bootloader",
-            "Kernel",
-            "Init system (systemd)",
-            "User space and login"
-          ]
+          "type": "text",
+          "value": "Use systemctl to start, stop, restart, enable, or disable services. This is essential for server and system administration."
+        },
+        {
+          "type": "code",
+          "command": "systemctl status nginx",
+          "description": "Check if a service is running"
+        },
+        {
+          "type": "code",
+          "command": "systemctl start nginx",
+          "description": "Start service immediately"
+        },
+        {
+          "type": "code",
+          "command": "systemctl stop nginx",
+          "description": "Stop service"
+        },
+        {
+          "type": "code",
+          "command": "systemctl restart nginx",
+          "description": "Restart service (after config changes)"
+        },
+        {
+          "type": "code",
+          "command": "systemctl enable nginx",
+          "description": "Start automatically at boot"
+        },
+        {
+          "type": "code",
+          "command": "systemctl disable nginx",
+          "description": "Disable auto-start at boot"
+        },
+        {
+          "type": "tip",
+          "value": "enable = auto start at boot, start = run now"
         }
       ],
       "video": null
     },
+
+
     {
       "slideId": 4,
       "content": [
         {
           "type": "heading",
-          "value": "BIOS / UEFI"
+          "value": "Troubleshooting with Logs (journalctl)"
         },
         {
           "type": "text",
-          "value": "When a computer is powered on, BIOS or UEFI performs hardware checks and looks for a bootable device such as a hard disk or SSD."
+          "value": "journalctl shows system logs stored by systemd. It's useful when services don't start or crash."
+        },
+        {
+          "type": "code",
+          "command": "journalctl -u nginx",
+          "description": "View logs for a specific service"
+        },
+        {
+          "type": "code",
+          "command": "journalctl -xe",
+          "description": "View recent boot or error logs (recommended for troubleshooting)"
+        },
+        {
+          "type": "code",
+          "command": "dmesg | less",
+          "description": "Shows kernel messages about hardware, drivers, or boot problems"
+        },
+        {
+          "type": "tip",
+          "value": "If a service fails: 1) status → 2) logs → 3) restart"
         }
       ],
       "video": null
     },
+
+
     {
       "slideId": 5,
       "content": [
         {
           "type": "heading",
-          "value": "Bootloader"
+          "value": "Quick Quiz"
         },
         {
-          "type": "text",
-          "value": "The bootloader loads the Linux kernel into memory. The most common Linux bootloader is GRUB, which also allows users to choose between operating systems."
-        }
-      ],
-      "video": null
-    },
-    {
-      "slideId": 6,
-      "content": [
-        {
-          "type": "heading",
-          "value": "Kernel"
+          "type": "quiz",
+          "question": "Which component is responsible for managing services in Linux?",
+          "options": ["A: GRUB", "B: systemd", "C: BIOS", "D: Kernel"],
+          "correctAnswer": 1
         },
         {
-          "type": "definition",
-          "value": "The kernel is the core of the Linux operating system that manages hardware, memory, and processes.",
-          "example": "Example: The kernel controls CPU usage and device drivers."
+          "type": "quiz",
+          "question": "Which command makes a service start automatically at boot?",
+          "options": ["A: systemctl start", "B: systemctl enable", "C: systemctl status", "D: reboot"],
+          "correctAnswer": 1
+        },
+        {
+          "type": "quiz",
+          "question": "Which command shows logs for a service?",
+          "options": ["A: journalctl -u servicename", "B: logview service", "C: showlogs", "D: cat /etc/service"],
+          "correctAnswer": 0
+        },
+        {
+          "type": "tip",
+          "value": "Boot line: BIOS → GRUB → Kernel → systemd → Services → Login"
         }
       ],
       "video": null

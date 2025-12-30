@@ -7,100 +7,154 @@
       "content": [
         {
           "type": "heading",
-          "value": "What is a Web Server?"
+          "value": "Introduction to Web Server Setup"
         },
         {
           "type": "definition",
-          "value": "A web server is software that delivers web pages to users over the internet or a local network.",
-          "example": "Example: Hosting a website that users can access using a browser."
+          "value": "A web server is software that delivers web pages to users over a network using HTTP/HTTPS protocols."
         },
         {
           "type": "text",
-          "value": "Web servers are the backbone of the internet. They host websites, web applications, and APIs. Linux is the most popular platform for web servers because it is stable, secure, and efficient. Learning how to install and manage a web server is a key skill for system administrators and DevOps engineers."
+          "value": "Linux commonly uses Apache and Nginx to host websites. Apache is module-based and great for beginners, while Nginx is lightweight and faster for modern web traffic."
+        },
+        {
+          "type": "table",
+          "value": [
+            ["Server", "Best For"],
+            ["Apache", "Dynamic websites, .htaccess, PHP-heavy applications"],
+            ["Nginx", "High performance, static sites, reverse proxy, load balancing"],
+            ["HTTP", "Unsecured web traffic on port 80"],
+            ["HTTPS", "Encrypted web traffic on port 443"]
+          ]
+        },
+        {
+          "type": "tip",
+          "value": "HTTP = 80 (normal) | HTTPS = 443 (secure SSL)"
         }
-      ],
-      "video": null
+      ]
     },
+
+
+
     {
       "slideId": 2,
       "content": [
         {
           "type": "heading",
-          "value": "Why Web Servers Are Important"
+          "value": "Installing Apache or Nginx"
         },
         {
           "type": "text",
-          "value": "Web servers are the backbone of the internet. They host websites, web applications, and APIs. Linux is the most popular platform for web servers because it is stable, secure, and efficient."
+          "value": "We install web servers through the package manager and control them using systemctl."
+        },
+        {
+          "type": "code",
+          "command": "sudo apt install apache2 -y",
+          "description": "Install Apache on Debian/Ubuntu."
+        },
+        {
+          "type": "code",
+          "command": "sudo systemctl start apache2\nsudo systemctl enable apache2",
+          "description": "Start Apache and enable it at boot."
+        },
+        {
+          "type": "code",
+          "command": "sudo apt install nginx -y",
+          "description": "Install Nginx on Debian/Ubuntu."
+        },
+        {
+          "type": "code",
+          "command": "sudo systemctl start nginx\nsudo systemctl enable nginx",
+          "description": "Start Nginx and enable auto-start."
+        },
+        {
+          "type": "tip",
+          "value": "If Apache and Nginx run together, they both try to use port 80 → stop one before starting the other."
         }
       ],
-      "video": null
+      "video": {
+        "platform": "youtube",
+        "url": "https://www.youtube.com/watch?v=C9RqrTTJIPs"
+      }
     },
+
+
+
     {
       "slideId": 3,
       "content": [
         {
           "type": "heading",
-          "value": "Apache vs Nginx"
+          "value": "Hosting a Basic Website"
         },
         {
-          "type": "text",
-          "value": "Both Apache and Nginx are popular web servers. Apache is easy to configure and beginner-friendly, while Nginx is lightweight and performs better under heavy traffic."
+          "type": "stepByStep",
+          "steps": [
+            "Create/modify the default website page at: /var/www/html/index.html",
+            "Add HTML content to test the server.",
+            "Restart service to apply changes.",
+            "Open browser and visit: http://your_server_ip"
+          ]
+        },
+        {
+          "type": "code",
+          "command": "echo \"<h1>Hello from my Web Server!</h1>\" | sudo tee /var/www/html/index.html",
+          "description": "Create a simple homepage."
+        },
+        {
+          "type": "code",
+          "command": "sudo systemctl restart apache2   # or nginx",
+          "description": "Restart server to apply changes."
+        },
+        {
+          "type": "table",
+          "value": [
+            ["Path", "Purpose"],
+            ["/var/www/html/", "Default web folder"],
+            ["/etc/apache2/sites-available/", "Apache site config"],
+            ["/etc/nginx/sites-available/", "Nginx site config"],
+            ["/var/log/apache2/", "Apache logs"],
+            ["/var/log/nginx/", "Nginx logs"]
+          ]
+        },
+        {
+          "type": "tip",
+          "value": "If page doesn't load → check firewall, ports, and server status."
         }
       ],
       "video": null
     },
+
+
+
     {
       "slideId": 4,
       "content": [
         {
           "type": "heading",
-          "value": "Comparison"
+          "value": "Quick Quiz"
         },
         {
-          "type": "table",
-          "value": [
-            [
-              "Column 1 header",
-              "Column 2 header"
-            ],
-            [
-              "Row 1 label",
-              "Row 1 value"
-            ],
-            [
-              "Row 2 label",
-              "Row 2 value"
-            ]
-          ]
-        }
-      ],
-      "video": null
-    },
-    {
-      "slideId": 5,
-      "content": [
-        {
-          "type": "heading",
-          "value": "Installing Apache"
+          "type": "quiz",
+          "question": "Which port does HTTP use?",
+          "options": ["A: 22", "B: 443", "C: 21", "D: 80"],
+          "correctAnswer": 3
         },
         {
-          "type": "code",
-          "command": "sudo apt install apache2",
-          "description": "Installs the Apache web server on Ubuntu/Debian systems."
-        }
-      ],
-      "video": null
-    },
-    {
-      "slideId": 6,
-      "content": [
-        {
-          "type": "heading",
-          "value": "Starting and Checking Apache"
+          "type": "quiz",
+          "question": "Which server is faster for static content?",
+          "options": ["A: Apache", "B: Nginx", "C: FTP", "D: Samba"],
+          "correctAnswer": 1
         },
         {
-          "type": "text",
-          "value": "After installation, the web server service must be started and checked to ensure it is running correctly."
+          "type": "quiz",
+          "question": "Where is the default web directory?",
+          "options": ["/var/www/html", "/home/www", "/srv/www/default", "/apache/webroot"],
+          "correctAnswer": 0
+        },
+        {
+          "type": "tip",
+          "value": "Apache = beginner friendly | Nginx = performance & scale"
         }
       ],
       "video": null

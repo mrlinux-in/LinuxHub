@@ -7,88 +7,205 @@
       "content": [
         {
           "type": "heading",
-          "value": "Process Management"
+          "value": "Introduction to Process Management"
         },
         {
           "type": "definition",
-          "value": "Process management in Linux is the ability to view, monitor, control, and terminate running programs (processes).",
-          "example": "Example: Stopping a frozen application using the kill command."
+          "value": "Process management means checking, controlling, switching, and terminating programs running in Linux."
         },
         {
-          "type": "text",
-          "value": "A process is a program that is currently running in the system. Every time you open an application or run a command, Linux creates a process for it. Linux can run thousands of processes at the same time while managing system resources efficiently."
+          "type": "table",
+          "value": [
+            ["Command", "Purpose"],
+            ["ps", "View running processes (snapshot)"],
+            ["top", "Live view of system resources"],
+            ["fg/bg", "Move jobs between foreground & background"],
+            ["kill", "Stop/terminate a running process"]
+          ]
+        },
+        {
+          "type": "tip",
+          "value": "Think of it like task manager but in the terminal!"
         }
-      ]
+      ],
+      "video": {
+        "platform": "youtube",
+        "url": "https://www.youtube.com/watch?v=P8GrPOpD8Sk"
+      }
     },
+
     {
       "slideId": 2,
       "content": [
         {
           "type": "heading",
-          "value": "What Is a Process?"
+          "value": "Viewing and Monitoring Processes"
         },
         {
-          "type": "text",
-          "value": "A process is a program that is currently running in the system. Every time you open an application or run a command, Linux creates a process for it. Linux can run thousands of processes at the same time while managing system resources efficiently."
+          "type": "code",
+          "command": "ps aux",
+          "description": "Shows all running processes with user, memory, and CPU usage."
+        },
+        {
+          "type": "code",
+          "command": "top",
+          "description": "Real-time process + resource monitor (CPU, RAM usage, running tasks)."
+        },
+        {
+          "type": "code",
+          "command": "htop",
+          "description": "Improved, colorful top (if installed)."
+        },
+        {
+          "type": "tip",
+          "value": "ps = list processes | top = monitor processes live"
         }
       ]
     },
+
     {
       "slideId": 3,
       "content": [
         {
           "type": "heading",
-          "value": "Process ID (PID)"
+          "value": "Foreground, Background Jobs & Control"
         },
         {
-          "type": "definition",
-          "value": "A Process ID (PID) is a unique number assigned to every running process in Linux.",
-          "example": "Example: PID 2456 represents a specific running program."
+          "type": "code",
+          "command": "command &",
+          "description": "Start a command in background."
+        },
+        {
+          "type": "code",
+          "command": "jobs",
+          "description": "Show background jobs started in the terminal."
+        },
+        {
+          "type": "code",
+          "command": "fg %1",
+          "description": "Bring job #1 back to foreground."
+        },
+        {
+          "type": "code",
+          "command": "bg %1",
+          "description": "Resume job #1 in background."
+        },
+        {
+          "type": "tip",
+          "value": "Pause task with CTRL+Z → resume in background with bg"
         }
-      ]
+      ],
+      "video": {
+        "platform": "youtube",
+        "url": "https://www.youtube.com/shorts/RqlzGLnWIZQ"
+      }
     },
+
     {
       "slideId": 4,
       "content": [
         {
           "type": "heading",
-          "value": "Why Process Management Is Important"
+          "value": "Killing / Terminating Processes"
         },
         {
-          "type": "text",
-          "value": "Process management helps users monitor system performance, identify high resource usage, stop unwanted programs, and troubleshoot system issues. System administrators rely heavily on process management to keep systems stable."
+          "type": "code",
+          "command": "kill PID",
+          "description": "Ask process to stop safely."
+        },
+        {
+          "type": "code",
+          "command": "kill -9 PID",
+          "description": "Force kill if normal kill doesn't work (last option!)."
+        },
+        {
+          "type": "code",
+          "command": "killall processname",
+          "description": "Stop all processes with that name."
+        },
+        {
+          "type": "tip",
+          "value": "Always try kill first before kill -9 to avoid data loss."
         }
       ]
     },
+
     {
       "slideId": 5,
       "content": [
         {
           "type": "heading",
-          "value": "ps Command"
+          "value": "Prioritizing Processes (nice & renice)"
         },
         {
-          "type": "definition",
-          "value": "ps (process status) is a command used to display information about running processes.",
-          "example": "Example: Viewing processes owned by the current user."
+          "type": "text",
+          "value": "nice and renice control CPU priority. Lower value = higher priority, higher value = lower priority."
+        },
+        {
+          "type": "code",
+          "command": "nice -n 10 command",
+          "description": "Start a program with lower CPU priority (so it doesn't slow down system)."
+        },
+        {
+          "type": "code",
+          "command": "renice 5 -p PID",
+          "description": "Change the priority of an already running process."
+        },
+        {
+          "type": "tip",
+          "value": "Use nice/renice to manage slow systems, servers, and heavy tasks."
         }
       ]
     },
+
     {
       "slideId": 6,
       "content": [
         {
           "type": "heading",
-          "value": "Using ps"
+          "value": "Checking System Resources (Disk & RAM)"
         },
         {
           "type": "code",
-          "command": [
-            "ps",
-            "ps -ef",
-            "ps aux"
-          ],
-          "description": "Displays running processes in various formats."
+          "command": "df -h",
+          "description": "Checks disk space in human-readable format (GB/MB)."
+        },
+        {
+          "type": "code",
+          "command": "free -h",
+          "description": "Shows memory usage (RAM/Swap). Helpful when system feels slow."
+        },
+        {
+          "type": "tip",
+          "value": "If system is lagging: free -h (check RAM) → top (check CPU) → kill PID if needed"
+        }
+      ]
+    },
+
+    {
+      "slideId": 7,
+      "content": [
+        {
+          "type": "heading",
+          "value": "Quick Quiz"
+        },
+        {
+          "type": "quiz",
+          "question": "Which command shows live system resource usage?",
+          "options": ["A: ps aux", "B: df -h", "C: top", "D: fg"],
+          "correctAnswer": 2
+        },
+        {
+          "type": "quiz",
+          "question": "Which command lowers/changes process priority?",
+          "options": ["A: renice", "B: free", "C: bg", "D: df"],
+          "correctAnswer": 0
+        },
+        {
+          "type": "quiz",
+          "question": "Which command checks RAM usage?",
+          "options": ["A: free -h", "B: df -h", "C: kill PID", "D: ps aux"],
+          "correctAnswer": 0
         }
       ]
     }

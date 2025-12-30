@@ -7,94 +7,132 @@
       "content": [
         {
           "type": "heading",
-          "value": "Linux Troubleshooting"
+          "value": "Introduction to Troubleshooting"
         },
         {
           "type": "definition",
-          "value": "Linux troubleshooting is the process of identifying, analyzing, and fixing problems in a Linux system."
+          "value": "Troubleshooting is the process of finding the root cause of a problem and fixing it step by step instead of guessing."
+        },
+        {
+          "type": "text",
+          "value": "A good Linux troubleshooter follows a method: observe → identify → test → confirm → fix. This prevents mistakes and makes solving issues faster and safer."
+        },
+        {
+          "type": "stepByStep",
+          "steps": [
+            "Check the error message or symptom.",
+            "Identify where the problem is: network, permissions, service, disk, etc.",
+            "Run commands to gather information (logs, status, config paths).",
+            "Apply a fix and test to confirm the solution."
+          ]
+        },
+        {
+          "type": "tip",
+          "value": "Don't make random guesses. Small tests lead to big solutions."
         }
-      ],
-      "video": null
+      ]
     },
+
+
+
     {
       "slideId": 2,
       "content": [
         {
           "type": "heading",
-          "value": "Why Troubleshooting Skills Matter"
+          "value": "Troubleshooting Tools & Commands"
+        },
+        {
+          "type": "table",
+          "value": [
+            ["Issue Area", "Command to Check"],
+            ["Service Not Working", "systemctl status service-name"],
+            ["Firewall Blocking", "sudo ufw status | sudo firewall-cmd --list-all"],
+            ["Permission Denied", "ls -l, chmod, chown"],
+            ["Low Disk Space", "df -h, du -sh *"],
+            ["High CPU/Memory Usage", "top, htop, free -h"],
+            ["Network Issue", "ping, ip a, curl, ssh"],
+            ["Logs for Errors", "journalctl -xe, tail -f /var/log/syslog"]
+          ]
         },
         {
           "type": "text",
-          "value": "No Linux system runs perfectly all the time. Services may fail, disks may fill up, permissions may break applications, or networks may go down."
+          "value": "Think like a detective: collect clues before taking action."
+        },
+        {
+          "type": "tip",
+          "value": "If something doesn't start → service status + logs = answer."
         }
       ],
       "video": null
     },
+
+
+
     {
       "slideId": 3,
       "content": [
         {
           "type": "heading",
-          "value": "Troubleshooting Method"
+          "value": "Final Project Overview"
+        },
+        {
+          "type": "text",
+          "value": "For your final practice, you will set up and secure a small working Linux environment using the skills learned in previous classes."
         },
         {
           "type": "stepByStep",
           "steps": [
-            "Identify the problem clearly",
-            "Check error messages or symptoms",
-            "Review logs and system status",
-            "Isolate the root cause",
-            "Apply a fix",
-            "Verify the solution"
+            "Create a user and grant sudo access",
+            "Install and start a web server (Apache or Nginx)",
+            "Host a basic HTML page in /var/www/html",
+            "Configure firewall to allow HTTP/HTTPS",
+            "Setup SSH key login and disable password login for security",
+            "Create a backup of the website using rsync or tar"
           ]
+        },
+        {
+          "type": "code",
+          "command": "sudo systemctl status apache2\nsudo ufw allow 80\nssh-copy-id user@server",
+          "description": "Example commands students will practice in the final project."
+        },
+        {
+          "type": "tip",
+          "value": "Document every step — real sysadmins write their own solutions for future use."
         }
       ],
       "video": null
     },
+
+
     {
       "slideId": 4,
       "content": [
         {
           "type": "heading",
-          "value": "Common Linux Problems"
+          "value": "Quick Quiz"
         },
         {
-          "type": "list",
-          "items": [
-            "Disk full issues",
-            "Service not starting",
-            "Permission denied errors",
-            "Network connectivity problems",
-            "High CPU or memory usage"
-          ]
-        }
-      ],
-      "video": null
-    },
-    {
-      "slideId": 5,
-      "content": [
-        {
-          "type": "heading",
-          "value": "Logs in Troubleshooting"
+          "type": "quiz",
+          "question": "Which command helps check why a service failed?",
+          "options": ["A: cd /", "B: systemctl status", "C: ls -l", "D: ip a"],
+          "correctAnswer": 1
         },
         {
-          "type": "definition",
-          "value": "Logs are records of system and application events that help diagnose problems."
-        }
-      ],
-      "video": null
-    },
-    {
-      "slideId": 6,
-      "content": [
-        {
-          "type": "heading",
-          "value": "Service Troubleshooting"
+          "type": "quiz",
+          "question": "You get 'Permission Denied'. What should you check first?",
+          "options": ["A: chmod / chown", "B: mkdir", "C: sudo rm -rf", "D: ftp login"],
+          "correctAnswer": 0
         },
         {
-          "type": "definition",
-          "value": "Service troubleshooting involves checking whether a service is running correctly and identifying why it may have failed."
+          "type": "quiz",
+          "question": "A website isn’t loading but the server is running. What next?",
+          "options": ["A: Restart computer", "B: Delete web directory", "C: Check firewall and logs", "D: Install Windows"],
+          "correctAnswer": 2
+        },
+        {
+          "type": "tip",
+          "value": "Troubleshooting = find where the problem is BEFORE fixing it."
         }
       ],
       "video": null

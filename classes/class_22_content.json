@@ -7,83 +7,152 @@
       "content": [
         {
           "type": "heading",
-          "value": "System Monitoring and Logs"
+          "value": "Introduction to System Monitoring"
         },
         {
           "type": "definition",
-          "value": "System monitoring and logs in Linux involve tracking system performance and reviewing log files to identify issues, errors, and system activity.",
-          "example": "Example: Checking CPU usage with top and reading system logs with journalctl."
+          "value": "System monitoring means checking CPU, memory, disk, and running processes to understand system performance and detect problems."
+        },
+        {
+          "type": "text",
+          "value": "Monitoring helps identify why a system is slow, which process is using resources, and if any application or service is misbehaving."
+        },
+        {
+          "type": "table",
+          "value": [
+            ["Tool", "Purpose"],
+            ["top", "Live system monitoring (CPU, memory, processes)"],
+            ["htop", "Improved top with colors and navigation (if installed)"],
+            ["vmstat", "Reports CPU, memory, and system processes efficiently"],
+            ["iostat", "Shows disk I/O performance"],
+            ["free -h", "Displays RAM and swap usage"],
+            ["df -h", "Shows disk space usage"]
+          ]
+        },
+        {
+          "type": "tip",
+          "value": "If the system is slow: check CPU (top) → memory (free -h) → disk (df -h)."
         }
       ]
     },
+
+
     {
       "slideId": 2,
       "content": [
         {
           "type": "heading",
-          "value": "Why System Monitoring Is Important"
+          "value": "Live Monitoring Commands"
         },
         {
-          "type": "text",
-          "value": "System monitoring helps users understand how system resources like CPU, memory, disk, and network are being used. Logs provide detailed records of system events and errors. Together, they help administrators detect problems early, troubleshoot issues, and maintain system stability."
+          "type": "stepByStep",
+          "steps": [
+            "Run top to view live CPU/memory usage and active processes.",
+            "Use htop (if installed) for a cleaner, interactive display.",
+            "Check memory usage with free -h to see RAM breakdown.",
+            "Check disk space with df -h to avoid system slowdowns.",
+            "Use iostat to see if storage devices are overloaded."
+          ]
+        },
+        {
+          "type": "code",
+          "command": "top",
+          "description": "Live process viewer – press Q to quit."
+        },
+        {
+          "type": "code",
+          "command": "htop",
+          "description": "More user-friendly monitoring tool (install if missing: sudo apt install htop)."
+        },
+        {
+          "type": "tip",
+          "value": "High CPU? Check top. Low RAM? Check free -h. Disk full? Check df -h."
         }
-      ]
+      ],
+      "video": null
     },
+
+
     {
       "slideId": 3,
       "content": [
         {
           "type": "heading",
-          "value": "System Resources"
+          "value": "System Logging and Log Files"
         },
         {
-          "type": "definition",
-          "value": "System resources are components such as CPU, memory, disk, and network that programs use to run.",
-          "example": "Example: High CPU usage caused by a running process."
+          "type": "text",
+          "value": "Logs help identify system errors, warnings, service failures, and hardware issues. They are stored in /var/log."
+        },
+        {
+          "type": "table",
+          "value": [
+            ["Log File", "Purpose"],
+            ["/var/log/syslog", "General system messages"],
+            ["/var/log/auth.log", "Login and authentication events"],
+            ["/var/log/kern.log", "Kernel related logs"],
+            ["/var/log/dmesg", "Hardware & driver information at boot"],
+            ["/var/log/boot.log", "Boot messages and startup issues"]
+          ]
+        },
+        {
+          "type": "code",
+          "command": "journalctl -xe",
+          "description": "View recent logs with errors and warnings highlighted."
+        },
+        {
+          "type": "code",
+          "command": "journalctl -u nginx",
+          "description": "View logs of a specific service (example: nginx)."
+        },
+        {
+          "type": "code",
+          "command": "tail -f /var/log/syslog",
+          "description": "Watch system logs live as they update."
+        },
+        {
+          "type": "tip",
+          "value": "If a service fails: systemctl status → journalctl -u servicename"
         }
-      ]
+      ],
+      "video": {
+        "platform": "youtube",
+        "url": "https://www.youtube.com/watch?v=6uP_f_z3CbM"
+      }
     },
+
+
     {
       "slideId": 4,
       "content": [
         {
           "type": "heading",
-          "value": "top Command"
+          "value": "Quick Quiz"
         },
         {
-          "type": "definition",
-          "value": "top is a command used to display real-time information about running processes and system resource usage.",
-          "example": "Example: Monitoring CPU and memory usage live."
-        }
-      ]
-    },
-    {
-      "slideId": 5,
-      "content": [
-        {
-          "type": "heading",
-          "value": "Using top"
+          "type": "quiz",
+          "question": "Which command shows CPU and memory usage live?",
+          "options": ["A: df -h", "B: top", "C: tail -f", "D: iostat"],
+          "correctAnswer": 1
         },
         {
-          "type": "code",
-          "command": "top",
-          "description": "Shows running processes and system usage in real-time."
-        }
-      ]
-    },
-    {
-      "slideId": 6,
-      "content": [
-        {
-          "type": "heading",
-          "value": "htop Command"
+          "type": "quiz",
+          "question": "Where are most Linux logs stored?",
+          "options": ["A: /system/logs", "B: ~/logs", "C: /var/log", "D: /root/logs"],
+          "correctAnswer": 2
         },
         {
-          "type": "definition",
-          "value": "htop is an interactive and user-friendly alternative to top with color-coded output.",
-          "example": "Example: Scrolling and killing processes interactively."
+          "type": "quiz",
+          "question": "Which log file shows login and authentication events?",
+          "options": ["A: /var/log/auth.log", "B: /var/log/syslog", "C: /var/log/dmesg", "D: /var/log/boot.log"],
+          "correctAnswer": 0
+        },
+        {
+          "type": "tip",
+          "value": "Logs are your best friend when troubleshooting: read them before panic!"
         }
-      ]
+      ],
+      "video": null
     }
   ]
 }

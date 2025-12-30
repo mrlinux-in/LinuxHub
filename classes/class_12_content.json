@@ -7,93 +7,161 @@
       "content": [
         {
           "type": "heading",
-          "value": "Pipes and Text Processing"
+          "value": "What Are Pipes and Text Processing?"
         },
         {
           "type": "definition",
-          "value": "Pipes and text processing in Linux allow users to combine multiple commands so that the output of one command becomes the input of another command."
+          "value": "A pipe | connects the output of one command to the input of another. Text processing tools like sort, awk, and sed help filter, format, and modify text."
         },
         {
           "type": "text",
-          "value": "Linux commands are designed to do one job well. Pipes allow users to connect these small commands together to perform complex tasks efficiently."
+          "value": "Think of pipes like plumbing: water flows through pipes and gets processed by filters. In Linux, data flows through commands the same way."
+        },
+        {
+          "type": "table",
+          "value": [
+            ["Tool / Symbol", "Purpose"],
+            ["| (pipe)", "Connects commands together"],
+            ["sort", "Sorts lines alphabetically or numerically"],
+            ["awk", "Extracts columns and formats text"],
+            ["sed", "Edits text on the fly (search/replace)"],
+            ["grep", "Filters lines by matching patterns"]
+          ]
+        },
+        {
+          "type": "tip",
+          "value": "Use pipes to build powerful command chains — no files or editors needed!"
         }
-      ],
-      "video": null
+      ]
     },
     {
       "slideId": 2,
       "content": [
         {
           "type": "heading",
-          "value": "Basic Pipe Example"
+          "value": "Using Pipes ( | ) to Combine Commands"
+        },
+        {
+          "type": "text",
+          "value": "Pipes send the output of one command directly into the next command as input."
         },
         {
           "type": "code",
           "command": "ls | sort",
           "description": "Lists files and sorts them alphabetically."
+        },
+        {
+          "type": "code",
+          "command": "cat data.txt | grep apple",
+          "description": "Shows only lines containing the word 'apple'."
+        },
+        {
+          "type": "code",
+          "command": "ps aux | grep firefox",
+          "description": "Finds processes related to 'firefox'. Useful for troubleshooting."
+        },
+        {
+          "type": "tip",
+          "value": "Rule: Left side sends data → right side processes it."
         }
       ],
-      "video": null
+      "video": {
+        "platform": "youtube",
+        "url": "https://www.youtube.com/watch?v=7PjAXqTPYPg"
+      }
     },
     {
       "slideId": 3,
       "content": [
         {
           "type": "heading",
-          "value": "Understanding Command Pipelines"
+          "value": "Text Processing Tools (sort, awk, sed)"
         },
         {
           "type": "text",
-          "value": "A pipeline can have two or more commands connected by pipes. Data flows from left to right through the pipeline."
+          "value": "These tools help format, filter, and transform text directly in the terminal."
+        },
+        {
+          "type": "code",
+          "command": "sort numbers.txt",
+          "description": "Sorts text alphabetically or by number."
+        },
+        {
+          "type": "code",
+          "command": "awk '{print $1, $3}' users.txt",
+          "description": "Prints the 1st and 3rd column from a file (useful for data extraction)."
+        },
+        {
+          "type": "code",
+          "command": "sed 's/apple/orange/g' fruits.txt",
+          "description": "Replaces the word 'apple' with 'orange' everywhere."
+        },
+        {
+          "type": "tip",
+          "value": "awk works like a column picker, sed works like search/replace."
         }
-      ],
-      "video": null
+      ]
     },
     {
       "slideId": 4,
       "content": [
         {
           "type": "heading",
-          "value": "Using sort"
+          "value": "Combining Everything Together"
         },
         {
           "type": "code",
-          "value": [
-            "sort names.txt",
-            "sort -n numbers.txt",
-            "sort -r names.txt"
-          ]
+          "command": "cat data.txt | grep error | sort | uniq",
+          "description": "Finds error lines, sorts them, removes duplicates — great for logs."
+        },
+        {
+          "type": "code",
+          "command": "ps aux | grep nginx | awk '{print $2}'",
+          "description": "Find nginx processes and show only their process IDs."
+        },
+        {
+          "type": "code",
+          "command": "dmesg | tail -20 | grep fail",
+          "description": "Check recent system errors containing 'fail'."
+        },
+        {
+          "type": "tip",
+          "value": "Start with simple pipes and add new commands step by step."
         }
       ],
-      "video": null
+      "video": {
+        "platform": "youtube",
+        "url": "https://www.youtube.com/watch?v=sGO9wAsAW4c"
+      }
     },
     {
       "slideId": 5,
       "content": [
         {
           "type": "heading",
-          "value": "Using uniq"
+          "value": "Quick Quiz"
         },
         {
-          "type": "code",
-          "value": [
-            "sort names.txt | uniq",
-            "sort names.txt | uniq -c"
-          ]
-        }
-      ],
-      "video": null
-    },
-    {
-      "slideId": 6,
-      "content": [
-        {
-          "type": "heading",
-          "value": "Why sort Is Needed Before uniq"
+          "type": "quiz",
+          "question": "Which symbol is used to connect two commands?",
+          "options": ["A: /", "B: |", "C: ->", "D: =="],
+          "correctAnswer": 1
         },
         {
-          "type": "text",
-          "value": "The uniq command only removes duplicate lines that are next to each other. Therefore, input must be sorted first to group identical lines together."
+          "type": "quiz",
+          "question": "Which tool is best for replacing text?",
+          "options": ["A: awk", "B: sed", "C: sort", "D: grep"],
+          "correctAnswer": 1
+        },
+        {
+          "type": "quiz",
+          "question": "Which command finds patterns inside text?",
+          "options": ["A: grep", "B: sort", "C: echo", "D: man"],
+          "correctAnswer": 0
+        },
+        {
+          "type": "tip",
+          "value": "Pipes = combine commands | Filters = change or clean the data"
         }
       ],
       "video": null
