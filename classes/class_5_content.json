@@ -17,21 +17,25 @@
           "type": "table",
           "value": [
             ["Command", "Description"],
-            ["touch", "Creates a new empty file with the specified name (if it doesn't exist) or updates its timestamp (if it does)."],
+            ["nano", "Opens a text editor to create or edit a file directly from the terminal."],
             ["mkdir", "Creates a new directory with the specified name (if it doesn't exist)."]
           ]
         },
         {
           "type": "code",
-          "command": "touch newfile.txt",
-          "description": "Creates an empty file named 'newfile.txt'"
+          "command": "nano newfile.txt",
+          "description": "Creates and open text editor with an empty file named 'newfile.txt'"
         },
         {
           "type": "code",
           "command": "mkdir projects",
           "description": "Creates a new directory named 'projects'"
         }
-      ]
+      ],
+      "video": {
+         "platform": "youtube",
+         "url": "https://www.youtube.com/watch?v=dzHscTzpAME"
+      }
     },
     {
       "slideId": 2,
@@ -126,7 +130,7 @@
         {
           "type": "stepByStep",
           "steps": [
-            "Create a new file named myfile.txt in your home directory using the touch command.",
+            "Create a new file named myfile.txt in your home directory using the nano command.",
             "Create a new directory called test_directory in your home directory using the mkdir command.",
             "Copy the myfile.txt file to the test_directory directory using the cp command.",
             "Move the myfile.txt file from the test_directory directory back to your home directory using the mv command.",

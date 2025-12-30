@@ -21,13 +21,13 @@
         "classId": 4,
         "topic": "Navigating the Linux File System",
         "description": "Learning how to move between directories and explore files using basic navigation commands.",
-        "version": "1.2"
+        "version": "1.3"
     },
     {
         "classId": 5,
         "topic": "File and Directory Management",
         "description": "Creating, copying, moving, renaming, and deleting files and directories in Linux.",
-        "version": "1.1"
+        "version": "1.2"
     },
     {
         "classId": 6,

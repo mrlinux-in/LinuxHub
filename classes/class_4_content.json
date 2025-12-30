@@ -86,7 +86,11 @@
           "command": "ls -thrl",
           "description": "Lists files in reverse chronological order with human-readable sizes and long format details."
         }
-      ]
+      ],
+    "video": {
+          "platform": "youtube",
+          "url": "https://www.youtube.com/watch?v=C1btVko0CVE"
+      }
     },
     {
       "slideId": "4",
