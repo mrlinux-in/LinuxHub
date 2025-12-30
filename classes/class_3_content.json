@@ -53,69 +53,6 @@
       "content": [
         {
           "type": "heading",
-          "value": "Familiarizing Yourself with the Linux File System using the Command Line"
-        },
-        {
-          "type": "text",
-          "value": "Now that you understand the main components of the Linux file system structure, let's learn how to navigate it using the command line:"
-        },
-        {
-          "type": "code",
-          "command": "cd /",
-          "description": "Navigate to the Root Directory: Type \"cd /\" to move to the root directory."
-        },
-        {
-          "type": "code",
-          "command": "cd ..",
-          "description": "Go Back One Directory Level: Type \"cd ..\" or simply \"..\" to move up one level in the directory hierarchy."
-        },
-        {
-          "type": "code",
-          "command": "ls",
-          "description": "List Files and Directories: Use the \"ls\" command followed by a directory name (optional) to list files and directories within that directory."
-        },
-        {
-          "type": "code",
-          "command": "cd Documents",
-          "description": "Change Directories: Use the \"cd\" command followed by the directory name you want to move into."
-        },
-        {
-          "type": "code",
-          "command": "mkdir new_folder",
-          "description": "Create New Directories: Use the \"mkdir\" command followed by the desired directory name."
-        },
-        {
-          "type": "code",
-          "command": "rmdir old_folder",
-          "description": "Remove an Empty Directory: Use the \"rmdir\" command followed by the directory name you want to delete."
-        },
-        {
-          "type": "code",
-          "command": "rm -r non_empty_folder",
-          "description": "Delete a Non-Empty Directory: To remove a non-empty directory, first navigate to it and use the \"rm -r\" command followed by the directory name (without the trailing slash). Be careful not to delete important files or directories accidentally!"
-        },
-        {
-          "type": "code",
-          "command": "cp document.txt /home/new_folder",
-          "description": "Copy Files and Directories: Use the \"cp\" command followed by the source file/directory and destination file/directory."
-        },
-        {
-          "type": "code",
-          "command": "mv old_file.txt new_file.txt",
-          "description": "Move (Rename) Files and Directories: Use the \"mv\" command followed by the source file/directory and destination file/directory."
-        },
-        {
-          "type": "code",
-          "command": "ln -s /home/old_folder /home/new_folder/old_folder_link",
-          "description": "Linking Files and Directories: Create a symbolic link using the \"ln -s\" command followed by the source file/directory and destination link name. This creates a shortcut to the original folder in the new location."
-        }
-        ]
-    },
-    {
-      "slideId": 3,
-      "content": [
-        {
-          "type": "heading",
           "value": "Path"
         },
         {
